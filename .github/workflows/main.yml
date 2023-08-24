@@ -16,6 +16,7 @@ jobs:
       - run: pip install pymarkdownlnt
       - run: pymarkdownlnt -c .pymarkdown-linting-cfg.json scan --recurse docs
   deploy:
+    needs: lint
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
