@@ -16,11 +16,11 @@ plugins:
   - macros
   - git-revision-date-localized
   - mkdocs-video
-  - tags:
-      tags_file: general/tags.md
+  #- tags:
+  #    tags_file: general/tags.md
 
 theme:
-  name: material
+  name: mkdocs
   language: en
   features:
     - search.highlight
@@ -66,9 +66,9 @@ markdown_extensions:
       guess_lang: false
   - toc:
       permalink: true
-  - pymdownx.emoji:
-      emoji_index: !!python/name:materialx.emoji.twemoji
-      emoji_generator: !!python/name:materialx.emoji.to_svg
+  #- pymdownx.emoji:
+  #    emoji_index: !!python/name:materialx.emoji.twemoji
+  #    emoji_generator: !!python/name:materialx.emoji.to_svg
   - pymdownx.highlight:
       anchor_linenums: true
   - pymdownx.inlinehilite

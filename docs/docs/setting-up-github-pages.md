@@ -37,3 +37,18 @@ Make lint
 ```
 sudo chmod a+x markdown-lint.sh
 ```
+
+
+///
+
+sudo apt-get install python-pip 
+sudo apt-get install python3-pip
+pip3 install mkdocs
+Create branch \gh-pages\
+
+
+
+
+pip install pymdown-extensions
+pip install mkdocs-awesome-pages-plugin
+pip install mkdocs-macros-plugin
