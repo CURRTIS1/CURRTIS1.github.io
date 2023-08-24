@@ -1,3 +1,8 @@
-## Testing
+## Github Pages Documentation
 
-Testing 1-2-3
+This is a Github Pages to store all documentation on:
+
+- AWS
+- Terraform
+- EKS
+- Any other projects
