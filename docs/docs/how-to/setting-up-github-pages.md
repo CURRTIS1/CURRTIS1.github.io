@@ -6,7 +6,7 @@
 
 Follow the below link to install `MKDocs`
 
-["Getting Started with MKDocs@](https://www.mkdocs.org/getting-started/)
+["Getting Started with MKDocs"](https://www.mkdocs.org/getting-started/)
 
 If you get the error `ModuleNotFoundError: No module named 'apt_pkg'` run the below:
 
