@@ -4,9 +4,9 @@
 }
 
 [data-md-color-scheme="light"] {
-    --md-primary-fg-color:#eb0000;
-    --md-typeset-a-color:#eb0000;
-    --md-accent-fg-color: #eb0000;
+    --md-primary-fg-color:#424242;
+    --md-typeset-a-color:#424242;
+    --md-accent-fg-color: #290000;
     --md-text-font: "FiraSans-Regular";
 }
 

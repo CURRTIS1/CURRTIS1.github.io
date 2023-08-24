@@ -30,14 +30,14 @@ theme:
     - navigation.indexes
     - content.action.edit
   palette:
-    - scheme: light
-      toggle:
-        icon: material/weather-sunny
-        name: Switch to light mode
     - scheme: slate
       toggle:
         icon: material/weather-night
         name: Switch to dark mode
+    - scheme: light
+      toggle:
+        icon: material/weather-sunny
+        name: Switch to light mode
   logo: ""
   favicon: ""
   icon:
