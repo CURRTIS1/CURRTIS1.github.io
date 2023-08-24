@@ -20,7 +20,7 @@ plugins:
   #    tags_file: general/tags.md
 
 theme:
-  name: mkdocs
+  name: material
   language: en
   features:
     - search.highlight
