@@ -103,8 +103,6 @@ spec:
   activeDeadlineSeconds: 10
 ```
 
-
-
 ```bash
 
 ```
