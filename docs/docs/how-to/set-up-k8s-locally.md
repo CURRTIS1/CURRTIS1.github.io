@@ -66,7 +66,7 @@ nodes:
 Run the below referencing your `kind.config`
 
 ```bash
-kind create cluster --config .\Documents\Kind\kind.config
+kind create cluster --config '.\Documents\Kind\kind.config'
 ```
 
 Now when you run get nodes you can see a control-plane and 3 worker nodes
