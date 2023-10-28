@@ -343,7 +343,7 @@ You can also create a `replica` table by creating a `Global secondary index` usi
 
 ## DocumentDB
 
-DocumentDB is a NoSQL JSON document database service, it is designed to be compatibale with MongoDB. 
+DocumentDB is a NoSQL JSON document database service, it is designed to be compatibale with MongoDB.
 
 DocumentDB has one main instance and multiple replicas, similar to Aurora.
 
@@ -351,7 +351,7 @@ DocumentDB has one main instance and multiple replicas, similar to Aurora.
 
 Fully managed clustered peta-byte scale data wahrehouse. It's PostresSQL compatible.
 
-## Preparing for Data 
+## Preparing for Data
 
 ETL
 
