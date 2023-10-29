@@ -409,3 +409,89 @@ Use cases:
 - `Quantum Ledger` - based on blockchain, provides immutable journal as a service.
 - `Timestream` - Keeping up with time-series data
 - `Opensearch` - Mostly a search engine but also a document store, used to be Elasticsearch
+
+## Quiz
+
+What DynamoDB features can be utilised to increase the speed of read operations?
+
+- DynamoDB Accelerator (DAX)
+- Secondary Indexes
+
+!!! note
+    DynamoDB Accelerator (DAX) works as an in-memory cache in front of DynamoDB, which can accelerate many read operations.<br>
+    Secondary indexes contain a subset of attributes from a table and an alternate key for queries. These can help speed up certain read operations.
+
+Which of the following options allows users to have secure access to private files located in S3?
+
+- CloudFront signed cookies
+- CloudFront signed URLs
+- CloudFront origin access identity
+
+!!! note
+    Signed cookies generate special cookies to grant secure access to objects in an S3 bucket, but they require the creation of an application and policy to generate and control these items.<br>
+    Signed URLs generate special URLs to grant secure access to objects in an S3 bucket, but require the creation of an application and policy to generate and control these items.<br>
+    An origin access identity is a virtual user identity that is used to give the CloudFront distribution permission to fetch a private object from an S3 bucket.
+
+Which of the following are true statements regarding Amazon Athena?
+
+- Athena requires no servers to be set up or managed.
+- Amazon Athena provides an easy way to analyze data in Amazon S3 using standard SQL.
+- Athena can run ad-hoc queries using ANSI SQL.
+
+You are tasked with choosing a storage service for a high-performance computing (HPC) environment based on Amazon Linux. The workload stores and processes a large number of videos that require shared, parallel storage and compute-intensive transcoding. Which of the following storage options would be the optimal solution?
+
+- FSx for Lustre
+
+!!! note
+    FSx for Lustre is optimized for HPC environments and provides parallel storage for files being processed by HPC clusters.
+
+__ is an immutable way to set policies on a Glacier vault, such as retention or enforcing MFA before delete.
+
+- Glacier Vault Lock
+
+Which database service would be appropriate for an application that requires a flexible, JSON-formatted schema?
+
+- DocumentDB
+- S3 and Athena
+
+!!! note
+    DocumentDB is a document-store database that keeps data in JSON-formatted documents. These documents have flexible schemas and are designed to be intuitively structured such that developers can easily make sense of the data contained in each document.<br>
+    JSON objects can be stored in S3 and queried with Amazon Athena.
+
+Which of the following data formats does Amazon Athena support?
+
+- Apache ORC data
+- JSON data
+- Apache Parquet data
+
+You need low-latency access to your entire dataset. Amazon S3 should be used to back up your on-premises data periodically, so you can restore it in the event of a disaster in your data center. Which AWS Storage Gateway solution offers the most suitable features for this use case?
+
+- Volume Gateway - Stored Volumes
+
+!!! note
+    Stored volumes provide low-latency access to entire datasets, where on-premises gateways are configured to store all data locally. Point-in-time snapshots from the local data are taken asynchronously to Amazon S3. This configuration provides durable and inexpensive offsite backups that can be recovered to local data centers or Amazon EC2.
+
+Which of the following are considered attributes of the ACID compliance model?
+
+- The ACID consistency model is Atomic, Consistent, Isolated, and Durable.
+
+!!! note
+    Consistent transactions must be valid.<br>
+    Atomic transactions are "all or nothing".<br>
+    Durable means that a completed transaction must stick around.<br>
+    Isolated transactions can't mess with one another.
+
+You are architecting a complex application landscape that values fast disk I/O for EC2 instances above everything else. Which storage option would you choose?
+
+- Instance Store
+
+!!! note
+    EBS can provide very high I/O for your EC2 instances, but the locally attached Instance Store drives provide the highest I/O potential.<br>
+    Instance Store, because it is locally attached, provides the fastest disk I/O among the choices. Note the question did not specify the need for the storage to be persistent, so ephemeral options are in play too.
+
+You need to improve the performance of queries to your DynamoDB table. The most common queries do not use the partition key. What should you do?
+
+- Create a global secondary index with the most common queried attribute as the partition key.
+
+!!! note
+    A global secondary index can be used to speed up queries against non-primary key items. They have their own throughput capacity separate to the table. Using the most common queried attribute as the global secondary index's partition key lets us query on it directly.
