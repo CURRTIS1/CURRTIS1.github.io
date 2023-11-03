@@ -26,7 +26,7 @@
 Capex - Capital Expenses - Money spent on long term assets like buildings and equipment
 Opex - Operational Expenses - Money spent on ongoing costs for running the business, usually variable expenses.
 
-Examples of CapEx include physical assets, such as buildings, equipment, machinery, and vehicles. 
+Examples of CapEx include physical assets, such as buildings, equipment, machinery, and vehicles.
 Examples of OpEx include employee salaries, rent, utilities, and property taxes.
 
 ## Cost Optimisation Strategies
