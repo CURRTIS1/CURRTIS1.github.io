@@ -138,7 +138,7 @@ Example of config rules:
 ## Business Applications and End-user computing
 
 - Amazon appstream - Similar to workspaces but only apps eg Word, Excel
-- AWS Client VPN - 
+- AWS Client VPN -
 - Amazon Chime - Meeting and video conferencing (like skype and zoom)
 - Alexa for business - deploy alexa functionality and skills internally like echo in conference room
 - Amazon worklink - Secure access to internal web/applications - basically a secure proxy
@@ -150,7 +150,7 @@ Example of config rules:
 ## Machine Learning
 
 - Amazon comprehend - Natural languace processing - finds insight and relationships within text
-- Amazon polly - text to speech- Amazon 
+- Amazon polly - text to speech
 - Amazon translate - translate text to different languages
 - Amazon forecast - combines time-series data to deliver accurate forecasts
 - Amazon lex - conversational interface - chatbox
@@ -217,4 +217,3 @@ You have been collecting IoT messages from hundreds of vibration and temperature
 
 !!! note
     Sending data from AWS IoT Core to AWS IoT Analytics allows you to process and analyze the IoT data. You can then use Amazon QuickSight to visualize and create reports based on the processed time-series data.
-
