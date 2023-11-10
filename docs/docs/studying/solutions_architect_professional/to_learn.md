@@ -3,15 +3,15 @@
 | Service| Done |
 | ------ | ---- |
 | AWS Storage Gateway | &#9745; |
-| Dynamo DB Global or Secondary indexes | &#9744; |
-| Dynamo DB partition or sort key | &#9744; |
-| What is NOSQL | &#9744; |
-| AWS Compute Optimizer | &#9744; |
-| AWS S3 Storage Lens | &#9744; |
-| Instance fleets | &#9744; |
+| Dynamo DB Global or Secondary indexes | &#9745; |
+| Dynamo DB partition or sort key | &#9745; |
+| What is NoSQL | &#9745; |
+| AWS Compute Optimizer | &#9745; |
+| AWS S3 Storage Lens | &#9745; |
+| EC2 Instance fleets | &#9745; |
+| ASG scaling methods (simple etc) | &#9745; |
+| AWS VPC Gateway Endpoints | &#9745; |
 | Kineses | &#9744; |
-| ASG scaling methods (simple etc) | &#9744; |
-| Endpoings (S3 test) | &#9744; |
 
 Done - &#9745; <br>
 Not done - &#9744;
@@ -239,6 +239,62 @@ You can also create a `replica` table by creating a `Global secondary index` usi
 
 ![dynamo1](../../assets/images/dynamo1.png "dynamo1.png")
 
+### DynamoDB RCU and WCUs
+
+The read/write capacity mode controls how you are charged for read and write throughput and how you manage capacity. You can set the read/write capacity mode when creating a table or you can change it later.
+
+Secondary indexes inherit the read/write capacity mode from the base table.
+
+For on-demand mode tables, you don't need to specify how much read and write throughput you expect your application to perform.
+
+#### Read Requests
+
+DynamoDB read requests can be either strongly consistent, eventually consistent, or transactional.
+
+- A strongly consistent read request of an item up to 4 KB requires one read request unit.
+- An eventually consistent read request of an item up to 4 KB requires one-half read request unit.
+- A transactional read request of an item up to 4 KB requires two read request units.
+
+If you need to read an item that is larger than 4 KB, DynamoDB needs additional read request units. The total number of read request units required depends on the item size, and whether you want an eventually consistent or strongly consistent read. For example, if your item size is 8 KB, you require 2 read request units to sustain one strongly consistent read, 1 read request unit if you choose eventually consistent reads, or 4 read request units for a transactional read request.
+
+#### Write Requests
+
+One write request unit represents one write for an item up to 1 KB in size. If you need to write an item that is larger than 1 KB, DynamoDB needs to consume additional write request units. Transactional write requests require 2 write request units to perform one write for items up to 1 KB. The total number of write request units required depends on the item size. For example, if your item size is 2 KB, you require 2 write request units to sustain one write request or 4 write request units for a transactional write request.
+
+### DynamoDB Capacity
+
+#### Provisioned Capacity
+
+Allocate limits for your RCUs and WCUs. Provisioned throughput is the maximum amount of capacity that an application can consume from a table or index. If your application exceeds your provisioned throughput capacity on a table or index, it is subject to request throttling.
+
+For example the below usage graph you can see the usage patterns and the red line shows what you have provisioned and are paying for:
+
+![dynusage1](../../assets/images/dynusage1.png "dynusage1.png")
+
+You can see within the same graph that the red part shows provisioned resource that isn't being consumed but is being paid for:
+
+![dynusage2](../../assets/images/dynusage2.png "dynusage2.png")
+
+You can use Autoscaling to dynamically change provisioned limits (the red line) to keep costs down.
+
+Considerations:
+
+- Capacity can be wasted
+- Autoscaling can minimise waste but it can take a while to scale up.
+
+`Best suited for consistend or predictable traffic patterns.`
+
+#### On Demand Capacity
+
+There's no limits, you pay by request.
+
+Considerations:
+
+- Don't need to worry about throttling
+- Don't need to worry about scaling and usage monitoring
+
+`Best suited for unpredictable or random traffic patterns.`
+
 ### DynamoDB scaling
 
 Two ways to scale DynamoDB
@@ -282,6 +338,239 @@ A good idea would be to  use the sensor_id as the partition key which distribute
 
 ### DynamoDB Streams
 
+A DynamoDB feature that creates an event when record modifications occur on a table.
+
+Three event types:
+
+- INSERT
+- UPDATE
+- REMOVE
+
+The events have the content of the row being modified so you can see before/after to see what changed on the data.
+
+Events are in the same order of modifications.
+
+Lambda can be triggered off events.
+
+Use cases:
+
+- Real time dashboards
+- Scoreboards which update when changes are made
+
+### NoSQL
+
+Not only SQL.
+
+SQL:
+
+- Structured Query Language.
+- Table based
+- Vertically scalable (increase size)
+
+
+NoSQL:
+- Document
+- Key/Value
+- Graph
+- Wide column stores.
+- Horizontally scalable (add more instances)
+
+SQL databases are relational, and NoSQL databases are non-relational. SQL databases use structured query language (SQL) and have a predefined schema. NoSQL databases have dynamic schemas for unstructured data. SQL databases are vertically scalable, while NoSQL databases are horizontally scalable.
+
+NoSQL can shard the data across different datastores due to it being non-structured.
+
+### ACID
+
+- Atomic - all or nothing transactions
+- Consistency - data is valid before and after
+- Isolation - multiple transactions at the same time
+- Durability - committed data is never lost
+
+## AWS Compute Optimizer
+
+AWS Compute Optimizer helps avoid overprovisioning and underprovisioning four types of AWS resources:
+
+- Amazon Elastic Compute Cloud (EC2) instance types
+- Amazon Elastic Block Store (EBS) volumes
+- Amazon Elastic Container Service (ECS) services on AWS Fargate
+- AWS Lambda functions—based on your utilization data.
+
+![awsoptimiser](../../assets/images/awsoptimiser.png "awsoptimiser.png")
+
+## AWS S3 Storage Lens
+
+Amazon S3 Storage Lens is a cloud-storage analytics feature that you can use to gain organization-wide visibility into object-storage usage and activity. 
+
+You can use S3 Storage Lens metrics to:
+
+- Generate summary insights, such as finding out how much storage you have across your entire organization or which are the fastest-growing buckets and prefixes.
+- Identify cost-optimization opportunities
+- Implement data-protection and security best practices
+- Improve the performance of application workloads.
+
+For example, you can identify buckets that don't have S3 Lifecycle rules to expire incomplete multipart uploads that are more than 7 days old. You can also identify buckets that aren't following data-protection best practices, such as using S3 Replication or S3 Versioning. S3 Storage Lens also analyzes metrics to deliver contextual recommendations that you can use to optimize storage costs and apply best practices for protecting your data.
+
+!!! note
+    Advanced metrics come at a cost.<br>
+    Advanced metrics are detailed status code metrics, advanced cost and advanced data protection.
+
+![s3lens1](../../assets/images/s3lens1.png "s3lens1.png")
+
+Can also look at 403 errors to see where applications are attempting to hit files where permissions aren't set for the application correctly.
+
+## EC2 Instance fleets
+
+An EC2 Fleet contains the configuration information to launch a fleet—or group—of instances. In a single API call, a fleet can launch multiple instance types across multiple Availability Zones, using the On-Demand Instance, Reserved Instance, and Spot Instance purchasing options together. 
+
+Using EC2 Fleet, you can:
+
+- Define separate `On-Demand` and `Spot` capacity targets and the maximum amount you’re willing to pay per hour
+- Specify the instance types that work best for your applications
+- Specify how Amazon EC2 should distribute your fleet capacity within each purchasing option
+
+You can also set a maximum amount per hour that you’re willing to pay for your fleet, and EC2 Fleet launches instances until it reaches the maximum amount. When the maximum amount you're willing to pay is reached, the fleet stops launching instances even if it hasn’t met the target capacity.
+
+You now have an option to modify instance types and weights for a running EC2 Fleet or Spot Fleet (referred to further as fleet). You can replace an entire launch template configuration specifying new instance types, weights, and other parameters without deleting and re-creating a fleet. 
+
+You can have multiple pools and the fleet will choose the best way to implement depending on the strategy you define.
+
+Spot Fleet strategies:
+
+- `CapacityOptimised` - Spot instances come from the pool with optimal capacity for the number of instances running
+- `LowestPrice` - Spot instances come from the pool with the lowest price, this is the default strategy
+- `Diversified` - Spot instances are distributed across all pools
+- `InstancePoolsToUseCount` - Spot instances are distributed across pools, only valid with `LowestPrice`
+
 ## ASG scaling methods
 
-Step scaling methods don't have a cooldown period
+- Maintain
+- Manual
+- Schedule
+- Dynamic
+
+### Dynamic scaling
+
+Dynamic scaling scales the capacity of your Auto Scaling group as traffic changes occur.
+
+Amazon EC2 Auto Scaling supports the following types of dynamic scaling policies.
+
+If you are scaling based on a metric that increases or decreases proportionally to the number of instances in an Auto Scaling group, we recommend that you use target tracking scaling policies. Otherwise, we recommend that you use step scaling policies.
+
+| Scaling | What | When |
+| ------- | ---- | ---- |
+| Target Tracking Policy | Scale based on a predefined or custom metric in relation to a target value | When CPU utilisation gets to 70% on current instances, scale up |
+| Simple Scaling Policy | Waits until health check and cool down period expires before evaluating new need | Let's add new instances slow and steady |
+| Step Scaling Policy | Responds to scaling needs with more sophistication and logic | Add all the instances |
+
+#### Target tracking scaling
+
+`Target tracking scaling` — Increase and decrease the current capacity of the group based on a Amazon CloudWatch metric and a target value. It works similar to the way that your thermostat maintains the temperature of your home—you select a temperature and the thermostat does the rest. E.G., keep your average aggregate CPU usage of your ASG at 70%.
+
+For example, let's say that you currently have an application that runs on two instances, and you want the CPU utilization of the Auto Scaling group to stay at around 50 percent when the load on the application changes. This gives you extra capacity to handle traffic spikes without maintaining an excessive number of idle resources.
+
+You can meet this need by creating a target tracking scaling policy that targets an average CPU utilization of 50 percent. Then, your Auto Scaling group scales the number of instances to keep the actual metric value at or near 50 percent.
+
+!!! note
+    We strongly recommend that you use a target tracking scaling policy to scale on a metric like average CPU utilization or the RequestCountPerTarget metric from the Application Load Balancer
+
+#### Step scaling
+
+`Step scaling` — Increase and decrease the current capacity of the group based on a set of scaling adjustments, known as step adjustments, that vary based on the size of the alarm breach. Step scaling methods don't have a cooldown period.
+
+Step scaling policies and simple scaling policies are two of the dynamic scaling options available for you to use. Both require you to create CloudWatch alarms for the scaling policies. Both require you to specify the high and low thresholds for the alarms. Both require you to define whether to add or remove instances, and how many, or set the group to an exact size.
+
+The main difference between the policy types is the step adjustments that you get with step scaling policies. When step adjustments are applied, and they increase or decrease the current capacity of your Auto Scaling group, the adjustments vary based on the size of the alarm breach.
+
+!!! note
+    In most cases, step scaling policies are a better choice than simple scaling policies, even if you have only a single scaling adjustment.
+
+#### Simple scaling
+
+`Simple scaling` — Increase and decrease the current capacity of the group based on a single scaling adjustment, with a cooldown period between each scaling activity.
+
+## AWS VPC Endpoints
+
+A VPC endpoint enables customers to privately connect to supported AWS services and VPC endpoint services powered by AWS PrivateLink.
+
+VPC endpoints are virtual devices. They are horizontally scaled, redundant, and highly available Amazon VPC components that allow communication between instances in an Amazon VPC and services without imposing availability risks or bandwidth constraints on network traffic. There are two types of VPC endpoints:
+
+- Interface endpoints
+- Gateway endpoints
+
+![vpcendpoint](../../assets/images/vpcendpoint.png "vpcendpoint.png")
+
+### Interface endpoints
+
+Interface endpoints enable connectivity to services over AWS PrivateLink. These services include some AWS managed services, services hosted by other AWS customers and partners in their own Amazon VPCs (referred to as endpoint services), and supported AWS Marketplace partner services.
+
+The following AWS services integrate with AWS PrivateLink. You can create a VPC endpoint to connect to these services privately, as if they were running in your own VPC.
+
+There are a lot, some examples:
+
+- Cloudformation
+- Aurora
+- ECS
+- ECR
+- Cloudwatch
+- Codebuild
+- etc
+
+["AWS services that integrate with AWS PrivateLink"](https://docs.aws.amazon.com/vpc/latest/privatelink/aws-services-privatelink-support.html)
+
+### Gateway endpoints
+
+For the services:
+
+- DynamoDB
+- S3
+
+A gateway endpoint targets specific IP routes in an Amazon VPC route table, in the form of a prefix-list, used for traffic destined to Amazon DynamoDB or Amazon Simple Storage Service (Amazon S3). Gateway endpoints do not enable AWS PrivateLink.
+
+Instances in an Amazon VPC do not require public IP addresses to communicate with VPC endpoints, as interface endpoints use local IP addresses within the consumer Amazon VPC.
+
+## Kinesis
+
+Collection of services for processing streams of various data
+
+Data is processed in `shards` which are able to ingest 1000 records per second each
+
+A default limit of 500 shards is set but you can request an increase to unlimited
+
+Data records ingested consist of:
+
+- Partition key
+- Sequence number
+- Data blob (up to 1MB)
+
+Not persistent storage, default retention is 25 hours, can be configured to 365 days but should be used for transient storage moving data to another service to be ingested
+
+### Kinesis Data streams
+
+Ingest high volume of data and process it in a number of ways
+
+![kinesis1](../../assets/images/kinesis1.png "kinesis1.png")
+
+### Kinesis Firehouse
+
+Prepares and loads the data to a destination of choice
+
+![kinesis2](../../assets/images/kinesis2.png "kinesis2.png")
+
+### Kinesis Data analytics
+
+Can run analytics on the data as it's coming in, can run standard SQL queries against the data streams
+
+### Kinesis Shards
+
+Like lanes in a motorway, the more lanes, the more traffic that can go through
+
+Then you can either use applications to process the data in the streams or firehose to send that data to another service
+
+### Kinesis Example
+
+- Pull in tweets from Twitter API
+- Send them to a Kinesis stream
+- Kinesis firehose sends the data to an S3 bucket
+- Lambda parses the data and stores it in DynamoDB
+
+![kinesisexample](../../assets/images/kinesisexample.png "kinesisexample.png")
