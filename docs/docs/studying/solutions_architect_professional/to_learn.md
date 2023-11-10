@@ -367,7 +367,6 @@ SQL:
 - Table based
 - Vertically scalable (increase size)
 
-
 NoSQL:
 - Document
 - Key/Value
@@ -399,7 +398,7 @@ AWS Compute Optimizer helps avoid overprovisioning and underprovisioning four ty
 
 ## AWS S3 Storage Lens
 
-Amazon S3 Storage Lens is a cloud-storage analytics feature that you can use to gain organization-wide visibility into object-storage usage and activity. 
+Amazon S3 Storage Lens is a cloud-storage analytics feature that you can use to gain organization-wide visibility into object-storage usage and activity.
 
 You can use S3 Storage Lens metrics to:
 
@@ -420,7 +419,7 @@ Can also look at 403 errors to see where applications are attempting to hit file
 
 ## EC2 Instance fleets
 
-An EC2 Fleet contains the configuration information to launch a fleet—or group—of instances. In a single API call, a fleet can launch multiple instance types across multiple Availability Zones, using the On-Demand Instance, Reserved Instance, and Spot Instance purchasing options together. 
+An EC2 Fleet contains the configuration information to launch a fleet—or group—of instances. In a single API call, a fleet can launch multiple instance types across multiple Availability Zones, using the On-Demand Instance, Reserved Instance, and Spot Instance purchasing options together.
 
 Using EC2 Fleet, you can:
 
@@ -430,7 +429,7 @@ Using EC2 Fleet, you can:
 
 You can also set a maximum amount per hour that you’re willing to pay for your fleet, and EC2 Fleet launches instances until it reaches the maximum amount. When the maximum amount you're willing to pay is reached, the fleet stops launching instances even if it hasn’t met the target capacity.
 
-You now have an option to modify instance types and weights for a running EC2 Fleet or Spot Fleet (referred to further as fleet). You can replace an entire launch template configuration specifying new instance types, weights, and other parameters without deleting and re-creating a fleet. 
+You now have an option to modify instance types and weights for a running EC2 Fleet or Spot Fleet (referred to further as fleet). You can replace an entire launch template configuration specifying new instance types, weights, and other parameters without deleting and re-creating a fleet.
 
 You can have multiple pools and the fleet will choose the best way to implement depending on the strategy you define.
 
