@@ -11,7 +11,7 @@
 | EC2 Instance fleets | &#9745; |
 | ASG scaling methods (simple etc) | &#9745; |
 | AWS VPC Gateway Endpoints | &#9745; |
-| Kineses | &#9744; |
+| Kineses | &#9745; |
 
 Done - &#9745; <br>
 Not done - &#9744;
