@@ -5,7 +5,7 @@
       "context": "..",
       "args": {
         "VARIANT": "3.11",
-        "NODE_VERSION": "none"
+        "NODE_VERSION": "14"
       }
     },
     "customizations": {
@@ -28,10 +28,6 @@
         "rlnt.keep-a-changelog"
       ]
     },
-    "mounts": [
-          "source=${localEnv:HOME}/.ssh,target=/home/vscode/.ssh,type=bind,consistency=cached"
-      ],
     "remoteUser": "vscode",
     "postAttachCommand": "pre-commit install --install-hooks"
   }
-  

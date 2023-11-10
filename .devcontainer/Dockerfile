@@ -6,7 +6,7 @@ FROM mcr.microsoft.com/devcontainers/python:${VARIANT}
 
 SHELL ["/bin/bash", "-c"]
 # [Choice] Node.js version: none, lts/*, 16, 14, 12, 10
-ARG NODE_VERSION="none"
+ARG NODE_VERSION="14"
 RUN if [ "${NODE_VERSION}" != "none" ]; then su vscode -c "umask 0002 && . /usr/local/share/nvm/nvm.sh && nvm install ${NODE_VERSION} 2>&1"; fi
 
 RUN apt update && \
@@ -23,15 +23,22 @@ ARG USERNAME="vscode"
 
 USER ${USERNAME}
 WORKDIR /home/${USERNAME}/
+ARG HOME="/home/$USERNAME"
 
 # Set up alias for devcontainer commands using the alternate Makefile
-RUN echo 'alias make="make -f Makefile.container"' >> ~/.profile && \
-    echo 'alias make="make -f Makefile.container"' >> ~/.bash_aliases && \
-    curl -s https://raw.githubusercontent.com/git/git/master/contrib/completion/git-completion.bash -o ~/.git-completion.bash && \
-    echo '. ~/.git-completion.bash' >> ~/.bashrc && \
-    echo 'eval "$(gh completion -s bash)"' >> ~/.bashrc
+RUN echo 'alias make="make -f Makefile.container"' >> ~/.profile
+RUN echo 'alias make="make -f Makefile.container"' >> ~/.bash_aliases
+RUN curl -s https://raw.githubusercontent.com/git/git/master/contrib/completion/git-completion.bash -o ~/.git-completion.bash
+RUN echo '. ~/.git-completion.bash' >> ~/.bashrc
+RUN echo 'eval "$(gh completion -s bash)"' >> ~/.bashrc
+
+ENV PATH="${HOME}/.local/bin:$PATH"
 
 # Install needed python packages
 COPY --chown=${USERNAME} requirements.txt /tmp/pip-tmp/
+COPY --chown=${USERNAME} .pre-commit-config.yaml .
 RUN pip3 --disable-pip-version-check --no-cache-dir install --user -r /tmp/pip-tmp/requirements.txt
-RUN rm -r /tmp/pip-tmp
+RUN git init && \
+    pre-commit install-hooks && \
+    rm -rf .git && \
+    rm -rf /tmp/pip-tmp
