@@ -94,7 +94,7 @@ Can run analytics on the data as it's coming in, can run standard SQL queries ag
 
 ### Kinesis Shards
 
-Like lanes in a motorway, the more lanes, the more traffic that can go through
+Like lans in a motorway, the more lanes, the more traffic that can go through
 
 Then you can either use applications to process the data in the streams or firehose to send that data to another service
 
