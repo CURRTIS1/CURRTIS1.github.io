@@ -42,3 +42,15 @@ RUN git init && \
     pre-commit install-hooks && \
     rm -rf .git && \
     rm -rf /tmp/pip-tmp
+
+# AWS CDK
+
+# Update NPM
+RUN npm config set unsafe-perm true
+# Install AWSCLI
+RUN pip install --upgrade pip && \
+    pip install --upgrade awscli
+# Install cdk
+RUN npm install -g aws-cdk
+RUN cdk --version
+ENTRYPOINT []
