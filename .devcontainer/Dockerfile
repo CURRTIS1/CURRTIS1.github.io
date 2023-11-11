@@ -26,11 +26,16 @@ WORKDIR /home/${USERNAME}/
 ARG HOME="/home/$USERNAME"
 
 # Set up alias for devcontainer commands using the alternate Makefile
-RUN echo 'alias make="make -f Makefile.container"' >> ~/.profile
-RUN echo 'alias make="make -f Makefile.container"' >> ~/.bash_aliases
+#RUN echo 'alias make="make -f Makefile.container"' >> ~/.profile
+#RUN echo 'alias make="make -f Makefile.container"' >> ~/.bash_aliases
 RUN curl -s https://raw.githubusercontent.com/git/git/master/contrib/completion/git-completion.bash -o ~/.git-completion.bash
 RUN echo '. ~/.git-completion.bash' >> ~/.bashrc
 RUN echo 'eval "$(gh completion -s bash)"' >> ~/.bashrc
+
+
+# Commented out make aliases as I got the below Error:
+#make: Makefile.container: No such file or directory
+#make: *** No rule to make target 'Makefile.container'.  Stop.
 
 ENV PATH="${HOME}/.local/bin:$PATH"
 
@@ -57,3 +62,15 @@ ENTRYPOINT []
 
 # Install Maven
 RUN sudo apt-get install maven -y
+
+# Install Poetry
+COPY --chown=${USERNAME} pyproject.toml /home/${USERNAME}/
+RUN pip install --user poetry
+ENV PATH="${PATH}:/root/.local/bin"
+RUN poetry install
+
+
+# Copy MakeFile
+#COPY --chown=${USERNAME} docs/Makefile /home/${USERNAME}/
+#COPY --chown=${USERNAME} docs/scripts /home/${USERNAME}/
+#COPY --chown=${USERNAME} .pre-commit-config.yaml /home/${USERNAME}/
