@@ -13,6 +13,7 @@
 | AWS VPC Gateway Endpoints | &#9745; |
 | Kineses | &#9745; |
 | Application portfolio assessment | &#9745; |
+| Service Catalog Constraints | &#9745; |
 
 Done - &#9745; <br>
 Not done - &#9744;
@@ -585,3 +586,30 @@ Long-running cloud migration programs require the coordination of several workst
 - Continuous assessment and improvement
 
 ![apa](../../assets/images/apa.png "apa.png")
+
+## Service Catalog Constraints
+
+Constraints restrict the ways that specific AWS resources can be deployed for a product. You can use them to apply limits to products for governance or cost control. There are two types of constraints: template and launch. Template constraints restrict the configuration parameters that are available for the user when launching the product (for example, EC2 instance types or IP ranges). Template constraints allow you to reuse generic infrastructure as code (IaC) templates for products and apply restrictions to the templates on a per-product or per-portfolio basis. Launch constraints allow you to specify a role for a product in a portfolio. This role is used to provision the resources at launch, so you can restrict user permissions without impacting users’ ability to provision products from the catalog.
+
+Constraints:
+
+- Launch Constraints
+- Template Constraints
+
+### Launch Constraints
+
+A launch constraint specifies the AWS Identity and Access Management (IAM) role that AWS Service Catalog assumes when an end user launches, updates, or terminates a product.
+
+Launch constraints apply to products in the portfolio (product-portfolio association). Launch constraints do not apply at the portfolio level or to a product across all portfolios.
+
+Without a launch constraint, end users must launch and manage products using their own IAM credentials.
+
+### Template Constraints
+
+To limit the options that are available to end users when they launch a product, you apply template constraints. Apply template constraints to ensure that the end users can use products without breaching the compliance requirements of your organization. You apply template constraints to a product in a AWS Service Catalog portfolio. A portfolio must contain one or more products before you can define template constraints.
+
+A template constraint consists of one or more rules that narrow the allowable values for parameters that are defined in the product's underlying AWS CloudFormation template. The parameters in an AWS CloudFormation template define the set of values that users can specify when creating a stack. For example, a parameter might define the various instance types that users can choose from when launching a stack that includes EC2 instances.
+
+### Service Actions
+
+Using service actions, you can enable end users to perform operational tasks, troubleshoot issues, run approved commands, or request permissions in AWS Service Catalog on your provisioned products, without needing to grant end users full access to AWS services. You use AWS Systems Manager documents to define service actions. The AWS Systems Manager documents provide access to pre-defined actions that implement AWS best practices, such as Amazon EC2 stop and reboot, and you can define custom actions too.
