@@ -1,0 +1,20 @@
+## Papers
+
+| Paper | Service | Done |
+| ----- | ------- | ---- |
+| Free test | Whizlabs | &#9745; |
+| Analytics | Whizlabs | &#9744; |
+| Internet of Things | Whizlabs | &#9744; |
+| Machine Learning | Whizlabs | &#9744; |
+| Security, Identity, and Compliance | Whizlabs | &#9744; |
+| Management and Governance | Whizlabs | &#9744; |
+| Practice test 1 | Whizlabs | &#9744; |
+| Practice test 2 | Whizlabs | &#9744; |
+| Practice test 3 | Whizlabs | &#9744; |
+| Final Test | Whizlabs | &#9744; |
+| Practice test 1 | ACG | &#9744; |
+| Practice test 2 | ACG | &#9744; |
+| Practice test 3 | ACG | &#9744; |
+
+Done - &#9745; <br>
+Not done - &#9744;
