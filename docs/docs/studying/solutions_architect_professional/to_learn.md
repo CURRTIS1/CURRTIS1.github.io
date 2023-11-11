@@ -12,6 +12,7 @@
 | ASG scaling methods (simple etc) | &#9745; |
 | AWS VPC Gateway Endpoints | &#9745; |
 | Kineses | &#9745; |
+| Application portfolio assessment | &#9745; |
 
 Done - &#9745; <br>
 Not done - &#9744;
@@ -573,3 +574,14 @@ Then you can either use applications to process the data in the streams or fireh
 - Lambda parses the data and stores it in DynamoDB
 
 ![kinesisexample](../../assets/images/kinesisexample.png "kinesisexample.png")
+
+## Application portfolio assessment
+
+Long-running cloud migration programs require the coordination of several workstreams such as program governance, landing zone (an operative target environment with security controls), migration, and application portfolio.
+
+- Portfolio discovery and initial planning
+- Prioritized applications assessment
+- Portfolio analysis and migration planning
+- Continuous assessment and improvement
+
+![apa](../../assets/images/apa.png "apa.png")
