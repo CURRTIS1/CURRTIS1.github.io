@@ -6,7 +6,7 @@ FROM mcr.microsoft.com/devcontainers/python:${VARIANT}
 
 SHELL ["/bin/bash", "-c"]
 # [Choice] Node.js version: none, lts/*, 16, 14, 12, 10
-ARG NODE_VERSION="14"
+ARG NODE_VERSION="18"
 RUN if [ "${NODE_VERSION}" != "none" ]; then su vscode -c "umask 0002 && . /usr/local/share/nvm/nvm.sh && nvm install ${NODE_VERSION} 2>&1"; fi
 
 RUN apt update && \
@@ -46,7 +46,7 @@ RUN git init && \
 # AWS CDK
 
 # Update NPM
-RUN npm config set unsafe-perm true
+# RUN npm config set unsafe-perm true
 # Install AWSCLI
 RUN pip install --upgrade pip && \
     pip install --upgrade awscli
@@ -54,3 +54,6 @@ RUN pip install --upgrade pip && \
 RUN npm install -g aws-cdk
 RUN cdk --version
 ENTRYPOINT []
+
+# Install Maven
+RUN sudo apt-get install maven -y
