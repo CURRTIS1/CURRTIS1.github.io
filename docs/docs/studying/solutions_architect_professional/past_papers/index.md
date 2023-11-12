@@ -3,11 +3,11 @@
 | Paper | Service | Done |
 | ----- | ------- | ---- |
 | Free test | Whizlabs | &#9745; |
-| Analytics | Whizlabs | &#9744; |
+| Analytics | Whizlabs | &#9745; |
 | Internet of Things | Whizlabs | &#9744; |
-| Machine Learning | Whizlabs | &#9744; |
-| Security, Identity, and Compliance | Whizlabs | &#9744; |
-| Management and Governance | Whizlabs | &#9744; |
+| Machine Learning | Whizlabs | &#9745; |
+| Security, Identity, and Compliance | Whizlabs | &#9745; |
+| Management and Governance | Whizlabs | &#9745; |
 | Practice test 1 | Whizlabs | &#9744; |
 | Practice test 2 | Whizlabs | &#9744; |
 | Practice test 3 | Whizlabs | &#9744; |
