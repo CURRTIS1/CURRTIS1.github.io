@@ -8,8 +8,8 @@
 | Machine Learning | Whizlabs | &#9745; |
 | Security, Identity, and Compliance | Whizlabs | &#9745; |
 | Management and Governance | Whizlabs | &#9745; |
-| Practice test 1 | Whizlabs | &#9744; |
-| Practice test 2 | Whizlabs | &#9744; |
+| Practice test 1 | Whizlabs | &#9745; |
+| Practice test 2 | Whizlabs | &#9745; |
 | Practice test 3 | Whizlabs | &#9744; |
 | Final Test | Whizlabs | &#9744; |
 | Practice test 1 | ACG | &#9744; |
@@ -23,4 +23,5 @@ To learn:
 
 - Multicast
 - Cognito User pools and Identity pools
-- API Gateway, stage vs integration
+- API Gateway, stage vs integration, method, integration response
+- GetCredentialsForIdentity
