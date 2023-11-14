@@ -10,7 +10,7 @@
 | Management and Governance | Whizlabs | &#9745; |
 | Practice test 1 | Whizlabs | &#9745; |
 | Practice test 2 | Whizlabs | &#9745; |
-| Practice test 3 | Whizlabs | &#9744; |
+| Practice test 3 | Whizlabs | &#9745; |
 | Final Test | Whizlabs | &#9744; |
 | Practice test 1 | ACG | &#9744; |
 | Practice test 2 | ACG | &#9744; |
@@ -25,3 +25,10 @@ To learn:
 - Cognito User pools and Identity pools
 - API Gateway, stage vs integration, method, integration response
 - GetCredentialsForIdentity
+- Step function - workflows
+- AWS Macie?
+- IOT??
+- SQS visibility timeout vs message retention
+- AMIs / snapshots of instance store EC2
+- IDP and SSO setup
+- Data pipeline vs DMS
