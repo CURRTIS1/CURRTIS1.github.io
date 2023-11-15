@@ -613,3 +613,143 @@ A template constraint consists of one or more rules that narrow the allowable va
 ### Service Actions
 
 Using service actions, you can enable end users to perform operational tasks, troubleshoot issues, run approved commands, or request permissions in AWS Service Catalog on your provisioned products, without needing to grant end users full access to AWS services. You use AWS Systems Manager documents to define service actions. The AWS Systems Manager documents provide access to pre-defined actions that implement AWS best practices, such as Amazon EC2 stop and reboot, and you can define custom actions too.
+
+## Multicast
+
+Multicast is a communication protocol used for delivering a single stream of data to multiple receiving computers simultaneously. Transit Gateway supports routing multicast traffic between subnets of attached VPCs, and it serves as a multicast router for instances sending traffic destined for multiple receiving instances.
+
+## Cognito
+
+The two main components of Amazon Cognito are user pools and identity pools. User pools are user directories that provide sign-up and sign-in options for your web and mobile app users. Identity pools provide AWS credentials to grant your users access to other AWS services.
+
+### User Pool
+
+A user pool is a user directory in Amazon Cognito. Your app users can sign in either directly through a user pool, or federate through a third-party identity provider (IdP). The user pool manages the overhead of handling the tokens that are returned from social sign-in through Facebook, Google, Amazon, and Apple, and from OpenID Connect (OIDC) and SAML IdPs. Whether your users sign in directly or through a third party, all members of the user pool have a directory profile that you can access through an SDK.
+
+### Identity Pool
+
+With an identity pool, your users can obtain temporary AWS credentials to access AWS services, such as Amazon S3 and DynamoDB. Identity pools support anonymous guest users, as well as federation through third-party IdPs.
+
+## Step Function Workflows
+
+AWS Step Functions is a serverless orchestration service that lets you integrate with AWS Lambda functions and other AWS services to build business-critical applications. Through Step Functions' graphical console, you see your application’s workflow as a series of event-driven steps.
+
+Step Functions has two workflow types. Standard workflows have exactly-once workflow execution and can run for up to one year. This means that each step in a Standard workflow will execute exactly once. Express workflows, however, have at-least-once workflow execution and can run for up to five minutes. This means that one or more steps in an Express Workflow can potentially run more than once, while each step in the workflow executes at least once.
+
+Standard workflows are ideal for long-running, auditable workflows, as they show execution history and visual debugging. Express workflows are ideal for high-event-rate workloads, such as streaming data processing and IoT data ingestion.
+
+## SQS Visibility timeout and message retention
+
+When a consumer receives and processes a message from a queue, the message remains in the queue. Amazon SQS doesn't automatically delete the message. Because Amazon SQS is a distributed system, there's no guarantee that the consumer actually receives the message (for example, due to a connectivity issue, or due to an issue in the consumer application). Thus, the consumer must delete the message from the queue after receiving and processing it. If the consumer fails to process and delete the message before the visibility timeout expires, the message becomes visible to other consumers.
+
+![sqsvisibility](../../assets/images/sqsvisibility.png "sqsvisibility.png")
+
+Immediately after a message is received, it remains in the queue. To prevent other consumers from processing the message again, Amazon SQS sets a visibility timeout, a period of time during which Amazon SQS prevents all consumers from receiving and processing the message. The default visibility timeout for a message is 30 seconds.
+
+Amazon SQS supports dead-letter queues (DLQ), which other queues (source queues) can target for messages that can't be processed (consumed) successfully. Dead-letter queues are useful for debugging your application or messaging system because they let you isolate unconsumed messages to determine why their processing didn't succeed.
+
+## AWS Glue / DMS / Data pipeline
+
+`AWS Glue` is a fully managed extract, transform, and load (ETL) service that simplifies data preparation and integration. Glue offers automated data discovery, cataloging, and schema inference, making it an excellent choice for data lakes and data warehousing projects.
+
+!!! note
+    Use Glue to extract data from various sources, transform it into a common format, and load it into an AWS Redshift data warehouse for analytics purposes.
+
+`AWS DataPipeline` is an orchestration service that helps you define, schedule, and manage complex data processing workflows. It allows you to combine various AWS services and third-party applications to build end-to-end data processing pipelines.
+
+!!! note
+    Use DataPipeline to schedule regular data imports from an S3 bucket to a Redshift cluster, perform data transformations using Glue, and trigger an AWS Lambda function for further processing or notifications.
+
+`AWS EMR` is a managed big data processing service that uses Apache Hadoop and Spark to process large volumes of data.
+
+!!! note
+    Use EMR to process large-scale clickstream data, perform real-time analytics using Spark, and store the aggregated results in an S3 bucket for further analysis.
+
+`AWS DMS` is a fully managed service that helps migrate, replicate, and continuously capture data changes between different databases
+
+!!! note
+    Use DMS to migrate data from an on-premises Oracle database to an Amazon RDS instance, ensuring data consistency and minimal downtime.
+
+## IOSP vs Throughput
+
+![iops_throughput](../../assets/images/iops_throughput.png "iops_throughput.png")
+
+For low latency you want to use IOPS and for large data sets you want to use Throughput.
+
+## Instance Store Backed EC2
+
+An instance store provides temporary block-level storage for your instance.
+
+This is different to EBS backed instances.
+
+There are no EBS volumes in the EC2 > Storage section of the console.
+
+You cannot unattach the volumes as they are connected physically on the EC2 instance.
+
+This is useful for low latency.
+
+The instance cannot be stopped, it can only be rebooted or terminated.
+
+Useful for instances with ephemeral storage such as caches, buffers, temporary content.
+
+You cannot resize the instance.
+
+Backups have to be done manually by copying the data off the volume.
+
+## AWS Macie
+
+Amazon Macie is a data security service that uses machine learning (ML) and pattern matching to discover and help protect your sensitive data.
+
+Reviews and suggests changes based on use determined by machine learning:
+
+- S3 bucket encryption
+- S3 bucket public access
+- S3 bucket shared permissions
+
+## AWS Outposts
+
+AWS Outposts is a family of fully managed solutions delivering AWS infrastructure and services to virtually any on-premises or edge location for a truly consistent hybrid experience. Outposts solutions allow you to extend and run native AWS services on premises, and is available in a variety of form factors, from 1U and 2U Outposts servers to 42U Outposts racks, and multiple rack deployments.
+
+### S3 Outposts
+
+Amazon S3 on Outposts delivers object storage to your on-premises AWS Outposts environment to meet local data processing and data residency needs. Using the S3 APIs and features, S3 on Outposts makes it easy to store, secure, tag, retrieve, report on, and control access to the data on your Outpost.
+
+## API Gateway
+
+- First you create a `Resource` for example `/transactions`
+- Then you create a `Method` for example `GET`
+- Then you create your `Integration` for example a `Lambda Function`
+
+!!! note
+    In `Lambda proxy integration`, when a client submits an API request, API Gateway passes to the integrated Lambda function an event object, except that the order of the request parameters is not preserved. This request data includes the request headers, query string parameters, URL path variables, payload, and API configuration data. The configuration data can include current deployment stage name, stage variables, user identity, or authorization context (if any). The backend Lambda function parses the incoming request data to determine the response that it returns.
+
+Then you deploy the API gateway into a `Stage` for example `Development`
+
+## Cognito
+
+### Basic flow
+
+- To generate or retrieve a user identity in the identity pool, call the `GetId` API
+- To retrieve the open ID token, use the result from step 2 to call the `GetOpenIdToken` API.
+- To retrieve the temporary credentials of the authenticated role, use the token from step 3 to call the `AssumeRoleWithWebIdentity` API.
+
+![cognitobasic](../../assets/images/cognitobasic.png "cognitobasic.png")
+
+### Enhanced flow
+
+- To generate or retrieve a user identity in the identity pool, call the `GetId` API
+- To retrieve temporary credentials from the identity pool, call the `GetCredentialsForIdentity` API.
+
+![cognitoenhanced](../../assets/images/cognitoenhanced.png "cognitoenhanced.png")
+
+!!! note
+    When calling `GetCredentialsForIdentity`, Amazon Cognito is actually making the call to `AssumeRoleWithWebIdentity` on your behalf
+
+!!! note
+    If you created an identity pool after February 2015 and used the supplied example code, you are already using the enhnaced flow.
+
+For most customers, the enhanced flow is the correct choice, it offers many benefits over the basic flow:
+
+- One less network call to get credentials on the device.
+- All calls are made to Amazon Cognito, meaning it is also one less network connection.
+- Roles no longer need to be embedded in your application, only an identity pool id and region are necessary to start bootstrapping credentials.
