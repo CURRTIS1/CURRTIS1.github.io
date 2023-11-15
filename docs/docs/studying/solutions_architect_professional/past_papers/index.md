@@ -32,3 +32,7 @@ To learn:
 - AMIs / snapshots of instance store EC2
 - IDP and SSO setup
 - Data pipeline vs DMS
+- IOPS vs Throughput
+- Instance store backed EC2
+- S3 outposts
+- AWS Glue
