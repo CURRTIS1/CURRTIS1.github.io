@@ -21,18 +21,11 @@ Not done - &#9744;
 
 To learn:
 
-- Multicast
-- Cognito User pools and Identity pools
-- API Gateway, stage vs integration, method, integration response
-- GetCredentialsForIdentity
-- Step function - workflows
-- AWS Macie?
-- IOT??
-- SQS visibility timeout vs message retention
-- AMIs / snapshots of instance store EC2
-- IDP and SSO setup
-- Data pipeline vs DMS
-- IOPS vs Throughput
-- Instance store backed EC2
-- S3 outposts
-- AWS Glue
+- Timestream
+- Amazon Redshift Spectrum
+- Athena vs Opensearch (SQL)
+- AWS Proton
+- Permissions boundary - allow deny
+- Conditions on an IAM policy
+- GetHLSStreamingSessionURL  HLS - mobile or pc streaming
+- DMS S3 to Dynamo DB migration or replication?
