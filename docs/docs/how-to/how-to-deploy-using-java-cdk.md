@@ -124,6 +124,39 @@ You will see the below if the deployment is successful.
 
 ![cdk1](../../assets/images/cdk1.png "cdk1.png")
 
+## Deploying an application written in Cloudformation
+
+Run the above steps up until:
+
+```bash
+cdk bootstrap
+```
+
+Add the cloudformation template to `src/main/java/com/myorg/`.
+
+Adding an S3 bucket, add the below to `src/main/java/com/myorg/HelloCfnCdkApp.java` referencing your template file `s3.template`.
+
+```java
+import software.amazon.awscdk.Stack;
+import software.amazon.awscdk.StackProps;
+import software.amazon.awscdk.cloudformation.include.CfnInclude;
+import software.constructs.Construct;
+
+public class HelloCfnCdkApp extends Stack {
+    public MyStack(final Construct scope, final String id) {
+        this(scope, id, null);
+    }
+
+    public HelloCfnCdkApp(final Construct scope, final String id, final StackProps props) {
+        super(scope, id, props);
+
+        CfnInclude template = CfnInclude.Builder.create(this, "Template")
+            .templateFile("s3.template")
+            .build();
+    }
+}
+```
+
 ## Reference Links
 
 ["Getting started with the AWS CDK"](https://docs.aws.amazon.com/cdk/v2/guide/getting_started.html)
