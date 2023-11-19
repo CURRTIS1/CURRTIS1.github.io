@@ -14,6 +14,12 @@
 | Kineses | &#9745; |
 | Application portfolio assessment | &#9745; |
 | Service Catalog Constraints | &#9745; |
+| Timestream | &#9745; |
+| Amazon Redshift Spectrum | &#9745; |
+| Athena vs Opensearch (SQL) | &#9745; |
+| AWS Proton | &#9745; |
+| Permissions boundary - allow / deny | &#9745; |
+| Using Amazon S3 as a source for AWS DMS | &#9745; |
 
 Done - &#9745; <br>
 Not done - &#9744;
@@ -753,3 +759,40 @@ For most customers, the enhanced flow is the correct choice, it offers many bene
 - One less network call to get credentials on the device.
 - All calls are made to Amazon Cognito, meaning it is also one less network connection.
 - Roles no longer need to be embedded in your application, only an identity pool id and region are necessary to start bootstrapping credentials.
+
+## Timestream
+
+Amazon Timestream is a fast, scalable, and serverless time-series database service that makes it easier to store and analyze trillions of events per day up to 1,000 times faster. Amazon Timestream automatically scales up or down to adjust capacity and performance, so that you don’t have to manage the underlying infrastructure.
+
+Use case is IOT.
+
+## Redshift Spectrum
+
+With Redshift Spectrum, an analyst can perform SQL queries on data stored in Amazon S3 buckets. This can save time and money because it eliminates the need to move data from a storage service to a database, and instead directly queries data inside an S3 bucket
+
+## Athena vs Opensearch
+
+Opensearch is opensource and a lot faster.
+
+## AWS Proton
+
+AWS Proton is a deployment workflow tool for modern applications that helps platform and DevOps engineers achieve organizational agility.
+
+You can support reliable deployments for modern applications with consistent standards for CI/CD, security, and monitoring.
+
+## Permissions boundary
+
+An entity's permissions boundary allows it to perform only the actions that are allowed by both its identity-based policies and its permissions boundaries.
+
+!!! note
+    Don't use resource-based policy statements that include a NotPrincipal policy element with a Deny effect for IAM users or roles that have a permissions boundary policy attached. `The NotPrincipal element with a Deny effect will always deny any IAM principal that has a permissions boundary policy attached`, regardless of the values specified in the NotPrincipal element.
+
+## Using Amazon S3 as a source for AWS DMS
+
+You can migrate data from an Amazon S3 bucket using AWS DMS. To do this, provide access to an Amazon S3 bucket containing one or more data files. In that S3 bucket, include a JSON file that describes the mapping between the data and the database tables of the data in those files.
+
+The source data files must be present in the Amazon S3 bucket before the full load starts. You specify the bucket name using the bucketName parameter.
+
+The source data files must be in comma-separated value (.csv) format.
+
+The mapping rule should be put in the source endpoint configuration rather than the task settings if S3 is the source for DMS.

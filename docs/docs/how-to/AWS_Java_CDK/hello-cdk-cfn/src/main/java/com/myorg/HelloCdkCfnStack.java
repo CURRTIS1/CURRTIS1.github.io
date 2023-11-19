@@ -1,3 +1,5 @@
+package com.myorg;
+
 import software.amazon.awscdk.Stack;
 import software.amazon.awscdk.StackProps;
 import software.amazon.awscdk.cloudformation.include.CfnInclude;
