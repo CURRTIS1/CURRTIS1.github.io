@@ -146,6 +146,8 @@ Add the cloudformation template to `src/main/java/com/myorg/`.
 
 Adding an S3 bucket, add the below to `src/main/java/com/myorg/HelloCfnCdkApp.java` referencing your template file `s3.template`.
 
+The `s3.template` should be located in the app root, the same folder as pom.xml.
+
 ```java
 import software.amazon.awscdk.Stack;
 import software.amazon.awscdk.StackProps;
