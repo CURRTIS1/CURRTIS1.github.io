@@ -117,11 +117,18 @@ Synthesize an AWS CloudFormation template for the app, as follows.
 cdk synth
 ```
 
+!!! note
+    The cdk synth command executes your app, which causes the resources defined in it to be translated into an AWS CloudFormation template. The displayed output of cdk synth is a YAML-format template. Following, you can see the beginning of our app's output. The template is also saved in the cdk.out directory in JSON format.
+
 To deploy the stack using AWS CloudFormation, issue:
 
 ```bash
 cdk deploy
 ```
+
+!!! note
+    As with cdk synth, you don't need to specify the name of the stack if there's only one in the app.<br>
+    It is optional (though good practice) to synthesize before deploying. The AWS CDK synthesizes your stack before each deployment.
 
 You will see the below if the deployment is successful.
 
