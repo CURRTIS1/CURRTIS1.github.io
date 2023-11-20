@@ -16,5 +16,6 @@ public class HelloCdkCfnStack extends Stack {
         CfnInclude template = CfnInclude.Builder.create(this, "Template")
         	.templateFile("my-template.json")
         	.build();
+
     }
 }

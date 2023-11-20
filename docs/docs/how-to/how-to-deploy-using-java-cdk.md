@@ -82,6 +82,9 @@ If you get the error below make sure to bootstrap:
 cdk bootstrap
 ```
 
+!!! note
+    If you're deploying this again to a new account such as the ACG playground, you'd need to bootstrap again.
+
 ## Add a resources
 
 Adding an S3 bucket, add the below to `src/main/java/com/myorg/HelloCdkStack.java`
@@ -157,8 +160,31 @@ public class HelloCfnCdkApp extends Stack {
 }
 ```
 
+To deploy the stack using AWS CloudFormation, issue:
+
+```bash
+cdk deploy
+```
+
+To deploy the stack using AWS CloudFormation and a parameter, issue:
+
+```bash
+cdk deploy MyStack --parameters uploadBucketName=uploadbucket
+```
+
+To reference multiple paramters:
+
+```bash
+cdk deploy MyStack --parameters uploadBucketName=upbucket --parameters downloadBucketName=downbucket
+```
+
+!!! note
+    By default, the AWS CDK retains values of parameters from previous deployments and uses them in subsequent deployments if they are not specified explicitly. Use the --no-previous-parameters flag to require all parameters to be specified.
+
 ## Reference Links
 
 ["Getting started with the AWS CDK"](https://docs.aws.amazon.com/cdk/v2/guide/getting_started.html)
 
 ["Your first AWS CDK app"](https://docs.aws.amazon.com/cdk/v2/guide/hello_world.html)
+
+["CDK Parameters"](https://docs.aws.amazon.com/cdk/v2/guide/parameters.html)
