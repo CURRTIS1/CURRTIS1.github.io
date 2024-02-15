@@ -11,8 +11,9 @@ class AwsPythonCdkStack(Stack):
         self.vpc_name = "vpc-demo"
         self.vpc_cidr = "192.168.0.0/16"
 
-        s3.Bucket(
-            self, id="bucket123", bucket_name="32897423j4hkcuhiuewhf98723948yiuhtest"
+        self.flow_log_bucket = s3.Bucket(
+            self,
+            id="bucket123",
         )
 
         self.__create_vpc()
@@ -20,7 +21,7 @@ class AwsPythonCdkStack(Stack):
     def __create_vpc(self):
         vpc_construct_id = "vpc"
         audit_bucket_construct_id = "audit-bucket"
-        audit_bucket_name = "32897423j4hkcuhiuewhf98723948yiuhtest"
+        audit_bucket_name = self.flow_log_bucket.bucket_name
         self.audit_bucket = s3.Bucket.from_bucket_name(
             self, audit_bucket_construct_id, audit_bucket_name
         )
