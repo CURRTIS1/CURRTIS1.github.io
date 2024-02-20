@@ -74,3 +74,6 @@ RUN poetry install
 #COPY --chown=${USERNAME} docs/Makefile /home/${USERNAME}/
 #COPY --chown=${USERNAME} docs/scripts /home/${USERNAME}/
 #COPY --chown=${USERNAME} .pre-commit-config.yaml /home/${USERNAME}/
+
+# Install AWS Construct library
+RUN python -m pip install aws-cdk-lib
