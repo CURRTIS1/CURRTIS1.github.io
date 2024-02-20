@@ -1,7 +1,7 @@
 # How to deploy using AWS Java CDK
 
 !!! note
-    The code for this is located in `how-to/AWS_Java_CDK/hello-cdk`
+    The code for this is located in `technical-documentation/AWS_CDK/AWS_Java_CDK/hello-cdk`
 
 ## Prerequisites
 
