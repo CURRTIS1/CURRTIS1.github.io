@@ -37,5 +37,5 @@ bitbucket_mirror:
         with:
           fetch-depth: 'true'
       - name: Checkout repo
-        run: git push --mirror https://x-token-auth:${{ secrets.AUTH_TOKEN }}@bitbucket.org/workspace/repository.git
+        run: git push --mirror https://x-token-auth:${{ '{{ secrets.AUTH_TOKEN }}' }}@bitbucket.org/workspace/repository.git
 ```
