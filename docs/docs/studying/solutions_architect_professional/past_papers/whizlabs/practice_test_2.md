@@ -495,8 +495,6 @@ Which solution can be designed for this requirement in the most effective way?
     Request parameter-based Lambda authorizers are supported only for WebSocket API and not REST APIs.
     This method is best suited when there is a need to provide access to a large number of global users.
 
-![cognitoapi](../../../../assets/images/cognitoapi.png "cognitoapi.png")
-
 ___
 
 A Java-based web application is migrated from On-premises to AWS. Amazon Elastic Beanstalk is used to deploy applications using ALB, Amazon EC2 instances in multiple AZ, and Amazon DynamoDB in provisioned capacity mode. Auto-scaling groups are created with general-purpose Amazon EC2 instances. Post-migration, customers observe a delayed response from web applications during busy hours. Further checks observed that the application performs a non-critical zip archive process causing load on the Amazon EC2 instance.
