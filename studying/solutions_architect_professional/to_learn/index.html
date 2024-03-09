@@ -1,0 +1,4521 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Documentation Site">
+      
+      
+      
+      
+        <link rel="prev" href="../security/">
+      
+      
+        <link rel="next" href="../to_learn_2/">
+      
+      
+      <link rel="icon" href="../../../assets/images/favicon.ico">
+      <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.5.13">
+    
+    
+      
+        <title>To learn - Curtis Documentation</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.7e359304.min.css">
+      
+        
+        <link rel="stylesheet" href="../../../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+  
+  
+    
+    
+  
+  
+  <style>:root{--md-admonition-icon--quote:url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m14.6 16.6 4.6-4.6-4.6-4.6L16 6l6 6-6 6-1.4-1.4m-5.2 0L4.8 12l4.6-4.6L8 6l-6 6 6 6 1.4-1.4Z"/></svg>');}</style>
+
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../../stylesheets/extra.css">
+    
+    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#to-learn" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../../.." title="Curtis Documentation" class="md-header__button md-logo" aria-label="Curtis Documentation" data-md-component="logo">
+      
+  <img src="../../../assets/images/icon.jpg" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Curtis Documentation
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              To learn
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m17.75 4.09-2.53 1.94.91 3.06-2.63-1.81-2.63 1.81.91-3.06-2.53-1.94L12.44 4l1.06-3 1.06 3 3.19.09m3.5 6.91-1.64 1.25.59 1.98-1.7-1.17-1.7 1.17.59-1.98L15.75 11l2.06-.05L18.5 9l.69 1.95 2.06.05m-2.28 4.95c.83-.08 1.72 1.1 1.19 1.85-.32.45-.66.87-1.08 1.27C15.17 23 8.84 23 4.94 19.07c-3.91-3.9-3.91-10.24 0-14.14.4-.4.82-.76 1.27-1.08.75-.53 1.93.36 1.85 1.19-.27 2.86.69 5.83 2.89 8.02a9.96 9.96 0 0 0 8.02 2.89m-1.64 2.02a12.08 12.08 0 0 1-7.8-3.47c-2.17-2.19-3.33-5-3.49-7.82-2.81 3.14-2.7 7.96.31 10.98 3.02 3.01 7.84 3.12 10.98.31Z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="light" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 7a5 5 0 0 1 5 5 5 5 0 0 1-5 5 5 5 0 0 1-5-5 5 5 0 0 1 5-5m0 2a3 3 0 0 0-3 3 3 3 0 0 0 3 3 3 3 0 0 0 3-3 3 3 0 0 0-3-3m0-7 2.39 3.42C13.65 5.15 12.84 5 12 5c-.84 0-1.65.15-2.39.42L12 2M3.34 7l4.16-.35A7.2 7.2 0 0 0 5.94 8.5c-.44.74-.69 1.5-.83 2.29L3.34 7m.02 10 1.76-3.77a7.131 7.131 0 0 0 2.38 4.14L3.36 17M20.65 7l-1.77 3.79a7.023 7.023 0 0 0-2.38-4.15l4.15.36m-.01 10-4.14.36c.59-.51 1.12-1.14 1.54-1.86.42-.73.69-1.5.83-2.29L20.64 17M12 22l-2.41-3.44c.74.27 1.55.44 2.41.44.82 0 1.63-.17 2.37-.44L12 22Z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var media,input,key,value,palette=__md_get("__palette");if(palette&&palette.color){"(prefers-color-scheme)"===palette.color.media&&(media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']"),palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent"));for([key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+          <a href="javascript:void(0)" class="md-search__icon md-icon" title="Share" aria-label="Share" data-clipboard data-clipboard-text="" data-md-component="search-share" tabindex="-1">
+            
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M18 16.08c-.76 0-1.44.3-1.96.77L8.91 12.7c.05-.23.09-.46.09-.7 0-.24-.04-.47-.09-.7l7.05-4.11c.54.5 1.25.81 2.04.81a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3c0 .24.04.47.09.7L8.04 9.81C7.5 9.31 6.79 9 6 9a3 3 0 0 0-3 3 3 3 0 0 0 3 3c.79 0 1.5-.31 2.04-.81l7.12 4.15c-.05.21-.08.43-.08.66 0 1.61 1.31 2.91 2.92 2.91 1.61 0 2.92-1.3 2.92-2.91A2.92 2.92 0 0 0 18 16.08Z"/></svg>
+          </a>
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/CURRTIS1/CURRTIS1.github.io" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    CURRTIS1.github.io
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../.." title="Curtis Documentation" class="md-nav__button md-logo" aria-label="Curtis Documentation" data-md-component="logo">
+      
+  <img src="../../../assets/images/icon.jpg" alt="logo">
+
+    </a>
+    Curtis Documentation
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/CURRTIS1/CURRTIS1.github.io" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    CURRTIS1.github.io
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../.." class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Home
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Studying
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            Studying
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_1" id="__nav_2_1_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    certified kubernetes application developer CKAD
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_1">
+            <span class="md-nav__icon md-icon"></span>
+            certified kubernetes application developer CKAD
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../certified_kubernetes_application_developer_CKAD/application-design-and-build/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Application design and build
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../certified_kubernetes_application_developer_CKAD/general/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    General
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_2" checked>
+        
+          
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../" class="md-nav__link ">
+              
+  
+  <span class="md-ellipsis">
+    Solutions architect professional
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_2_2" id="__nav_2_2_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_2_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2_2">
+            <span class="md-nav__icon md-icon"></span>
+            Solutions architect professional
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../architecting_to_scale/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Architecting to scale
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../business_continuity/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Business continuity
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../cost_management/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Cost management
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../datastores/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Datastores
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../deployment_and_operations_management/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Deployment and operations management
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../general/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    General
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../migrations/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Migrations
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../networking/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Networking
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../security/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Security
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    To learn
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    To learn
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#to-learn" class="md-nav__link">
+    <span class="md-ellipsis">
+      To learn
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#aws-storage-gateway" class="md-nav__link">
+    <span class="md-ellipsis">
+      AWS Storage Gateway
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="AWS Storage Gateway">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#aws-file-gateway" class="md-nav__link">
+    <span class="md-ellipsis">
+      AWS File Gateway
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="AWS File Gateway">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#aws-s3-file-gateway" class="md-nav__link">
+    <span class="md-ellipsis">
+      AWS S3 File Gateway
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#aws-fsx-file-gateway" class="md-nav__link">
+    <span class="md-ellipsis">
+      AWS FSx File Gateway
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tape-gateway" class="md-nav__link">
+    <span class="md-ellipsis">
+      Tape Gateway
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#volume-gateway" class="md-nav__link">
+    <span class="md-ellipsis">
+      Volume Gateway
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#dynamodb" class="md-nav__link">
+    <span class="md-ellipsis">
+      DynamoDB
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="DynamoDB">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#dynamodb-primary-keys" class="md-nav__link">
+    <span class="md-ellipsis">
+      DynamoDB Primary Keys
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="DynamoDB Primary Keys">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#partition-key" class="md-nav__link">
+    <span class="md-ellipsis">
+      Partition Key
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#partition-key-and-sort-key" class="md-nav__link">
+    <span class="md-ellipsis">
+      Partition Key and Sort Key
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#dynamodb-global-or-secondary-index" class="md-nav__link">
+    <span class="md-ellipsis">
+      DynamoDB Global or Secondary Index
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#dynamodb-rcu-and-wcus" class="md-nav__link">
+    <span class="md-ellipsis">
+      DynamoDB RCU and WCUs
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="DynamoDB RCU and WCUs">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#read-requests" class="md-nav__link">
+    <span class="md-ellipsis">
+      Read Requests
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#write-requests" class="md-nav__link">
+    <span class="md-ellipsis">
+      Write Requests
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#dynamodb-capacity" class="md-nav__link">
+    <span class="md-ellipsis">
+      DynamoDB Capacity
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="DynamoDB Capacity">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#provisioned-capacity" class="md-nav__link">
+    <span class="md-ellipsis">
+      Provisioned Capacity
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#on-demand-capacity" class="md-nav__link">
+    <span class="md-ellipsis">
+      On Demand Capacity
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#dynamodb-scaling" class="md-nav__link">
+    <span class="md-ellipsis">
+      DynamoDB scaling
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#dynamodb-streams" class="md-nav__link">
+    <span class="md-ellipsis">
+      DynamoDB Streams
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#nosql" class="md-nav__link">
+    <span class="md-ellipsis">
+      NoSQL
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#acid" class="md-nav__link">
+    <span class="md-ellipsis">
+      ACID
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#aws-compute-optimizer" class="md-nav__link">
+    <span class="md-ellipsis">
+      AWS Compute Optimizer
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#aws-s3-storage-lens" class="md-nav__link">
+    <span class="md-ellipsis">
+      AWS S3 Storage Lens
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ec2-instance-fleets" class="md-nav__link">
+    <span class="md-ellipsis">
+      EC2 Instance fleets
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#asg-scaling-methods" class="md-nav__link">
+    <span class="md-ellipsis">
+      ASG scaling methods
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="ASG scaling methods">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#dynamic-scaling" class="md-nav__link">
+    <span class="md-ellipsis">
+      Dynamic scaling
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Dynamic scaling">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#target-tracking-scaling" class="md-nav__link">
+    <span class="md-ellipsis">
+      Target tracking scaling
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step-scaling" class="md-nav__link">
+    <span class="md-ellipsis">
+      Step scaling
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#simple-scaling" class="md-nav__link">
+    <span class="md-ellipsis">
+      Simple scaling
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#aws-vpc-endpoints" class="md-nav__link">
+    <span class="md-ellipsis">
+      AWS VPC Endpoints
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="AWS VPC Endpoints">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#interface-endpoints" class="md-nav__link">
+    <span class="md-ellipsis">
+      Interface endpoints
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#gateway-endpoints" class="md-nav__link">
+    <span class="md-ellipsis">
+      Gateway endpoints
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#kinesis" class="md-nav__link">
+    <span class="md-ellipsis">
+      Kinesis
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Kinesis">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#kinesis-data-streams" class="md-nav__link">
+    <span class="md-ellipsis">
+      Kinesis Data streams
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#kinesis-firehouse" class="md-nav__link">
+    <span class="md-ellipsis">
+      Kinesis Firehouse
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#kinesis-data-analytics" class="md-nav__link">
+    <span class="md-ellipsis">
+      Kinesis Data analytics
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#kinesis-shards" class="md-nav__link">
+    <span class="md-ellipsis">
+      Kinesis Shards
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#kinesis-example" class="md-nav__link">
+    <span class="md-ellipsis">
+      Kinesis Example
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#application-portfolio-assessment" class="md-nav__link">
+    <span class="md-ellipsis">
+      Application portfolio assessment
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#service-catalog-constraints" class="md-nav__link">
+    <span class="md-ellipsis">
+      Service Catalog Constraints
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Service Catalog Constraints">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#launch-constraints" class="md-nav__link">
+    <span class="md-ellipsis">
+      Launch Constraints
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#template-constraints" class="md-nav__link">
+    <span class="md-ellipsis">
+      Template Constraints
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#service-actions" class="md-nav__link">
+    <span class="md-ellipsis">
+      Service Actions
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#multicast" class="md-nav__link">
+    <span class="md-ellipsis">
+      Multicast
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#cognito" class="md-nav__link">
+    <span class="md-ellipsis">
+      Cognito
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Cognito">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#user-pool" class="md-nav__link">
+    <span class="md-ellipsis">
+      User Pool
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#identity-pool" class="md-nav__link">
+    <span class="md-ellipsis">
+      Identity Pool
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#step-function-workflows" class="md-nav__link">
+    <span class="md-ellipsis">
+      Step Function Workflows
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#sqs-visibility-timeout-and-message-retention" class="md-nav__link">
+    <span class="md-ellipsis">
+      SQS Visibility timeout and message retention
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#aws-glue-dms-data-pipeline" class="md-nav__link">
+    <span class="md-ellipsis">
+      AWS Glue / DMS / Data pipeline
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#iosp-vs-throughput" class="md-nav__link">
+    <span class="md-ellipsis">
+      IOSP vs Throughput
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#instance-store-backed-ec2" class="md-nav__link">
+    <span class="md-ellipsis">
+      Instance Store Backed EC2
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#aws-macie" class="md-nav__link">
+    <span class="md-ellipsis">
+      AWS Macie
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#aws-outposts" class="md-nav__link">
+    <span class="md-ellipsis">
+      AWS Outposts
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="AWS Outposts">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#s3-outposts" class="md-nav__link">
+    <span class="md-ellipsis">
+      S3 Outposts
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#api-gateway" class="md-nav__link">
+    <span class="md-ellipsis">
+      API Gateway
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#cognito_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Cognito
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Cognito">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#basic-flow" class="md-nav__link">
+    <span class="md-ellipsis">
+      Basic flow
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#enhanced-flow" class="md-nav__link">
+    <span class="md-ellipsis">
+      Enhanced flow
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#timestream" class="md-nav__link">
+    <span class="md-ellipsis">
+      Timestream
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#redshift-spectrum" class="md-nav__link">
+    <span class="md-ellipsis">
+      Redshift Spectrum
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#athena-vs-opensearch" class="md-nav__link">
+    <span class="md-ellipsis">
+      Athena vs Opensearch
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#aws-proton" class="md-nav__link">
+    <span class="md-ellipsis">
+      AWS Proton
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#permissions-boundary" class="md-nav__link">
+    <span class="md-ellipsis">
+      Permissions boundary
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#using-amazon-s3-as-a-source-for-aws-dms" class="md-nav__link">
+    <span class="md-ellipsis">
+      Using Amazon S3 as a source for AWS DMS
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../to_learn_2/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    To Learn 2
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../to_learn_3/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    To learn 3
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../to_learn_4/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    To Learn 4
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_2_15" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_2_15" id="__nav_2_2_15_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Past papers
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_2_2_15_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_2_15">
+            <span class="md-nav__icon md-icon"></span>
+            Past papers
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_2_15_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_2_15_1" id="__nav_2_2_15_1_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Acg
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="4" aria-labelledby="__nav_2_2_15_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_2_15_1">
+            <span class="md-nav__icon md-icon"></span>
+            Acg
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../past_papers/acg/practice_test_1/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Practice test 1
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../past_papers/acg/practice_test_2/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Practice test 2
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../past_papers/acg/practice_test_3/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Practice test 3
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_2_15_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_2_15_2" id="__nav_2_2_15_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Tutorialsdojo
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="4" aria-labelledby="__nav_2_2_15_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_2_15_2">
+            <span class="md-nav__icon md-icon"></span>
+            Tutorialsdojo
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../past_papers/tutorialsdojo/section1/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Section1
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../past_papers/tutorialsdojo/section2/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Section2
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../past_papers/tutorialsdojo/section3/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Section3
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../past_papers/tutorialsdojo/section4/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Section4
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_2_15_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_2_15_3" id="__nav_2_2_15_3_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Whizlabs
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="4" aria-labelledby="__nav_2_2_15_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_2_15_3">
+            <span class="md-nav__icon md-icon"></span>
+            Whizlabs
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../past_papers/whizlabs/analytics/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Analytics
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../past_papers/whizlabs/final_test/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Final test
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../past_papers/whizlabs/free_test/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Free test
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../past_papers/whizlabs/governance/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Governance
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../past_papers/whizlabs/iot/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Iot
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../past_papers/whizlabs/machine_learning/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Machine learning
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../past_papers/whizlabs/practice_test_1/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Practice test 1
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../past_papers/whizlabs/practice_test_2/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Practice test 2
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../past_papers/whizlabs/practice_test_3/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Practice test 3
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../past_papers/whizlabs/security/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Security
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Technical documentation
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            Technical documentation
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_1" id="__nav_3_1_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    AWS CDK
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_1">
+            <span class="md-nav__icon md-icon"></span>
+            AWS CDK
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../technical-documentation/AWS_CDK/how-to-deploy-using-java-cdk/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    How to deploy using AWS Java CDK
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../technical-documentation/AWS_CDK/how-to-deploy-using-python-cdk/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    How to deploy using AWS Java CDK
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_1_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_1_3" id="__nav_3_1_3_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    AWS Java CDK
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_3_1_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_1_3">
+            <span class="md-nav__icon md-icon"></span>
+            AWS Java CDK
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_1_3_1" >
+        
+          
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../../technical-documentation/AWS_CDK/AWS_Java_CDK/hello-cdk/" class="md-nav__link ">
+              
+  
+  <span class="md-ellipsis">
+    Hello cdk
+  </span>
+  
+
+            </a>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="4" aria-labelledby="__nav_3_1_3_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_1_3_1">
+            <span class="md-nav__icon md-icon"></span>
+            Hello cdk
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_1_3_2" >
+        
+          
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../../technical-documentation/AWS_CDK/AWS_Java_CDK/hello-cdk-cfn/" class="md-nav__link ">
+              
+  
+  <span class="md-ellipsis">
+    Hello cdk cfn
+  </span>
+  
+
+            </a>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="4" aria-labelledby="__nav_3_1_3_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_1_3_2">
+            <span class="md-nav__icon md-icon"></span>
+            Hello cdk cfn
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_1_4" >
+        
+          
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../../technical-documentation/AWS_CDK/AWS_Python_CDK/" class="md-nav__link ">
+              
+  
+  <span class="md-ellipsis">
+    AWS Python CDK
+  </span>
+  
+
+            </a>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_3_1_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_1_4">
+            <span class="md-nav__icon md-icon"></span>
+            AWS Python CDK
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_2" id="__nav_3_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Git
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_2">
+            <span class="md-nav__icon md-icon"></span>
+            Git
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../technical-documentation/Git/comparing-github-actions-bitbucket-pipelines/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Comparing Github Actions Bitbucket Pipelines
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../technical-documentation/Git/setting-up-github-pages/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Setting up Github Pages
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../technical-documentation/Git/sync-github-to-bitbucket/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Syncing Github repository to Bitbucket
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_3" id="__nav_3_3_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Kubernetes
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_3">
+            <span class="md-nav__icon md-icon"></span>
+            Kubernetes
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../technical-documentation/Kubernetes/set-up-k8s-locally/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Setting up a Kubernetes cluster locally on your machine
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_4" id="__nav_3_4_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Minecraft
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_4">
+            <span class="md-nav__icon md-icon"></span>
+            Minecraft
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../technical-documentation/Minecraft/deploy-a-minecraft-server/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    How to deploy a Minecraft Server
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_5" id="__nav_3_5_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Mkdocs
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_5">
+            <span class="md-nav__icon md-icon"></span>
+            Mkdocs
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../technical-documentation/Mkdocs/bracket-render-error/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    How to resolve the Macro Rendering Error
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_6" id="__nav_3_6_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Synology
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_6">
+            <span class="md-nav__icon md-icon"></span>
+            Synology
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../technical-documentation/Synology/resolve-mfa-error/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Resolving 2FA on Synology NAS
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    General
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            General
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../general/tags/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Tag Index
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../general/contributing/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Contributing
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#to-learn" class="md-nav__link">
+    <span class="md-ellipsis">
+      To learn
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#aws-storage-gateway" class="md-nav__link">
+    <span class="md-ellipsis">
+      AWS Storage Gateway
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="AWS Storage Gateway">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#aws-file-gateway" class="md-nav__link">
+    <span class="md-ellipsis">
+      AWS File Gateway
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="AWS File Gateway">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#aws-s3-file-gateway" class="md-nav__link">
+    <span class="md-ellipsis">
+      AWS S3 File Gateway
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#aws-fsx-file-gateway" class="md-nav__link">
+    <span class="md-ellipsis">
+      AWS FSx File Gateway
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tape-gateway" class="md-nav__link">
+    <span class="md-ellipsis">
+      Tape Gateway
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#volume-gateway" class="md-nav__link">
+    <span class="md-ellipsis">
+      Volume Gateway
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#dynamodb" class="md-nav__link">
+    <span class="md-ellipsis">
+      DynamoDB
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="DynamoDB">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#dynamodb-primary-keys" class="md-nav__link">
+    <span class="md-ellipsis">
+      DynamoDB Primary Keys
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="DynamoDB Primary Keys">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#partition-key" class="md-nav__link">
+    <span class="md-ellipsis">
+      Partition Key
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#partition-key-and-sort-key" class="md-nav__link">
+    <span class="md-ellipsis">
+      Partition Key and Sort Key
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#dynamodb-global-or-secondary-index" class="md-nav__link">
+    <span class="md-ellipsis">
+      DynamoDB Global or Secondary Index
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#dynamodb-rcu-and-wcus" class="md-nav__link">
+    <span class="md-ellipsis">
+      DynamoDB RCU and WCUs
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="DynamoDB RCU and WCUs">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#read-requests" class="md-nav__link">
+    <span class="md-ellipsis">
+      Read Requests
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#write-requests" class="md-nav__link">
+    <span class="md-ellipsis">
+      Write Requests
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#dynamodb-capacity" class="md-nav__link">
+    <span class="md-ellipsis">
+      DynamoDB Capacity
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="DynamoDB Capacity">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#provisioned-capacity" class="md-nav__link">
+    <span class="md-ellipsis">
+      Provisioned Capacity
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#on-demand-capacity" class="md-nav__link">
+    <span class="md-ellipsis">
+      On Demand Capacity
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#dynamodb-scaling" class="md-nav__link">
+    <span class="md-ellipsis">
+      DynamoDB scaling
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#dynamodb-streams" class="md-nav__link">
+    <span class="md-ellipsis">
+      DynamoDB Streams
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#nosql" class="md-nav__link">
+    <span class="md-ellipsis">
+      NoSQL
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#acid" class="md-nav__link">
+    <span class="md-ellipsis">
+      ACID
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#aws-compute-optimizer" class="md-nav__link">
+    <span class="md-ellipsis">
+      AWS Compute Optimizer
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#aws-s3-storage-lens" class="md-nav__link">
+    <span class="md-ellipsis">
+      AWS S3 Storage Lens
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ec2-instance-fleets" class="md-nav__link">
+    <span class="md-ellipsis">
+      EC2 Instance fleets
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#asg-scaling-methods" class="md-nav__link">
+    <span class="md-ellipsis">
+      ASG scaling methods
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="ASG scaling methods">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#dynamic-scaling" class="md-nav__link">
+    <span class="md-ellipsis">
+      Dynamic scaling
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Dynamic scaling">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#target-tracking-scaling" class="md-nav__link">
+    <span class="md-ellipsis">
+      Target tracking scaling
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step-scaling" class="md-nav__link">
+    <span class="md-ellipsis">
+      Step scaling
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#simple-scaling" class="md-nav__link">
+    <span class="md-ellipsis">
+      Simple scaling
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#aws-vpc-endpoints" class="md-nav__link">
+    <span class="md-ellipsis">
+      AWS VPC Endpoints
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="AWS VPC Endpoints">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#interface-endpoints" class="md-nav__link">
+    <span class="md-ellipsis">
+      Interface endpoints
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#gateway-endpoints" class="md-nav__link">
+    <span class="md-ellipsis">
+      Gateway endpoints
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#kinesis" class="md-nav__link">
+    <span class="md-ellipsis">
+      Kinesis
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Kinesis">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#kinesis-data-streams" class="md-nav__link">
+    <span class="md-ellipsis">
+      Kinesis Data streams
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#kinesis-firehouse" class="md-nav__link">
+    <span class="md-ellipsis">
+      Kinesis Firehouse
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#kinesis-data-analytics" class="md-nav__link">
+    <span class="md-ellipsis">
+      Kinesis Data analytics
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#kinesis-shards" class="md-nav__link">
+    <span class="md-ellipsis">
+      Kinesis Shards
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#kinesis-example" class="md-nav__link">
+    <span class="md-ellipsis">
+      Kinesis Example
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#application-portfolio-assessment" class="md-nav__link">
+    <span class="md-ellipsis">
+      Application portfolio assessment
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#service-catalog-constraints" class="md-nav__link">
+    <span class="md-ellipsis">
+      Service Catalog Constraints
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Service Catalog Constraints">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#launch-constraints" class="md-nav__link">
+    <span class="md-ellipsis">
+      Launch Constraints
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#template-constraints" class="md-nav__link">
+    <span class="md-ellipsis">
+      Template Constraints
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#service-actions" class="md-nav__link">
+    <span class="md-ellipsis">
+      Service Actions
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#multicast" class="md-nav__link">
+    <span class="md-ellipsis">
+      Multicast
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#cognito" class="md-nav__link">
+    <span class="md-ellipsis">
+      Cognito
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Cognito">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#user-pool" class="md-nav__link">
+    <span class="md-ellipsis">
+      User Pool
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#identity-pool" class="md-nav__link">
+    <span class="md-ellipsis">
+      Identity Pool
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#step-function-workflows" class="md-nav__link">
+    <span class="md-ellipsis">
+      Step Function Workflows
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#sqs-visibility-timeout-and-message-retention" class="md-nav__link">
+    <span class="md-ellipsis">
+      SQS Visibility timeout and message retention
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#aws-glue-dms-data-pipeline" class="md-nav__link">
+    <span class="md-ellipsis">
+      AWS Glue / DMS / Data pipeline
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#iosp-vs-throughput" class="md-nav__link">
+    <span class="md-ellipsis">
+      IOSP vs Throughput
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#instance-store-backed-ec2" class="md-nav__link">
+    <span class="md-ellipsis">
+      Instance Store Backed EC2
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#aws-macie" class="md-nav__link">
+    <span class="md-ellipsis">
+      AWS Macie
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#aws-outposts" class="md-nav__link">
+    <span class="md-ellipsis">
+      AWS Outposts
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="AWS Outposts">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#s3-outposts" class="md-nav__link">
+    <span class="md-ellipsis">
+      S3 Outposts
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#api-gateway" class="md-nav__link">
+    <span class="md-ellipsis">
+      API Gateway
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#cognito_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Cognito
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Cognito">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#basic-flow" class="md-nav__link">
+    <span class="md-ellipsis">
+      Basic flow
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#enhanced-flow" class="md-nav__link">
+    <span class="md-ellipsis">
+      Enhanced flow
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#timestream" class="md-nav__link">
+    <span class="md-ellipsis">
+      Timestream
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#redshift-spectrum" class="md-nav__link">
+    <span class="md-ellipsis">
+      Redshift Spectrum
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#athena-vs-opensearch" class="md-nav__link">
+    <span class="md-ellipsis">
+      Athena vs Opensearch
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#aws-proton" class="md-nav__link">
+    <span class="md-ellipsis">
+      AWS Proton
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#permissions-boundary" class="md-nav__link">
+    <span class="md-ellipsis">
+      Permissions boundary
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#using-amazon-s3-as-a-source-for-aws-dms" class="md-nav__link">
+    <span class="md-ellipsis">
+      Using Amazon S3 as a source for AWS DMS
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+  
+    <a href="https://github.com/CURRTIS1/CURRTIS1.github.io/edit/main/docs/docs/studying/solutions_architect_professional/to_learn.md" title="Edit this page" class="md-content__button md-icon">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25Z"/></svg>
+    </a>
+  
+  
+
+
+  <h1>To learn</h1>
+
+<div><h2 id="to-learn">To learn<a class="headerlink" href="#to-learn" title="Permanent link">¶</a></h2>
+<table>
+<thead>
+<tr>
+<th>Service</th>
+<th>Done</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>AWS Storage Gateway</td>
+<td>☑</td>
+</tr>
+<tr>
+<td>Dynamo DB Global or Secondary indexes</td>
+<td>☑</td>
+</tr>
+<tr>
+<td>Dynamo DB partition or sort key</td>
+<td>☑</td>
+</tr>
+<tr>
+<td>What is NoSQL</td>
+<td>☑</td>
+</tr>
+<tr>
+<td>AWS Compute Optimizer</td>
+<td>☑</td>
+</tr>
+<tr>
+<td>AWS S3 Storage Lens</td>
+<td>☑</td>
+</tr>
+<tr>
+<td>EC2 Instance fleets</td>
+<td>☑</td>
+</tr>
+<tr>
+<td>ASG scaling methods (simple etc)</td>
+<td>☑</td>
+</tr>
+<tr>
+<td>AWS VPC Gateway Endpoints</td>
+<td>☑</td>
+</tr>
+<tr>
+<td>Kineses</td>
+<td>☑</td>
+</tr>
+<tr>
+<td>Application portfolio assessment</td>
+<td>☑</td>
+</tr>
+<tr>
+<td>Service Catalog Constraints</td>
+<td>☑</td>
+</tr>
+<tr>
+<td>Timestream</td>
+<td>☑</td>
+</tr>
+<tr>
+<td>Amazon Redshift Spectrum</td>
+<td>☑</td>
+</tr>
+<tr>
+<td>Athena vs Opensearch (SQL)</td>
+<td>☑</td>
+</tr>
+<tr>
+<td>AWS Proton</td>
+<td>☑</td>
+</tr>
+<tr>
+<td>Permissions boundary - allow / deny</td>
+<td>☑</td>
+</tr>
+<tr>
+<td>Using Amazon S3 as a source for AWS DMS</td>
+<td>☑</td>
+</tr>
+</tbody>
+</table>
+<p>Done - ☑ <br>
+Not done - ☐</p>
+<h2 id="aws-storage-gateway">AWS Storage Gateway<a class="headerlink" href="#aws-storage-gateway" title="Permanent link">¶</a></h2>
+<p>AWS Storage Gateway is a set of hybrid cloud storage services that provide on-premises low latency access to virtually unlimited cloud storage.</p>
+<p>Offerings:</p>
+<ul>
+<li>File Gateway</li>
+<li>Tape Gateway</li>
+<li>Volume Gateway</li>
+</ul>
+<p>Fully Managed Cache: The local gateway appliance maintains a cache of recently written or read data so your applications can have low-latency access to data that is stored durably in AWS. The gateways use a read-through and write-back cache, committing data locally, acknowledging the write operations, and then asynchronously copying data to AWS, reducing application latency.</p>
+<h3 id="aws-file-gateway">AWS File Gateway<a class="headerlink" href="#aws-file-gateway" title="Permanent link">¶</a></h3>
+<h4 id="aws-s3-file-gateway">AWS S3 File Gateway<a class="headerlink" href="#aws-s3-file-gateway" title="Permanent link">¶</a></h4>
+<p><img alt="fgws3" src="../../../assets/images/fgws3.png" title="fgws3.png"></p>
+<p>Amazon S3 File Gateway presents a file interface that enables you to store files as objects in Amazon S3 using the industry-standard NFS and SMB file protocols, and access those files via NFS and SMB from your data center or Amazon EC2, or access those files as objects directly in Amazon S3</p>
+<h4 id="aws-fsx-file-gateway">AWS FSx File Gateway<a class="headerlink" href="#aws-fsx-file-gateway" title="Permanent link">¶</a></h4>
+<p><img alt="fgwfsx" src="../../../assets/images/fgwfsx.png" title="fgwfsx.png"></p>
+<p>Amazon FSx File Gateway provides fast, low-latency on-premises access to fully managed, highly reliable, and scalable file shares in the cloud using the industry-standard SMB protocol. Customers can store and access file data in Amazon FSx with Windows-native compatibility including full NTFS support, shadow copies, and Access Control Lists (ACLs).</p>
+<h3 id="tape-gateway">Tape Gateway<a class="headerlink" href="#tape-gateway" title="Permanent link">¶</a></h3>
+<p><img alt="tapegw" src="../../../assets/images/tapegw.png" title="tapegw.png"></p>
+<p>Back up and archive on-premises data to virtual tapes on AWS using your network. Use Tape Gateway to replace physical tapes on premises with virtual tapes on AWS—reducing your data storage costs without changing your tape-based backup workflows. Tape Gateway supports all leading backup applications and caches virtual tapes on premises for low-latency data access. It compresses your tape data, encrypts it, and stores it in a virtual tape library in Amazon Simple Storage Service (Amazon S3). From there, you can transfer it to either Amazon S3 Glacier Flexible Retrieval or Amazon S3 Glacier Deep Archive to help minimize your long-term storage costs.</p>
+<h3 id="volume-gateway">Volume Gateway<a class="headerlink" href="#volume-gateway" title="Permanent link">¶</a></h3>
+<p>Volume Gateway presents cloud-backed iSCSI block storage volumes to your on-premises applications. Volume Gateway stores and manages on-premises data in Amazon S3 on your behalf and operates in either cache mode or stored mode. In the cached Volume Gateway mode, your primary data is stored in Amazon S3, while retaining your frequently accessed data locally in the cache for low latency access. In the stored Volume Gateway mode, your primary data is stored locally and your entire dataset is available for low latency access on premises while also asynchronously getting backed up to Amazon S3.</p>
+<p><img alt="volgw" src="../../../assets/images/volgw.png" title="volgw.png"></p>
+<h2 id="dynamodb">DynamoDB<a class="headerlink" href="#dynamodb" title="Permanent link">¶</a></h2>
+<h3 id="dynamodb-primary-keys">DynamoDB Primary Keys<a class="headerlink" href="#dynamodb-primary-keys" title="Permanent link">¶</a></h3>
+<p>You need a Primary Key on every row of your DynamoDB table and it has to be unique.</p>
+<h4 id="partition-key">Partition Key<a class="headerlink" href="#partition-key" title="Permanent link">¶</a></h4>
+<p><code>Partition key</code>: A simple primary key, composed of one attribute known as the partition key. Attributes in DynamoDB are similar in many ways to fields or columns in other database systems.</p>
+<p>Example would be <code>OrderID</code> as the <code>Partition Key</code> in the table below:</p>
+<table>
+<thead>
+<tr>
+<th>OrderID</th>
+<th>CustomerID</th>
+<th>State</th>
+<th>TotalAmount</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>CID-100</td>
+<td>SHIPPED</td>
+<td>3200</td>
+</tr>
+<tr>
+<td>2</td>
+<td>CID-101</td>
+<td>DELIVERED</td>
+<td>700</td>
+</tr>
+<tr>
+<td>3</td>
+<td>CID-100</td>
+<td>SHIPPED</td>
+<td>3</td>
+</tr>
+<tr>
+<td>4</td>
+<td>CID-102</td>
+<td>DELIVERED</td>
+<td>12</td>
+</tr>
+</tbody>
+</table>
+<p>The below is a table named 'People'.</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="p">{</span>
+<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="w">    </span><span class="nt">"PersonID"</span><span class="p">:</span><span class="w"> </span><span class="mi">101</span><span class="p">,</span>
+<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="w">    </span><span class="nt">"LastName"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Smith"</span><span class="p">,</span>
+<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="w">    </span><span class="nt">"FirstName"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Fred"</span><span class="p">,</span>
+<a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a><span class="w">    </span><span class="nt">"Phone"</span><span class="p">:</span><span class="w"> </span><span class="s2">"555-4321"</span>
+<a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a><span class="p">}</span>
+<a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a>
+<a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a><span class="p">{</span>
+<a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a><span class="w">    </span><span class="nt">"PersonID"</span><span class="p">:</span><span class="w"> </span><span class="mi">102</span><span class="p">,</span>
+<a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a><span class="w">    </span><span class="nt">"LastName"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Jones"</span><span class="p">,</span>
+<a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a><span class="w">    </span><span class="nt">"FirstName"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Mary"</span><span class="p">,</span>
+<a id="__codelineno-0-12" name="__codelineno-0-12" href="#__codelineno-0-12"></a><span class="w">    </span><span class="nt">"Address"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-0-13" name="__codelineno-0-13" href="#__codelineno-0-13"></a><span class="w">                </span><span class="nt">"Street"</span><span class="p">:</span><span class="w"> </span><span class="s2">"123 Main"</span><span class="p">,</span>
+<a id="__codelineno-0-14" name="__codelineno-0-14" href="#__codelineno-0-14"></a><span class="w">                </span><span class="nt">"City"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Anytown"</span><span class="p">,</span>
+<a id="__codelineno-0-15" name="__codelineno-0-15" href="#__codelineno-0-15"></a><span class="w">                </span><span class="nt">"State"</span><span class="p">:</span><span class="w"> </span><span class="s2">"OH"</span><span class="p">,</span>
+<a id="__codelineno-0-16" name="__codelineno-0-16" href="#__codelineno-0-16"></a><span class="w">                </span><span class="nt">"ZIPCode"</span><span class="p">:</span><span class="w"> </span><span class="mi">12345</span>
+<a id="__codelineno-0-17" name="__codelineno-0-17" href="#__codelineno-0-17"></a><span class="w">    </span><span class="p">}</span>
+<a id="__codelineno-0-18" name="__codelineno-0-18" href="#__codelineno-0-18"></a><span class="p">}</span>
+<a id="__codelineno-0-19" name="__codelineno-0-19" href="#__codelineno-0-19"></a>
+<a id="__codelineno-0-20" name="__codelineno-0-20" href="#__codelineno-0-20"></a><span class="p">{</span>
+<a id="__codelineno-0-21" name="__codelineno-0-21" href="#__codelineno-0-21"></a><span class="w">    </span><span class="nt">"PersonID"</span><span class="p">:</span><span class="w"> </span><span class="mi">103</span><span class="p">,</span>
+<a id="__codelineno-0-22" name="__codelineno-0-22" href="#__codelineno-0-22"></a><span class="w">    </span><span class="nt">"LastName"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Stephens"</span><span class="p">,</span>
+<a id="__codelineno-0-23" name="__codelineno-0-23" href="#__codelineno-0-23"></a><span class="w">    </span><span class="nt">"FirstName"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Howard"</span><span class="p">,</span>
+<a id="__codelineno-0-24" name="__codelineno-0-24" href="#__codelineno-0-24"></a><span class="w">    </span><span class="nt">"Address"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-0-25" name="__codelineno-0-25" href="#__codelineno-0-25"></a><span class="w">                </span><span class="nt">"Street"</span><span class="p">:</span><span class="w"> </span><span class="s2">"123 Main"</span><span class="p">,</span>
+<a id="__codelineno-0-26" name="__codelineno-0-26" href="#__codelineno-0-26"></a><span class="w">                </span><span class="nt">"City"</span><span class="p">:</span><span class="w"> </span><span class="s2">"London"</span><span class="p">,</span><span class="w">                                    </span>
+<a id="__codelineno-0-27" name="__codelineno-0-27" href="#__codelineno-0-27"></a><span class="w">                </span><span class="nt">"PostalCode"</span><span class="p">:</span><span class="w"> </span><span class="s2">"ER3 5K8"</span>
+<a id="__codelineno-0-28" name="__codelineno-0-28" href="#__codelineno-0-28"></a><span class="w">    </span><span class="p">},</span>
+<a id="__codelineno-0-29" name="__codelineno-0-29" href="#__codelineno-0-29"></a><span class="w">    </span><span class="nt">"FavoriteColor"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Blue"</span>
+<a id="__codelineno-0-30" name="__codelineno-0-30" href="#__codelineno-0-30"></a><span class="p">}</span>
+</code></pre></div>
+<ul>
+<li>Each item in the table has a unique identifier, or primary key, that distinguishes the item from all of the others in the table. In the People table, the <code>primary key</code> consists of one attribute (<code>PersonID</code>).</li>
+<li>Some of the items have a nested attribute (<code>Address</code>). DynamoDB supports nested attributes up to 32 levels deep.</li>
+</ul>
+<h4 id="partition-key-and-sort-key">Partition Key and Sort Key<a class="headerlink" href="#partition-key-and-sort-key" title="Permanent link">¶</a></h4>
+<p><code>Partition key and sort key</code>: Referred to as a <code>composite primary key</code>, this type of key is composed of two attributes. The first attribute is the partition key, and the second attribute is the sort key. All data under a partition key is sorted by the sort key value.</p>
+<p>The following is an example table named Music that you could use to keep track of your music collection:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="p">{</span>
+<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="w">    </span><span class="nt">"Artist"</span><span class="p">:</span><span class="w"> </span><span class="s2">"No One You Know"</span><span class="p">,</span>
+<a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a><span class="w">    </span><span class="nt">"SongTitle"</span><span class="p">:</span><span class="w"> </span><span class="s2">"My Dog Spot"</span><span class="p">,</span>
+<a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a><span class="w">    </span><span class="nt">"AlbumTitle"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Hey Now"</span><span class="p">,</span>
+<a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a><span class="w">    </span><span class="nt">"Price"</span><span class="p">:</span><span class="w"> </span><span class="mf">1.98</span><span class="p">,</span>
+<a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a><span class="w">    </span><span class="nt">"Genre"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Country"</span><span class="p">,</span>
+<a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a><span class="w">    </span><span class="nt">"CriticRating"</span><span class="p">:</span><span class="w"> </span><span class="mf">8.4</span>
+<a id="__codelineno-1-8" name="__codelineno-1-8" href="#__codelineno-1-8"></a><span class="p">}</span>
+<a id="__codelineno-1-9" name="__codelineno-1-9" href="#__codelineno-1-9"></a>
+<a id="__codelineno-1-10" name="__codelineno-1-10" href="#__codelineno-1-10"></a><span class="p">{</span>
+<a id="__codelineno-1-11" name="__codelineno-1-11" href="#__codelineno-1-11"></a><span class="w">    </span><span class="nt">"Artist"</span><span class="p">:</span><span class="w"> </span><span class="s2">"No One You Know"</span><span class="p">,</span>
+<a id="__codelineno-1-12" name="__codelineno-1-12" href="#__codelineno-1-12"></a><span class="w">    </span><span class="nt">"SongTitle"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Somewhere Down The Road"</span><span class="p">,</span>
+<a id="__codelineno-1-13" name="__codelineno-1-13" href="#__codelineno-1-13"></a><span class="w">    </span><span class="nt">"AlbumTitle"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Somewhat Famous"</span><span class="p">,</span>
+<a id="__codelineno-1-14" name="__codelineno-1-14" href="#__codelineno-1-14"></a><span class="w">    </span><span class="nt">"Genre"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Country"</span><span class="p">,</span>
+<a id="__codelineno-1-15" name="__codelineno-1-15" href="#__codelineno-1-15"></a><span class="w">    </span><span class="nt">"CriticRating"</span><span class="p">:</span><span class="w"> </span><span class="mf">8.4</span><span class="p">,</span>
+<a id="__codelineno-1-16" name="__codelineno-1-16" href="#__codelineno-1-16"></a><span class="w">    </span><span class="nt">"Year"</span><span class="p">:</span><span class="w"> </span><span class="mi">1984</span>
+<a id="__codelineno-1-17" name="__codelineno-1-17" href="#__codelineno-1-17"></a><span class="p">}</span>
+<a id="__codelineno-1-18" name="__codelineno-1-18" href="#__codelineno-1-18"></a>
+<a id="__codelineno-1-19" name="__codelineno-1-19" href="#__codelineno-1-19"></a><span class="p">{</span>
+<a id="__codelineno-1-20" name="__codelineno-1-20" href="#__codelineno-1-20"></a><span class="w">    </span><span class="nt">"Artist"</span><span class="p">:</span><span class="w"> </span><span class="s2">"The Acme Band"</span><span class="p">,</span>
+<a id="__codelineno-1-21" name="__codelineno-1-21" href="#__codelineno-1-21"></a><span class="w">    </span><span class="nt">"SongTitle"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Still in Love"</span><span class="p">,</span>
+<a id="__codelineno-1-22" name="__codelineno-1-22" href="#__codelineno-1-22"></a><span class="w">    </span><span class="nt">"AlbumTitle"</span><span class="p">:</span><span class="w"> </span><span class="s2">"The Buck Starts Here"</span><span class="p">,</span>
+<a id="__codelineno-1-23" name="__codelineno-1-23" href="#__codelineno-1-23"></a><span class="w">    </span><span class="nt">"Price"</span><span class="p">:</span><span class="w"> </span><span class="mf">2.47</span><span class="p">,</span>
+<a id="__codelineno-1-24" name="__codelineno-1-24" href="#__codelineno-1-24"></a><span class="w">    </span><span class="nt">"Genre"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Rock"</span><span class="p">,</span>
+<a id="__codelineno-1-25" name="__codelineno-1-25" href="#__codelineno-1-25"></a><span class="w">    </span><span class="nt">"PromotionInfo"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-1-26" name="__codelineno-1-26" href="#__codelineno-1-26"></a><span class="w">        </span><span class="nt">"RadioStationsPlaying"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-1-27" name="__codelineno-1-27" href="#__codelineno-1-27"></a><span class="w">            </span><span class="s2">"KHCR"</span><span class="p">,</span>
+<a id="__codelineno-1-28" name="__codelineno-1-28" href="#__codelineno-1-28"></a><span class="w">            </span><span class="s2">"KQBX"</span><span class="p">,</span>
+<a id="__codelineno-1-29" name="__codelineno-1-29" href="#__codelineno-1-29"></a><span class="w">            </span><span class="s2">"WTNR"</span><span class="p">,</span>
+<a id="__codelineno-1-30" name="__codelineno-1-30" href="#__codelineno-1-30"></a><span class="w">            </span><span class="s2">"WJJH"</span>
+<a id="__codelineno-1-31" name="__codelineno-1-31" href="#__codelineno-1-31"></a><span class="w">        </span><span class="p">},</span>
+<a id="__codelineno-1-32" name="__codelineno-1-32" href="#__codelineno-1-32"></a><span class="w">        </span><span class="nt">"TourDates"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-1-33" name="__codelineno-1-33" href="#__codelineno-1-33"></a><span class="w">            </span><span class="nt">"Seattle"</span><span class="p">:</span><span class="w"> </span><span class="s2">"20150622"</span><span class="p">,</span>
+<a id="__codelineno-1-34" name="__codelineno-1-34" href="#__codelineno-1-34"></a><span class="w">            </span><span class="nt">"Cleveland"</span><span class="p">:</span><span class="w"> </span><span class="s2">"20150630"</span>
+<a id="__codelineno-1-35" name="__codelineno-1-35" href="#__codelineno-1-35"></a><span class="w">        </span><span class="p">},</span>
+<a id="__codelineno-1-36" name="__codelineno-1-36" href="#__codelineno-1-36"></a><span class="w">        </span><span class="nt">"Rotation"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Heavy"</span>
+<a id="__codelineno-1-37" name="__codelineno-1-37" href="#__codelineno-1-37"></a><span class="w">    </span><span class="p">}</span>
+<a id="__codelineno-1-38" name="__codelineno-1-38" href="#__codelineno-1-38"></a><span class="p">}</span>
+<a id="__codelineno-1-39" name="__codelineno-1-39" href="#__codelineno-1-39"></a>
+<a id="__codelineno-1-40" name="__codelineno-1-40" href="#__codelineno-1-40"></a><span class="p">{</span>
+<a id="__codelineno-1-41" name="__codelineno-1-41" href="#__codelineno-1-41"></a><span class="w">    </span><span class="nt">"Artist"</span><span class="p">:</span><span class="w"> </span><span class="s2">"The Acme Band"</span><span class="p">,</span>
+<a id="__codelineno-1-42" name="__codelineno-1-42" href="#__codelineno-1-42"></a><span class="w">    </span><span class="nt">"SongTitle"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Look Out, World"</span><span class="p">,</span>
+<a id="__codelineno-1-43" name="__codelineno-1-43" href="#__codelineno-1-43"></a><span class="w">    </span><span class="nt">"AlbumTitle"</span><span class="p">:</span><span class="w"> </span><span class="s2">"The Buck Starts Here"</span><span class="p">,</span>
+<a id="__codelineno-1-44" name="__codelineno-1-44" href="#__codelineno-1-44"></a><span class="w">    </span><span class="nt">"Price"</span><span class="p">:</span><span class="w"> </span><span class="mf">0.99</span><span class="p">,</span>
+<a id="__codelineno-1-45" name="__codelineno-1-45" href="#__codelineno-1-45"></a><span class="w">    </span><span class="nt">"Genre"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Rock"</span>
+<a id="__codelineno-1-46" name="__codelineno-1-46" href="#__codelineno-1-46"></a><span class="p">}</span><span class="w"> </span>
+</code></pre></div>
+<p>The <code>primary key</code> for Music consists of <code>two attributes</code> (Artist and SongTitle). Each item in the table must have these two attributes. The combination of Artist and SongTitle distinguishes each item in the table from all of the others.</p>
+<p>In a table that has a partition key and a sort key, it's possible for multiple items to have the same partition key value. However, those items must have different sort key values.</p>
+<h3 id="dynamodb-global-or-secondary-index">DynamoDB Global or Secondary Index<a class="headerlink" href="#dynamodb-global-or-secondary-index" title="Permanent link">¶</a></h3>
+<p>You can create one or more secondary indexes on a table. A secondary index lets you query the data in the table using an alternate key, in addition to queries against the primary key. DynamoDB doesn't require that you use indexes, but they give your applications more flexibility when querying your data. After you create a secondary index on a table, you can read data from the index in much the same way as you do from the table.</p>
+<p>DynamoDB supports two kinds of indexes:</p>
+<ul>
+<li><code>Global secondary index</code> – An <code>index</code> with a <code>partition key</code> and <code>sort key</code> that can be different from those on the table.</li>
+<li><code>Local secondary index</code> – An <code>index</code> that has the same <code>partition key</code> as the table, but a different <code>sort key</code>.</li>
+</ul>
+<p>Each table in DynamoDB has a quota of 20 global secondary indexes (default quota) and 5 local secondary indexes.</p>
+<p>Creating a Global Secondary Index creates a copy of the Primary table using the new partition key and keeps the two tables in sync.</p>
+<p>If you have 1 Primary table and 5 Global Secondary Indexes, one write to the table actually equates to 5 as the changes have to be written to the GSIs.</p>
+<p>You can only define a Local Secondary Index at the time of creating the table.</p>
+<p>The following diagram shows the example <code>Music</code> table, with a new index called <code>GenreAlbumTitle</code>. In the index, <code>Genre</code> is the <code>partition key</code> and <code>AlbumTitle</code> is the <code>sort key</code>.</p>
+<table>
+<thead>
+<tr>
+<th>Music Table</th>
+<th>GenreAlbumTitle</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><pre lang="json">{<br>  "Artist": "No One You Know",<br>  "SongTitle": "My Dog Spot",<br>  "AlbumTitle": "Hey Now",<br>  "Price": 1.98,<br>  "Genre": "Country",<br>  "CriticRating": 8.4<br>}</pre></td>
+<td><pre lang="json">{<br>    "Genre": "Country",<br>    "AlbumTitle": "Hey Now",<br>    "Artist": "No One You Know",<br>    "SongTitle": "My Dog Spot"<br>}</pre></td>
+</tr>
+<tr>
+<td><pre lang="json">{<br>    "Artist": "No One You Know",<br>    "SongTitle": "Somewhere Down The Road",<br>    "AlbumTitle": "Somewhat Famous",<br>    "Genre": "Country",<br>    "CriticRating": 8.4,<br>    "Year": 1984<br>}</pre></td>
+<td><pre lang="json">{<br>    "Genre": "Country",<br>    "AlbumTitle": "Somewhat Famous",<br>    "Artist": "No One You Know",<br>    "SongTitle": "Somewhere Down The Road"<br>}</pre></td>
+</tr>
+<tr>
+<td><pre lang="json">{<br>    "Artist": "The Acme Band",<br>    "SongTitle": "Still in Love",<br>    "AlbumTitle": "The Buck Starts Here",<br>    "Price": 2.47,<br>    "Genre": "Rock",<br>    "PromotionInfo": {<br>        "RadioStationsPlaying": {<br>            "KHCR",<br>            "KQBX",<br>            "WTNR",<br>            "WJJH"<br>        },<br>        "TourDates": {<br>            "Seattle": "20150622",<br>            "Cleveland": "20150630"<br>        },<br>        "Rotation": "Heavy"<br>    }<br>}</pre></td>
+<td><pre lang="json">{<br>    "Genre": "Rock",<br>    "AlbumTitle": "The Buck Starts Here",<br>    "Artist": "The Acme Band",<br>    "SongTitle": "Still In Love"<br>}</pre></td>
+</tr>
+<tr>
+<td><pre lang="json">{<br>    "Artist": "The Acme Band",<br>    "SongTitle": "Look Out, World",<br>    "AlbumTitle": "The Buck Starts Here",<br>    "Price": 0.99,<br>    "Genre": "Rock"<br>}</pre></td>
+<td><pre lang="json">{<br>    "Genre": "Rock",<br>    "AlbumTitle": "The Buck Starts Here",<br>    "Artist": "The Acme Band",<br>    "SongTitle": "Look Out, World"<br>}</pre></td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th>Index type</th>
+<th>Description</th>
+<th>Remember</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Global Secondary Index</td>
+<td>Partition key and sort key can be different from those on the table</td>
+<td>Not restriced to just the partitioning set forth by the partition key, global</td>
+</tr>
+<tr>
+<td>Local Secondary Index</td>
+<td>Same partition key as the table but different sort key</td>
+<td>Have to stay local and respect the tables partition key but can choose whatever sort key I want</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th>Index type</th>
+<th>When to use</th>
+<th>Example</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Global Secondary Index</td>
+<td>When you want a fast query of attributes outside of the primary key</td>
+<td>"I'd like to query sales orders by customer number rather than sales order number"</td>
+</tr>
+<tr>
+<td>Local Secondary Index</td>
+<td>When you already know the partition key and want to quickly query on another attribute</td>
+<td>"I have the sales order number but I'd like to retrieve only those records with a certain Material number"</td>
+</tr>
+</tbody>
+</table>
+<p>You can query the GenreAlbumTitle index to find all albums of a particular genre (for example, all Rock albums). You can also query the index to find all albums within a particular genre that have certain album titles (for example, all Country albums with titles that start with the letter H).</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="p">{</span>
+<a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a><span class="w">    </span><span class="nt">"salesordernum"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"12346435"</span><span class="p">,</span>
+<a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a><span class="w">    </span><span class="nt">"timestamp"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"22-10-2023"</span><span class="p">,</span>
+<a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a><span class="w">    </span><span class="nt">"salesorder"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a><span class="w">        </span><span class="nt">"salesordertytpe"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"schedule"</span><span class="p">,</span>
+<a id="__codelineno-2-6" name="__codelineno-2-6" href="#__codelineno-2-6"></a><span class="w">        </span><span class="nt">"materialnum"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"123217856"</span>
+<a id="__codelineno-2-7" name="__codelineno-2-7" href="#__codelineno-2-7"></a><span class="w">    </span><span class="p">},</span>
+<a id="__codelineno-2-8" name="__codelineno-2-8" href="#__codelineno-2-8"></a><span class="w">    </span><span class="nt">"customer"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-2-9" name="__codelineno-2-9" href="#__codelineno-2-9"></a><span class="w">        </span><span class="nt">"customernum"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"234235"</span><span class="p">,</span>
+<a id="__codelineno-2-10" name="__codelineno-2-10" href="#__codelineno-2-10"></a><span class="w">        </span><span class="nt">"customername"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"Jimbob"</span>
+<a id="__codelineno-2-11" name="__codelineno-2-11" href="#__codelineno-2-11"></a><span class="w">    </span><span class="p">}</span>
+<a id="__codelineno-2-12" name="__codelineno-2-12" href="#__codelineno-2-12"></a><span class="p">}</span>
+</code></pre></div>
+<p>If you created a Global Secondary Index using <code>customernum</code> you could query by Customer Number at light-speed.</p>
+<p>If you created a Local Secondary Index using <code>materialnum</code> you could query bu Sales Order Number and Material Number at light-speed.</p>
+<p>Attribute projections are attributes projected into an index, ie:</p>
+<ul>
+<li>customernum (key)</li>
+<li>customername</li>
+<li>salesordernum</li>
+<li>timestamp</li>
+<li>materialnum</li>
+</ul>
+<p>You can also create a <code>replica</code> table by creating a <code>Global secondary index</code> using the same <code>partition key</code> and <code>sort key</code>. A use case for this would be if you wanted the same set of data present to higher and lower tier customers, you can set higher RCU/WCU limits for the higher tier customers.</p>
+<p><img alt="dynamo1" src="../../../assets/images/dynamo1.png" title="dynamo1.png"></p>
+<h3 id="dynamodb-rcu-and-wcus">DynamoDB RCU and WCUs<a class="headerlink" href="#dynamodb-rcu-and-wcus" title="Permanent link">¶</a></h3>
+<p>The read/write capacity mode controls how you are charged for read and write throughput and how you manage capacity. You can set the read/write capacity mode when creating a table or you can change it later.</p>
+<p>Secondary indexes inherit the read/write capacity mode from the base table.</p>
+<p>For on-demand mode tables, you don't need to specify how much read and write throughput you expect your application to perform.</p>
+<h4 id="read-requests">Read Requests<a class="headerlink" href="#read-requests" title="Permanent link">¶</a></h4>
+<p>DynamoDB read requests can be either strongly consistent, eventually consistent, or transactional.</p>
+<ul>
+<li>A strongly consistent read request of an item up to 4 KB requires one read request unit.</li>
+<li>An eventually consistent read request of an item up to 4 KB requires one-half read request unit.</li>
+<li>A transactional read request of an item up to 4 KB requires two read request units.</li>
+</ul>
+<p>If you need to read an item that is larger than 4 KB, DynamoDB needs additional read request units. The total number of read request units required depends on the item size, and whether you want an eventually consistent or strongly consistent read. For example, if your item size is 8 KB, you require 2 read request units to sustain one strongly consistent read, 1 read request unit if you choose eventually consistent reads, or 4 read request units for a transactional read request.</p>
+<h4 id="write-requests">Write Requests<a class="headerlink" href="#write-requests" title="Permanent link">¶</a></h4>
+<p>One write request unit represents one write for an item up to 1 KB in size. If you need to write an item that is larger than 1 KB, DynamoDB needs to consume additional write request units. Transactional write requests require 2 write request units to perform one write for items up to 1 KB. The total number of write request units required depends on the item size. For example, if your item size is 2 KB, you require 2 write request units to sustain one write request or 4 write request units for a transactional write request.</p>
+<h3 id="dynamodb-capacity">DynamoDB Capacity<a class="headerlink" href="#dynamodb-capacity" title="Permanent link">¶</a></h3>
+<h4 id="provisioned-capacity">Provisioned Capacity<a class="headerlink" href="#provisioned-capacity" title="Permanent link">¶</a></h4>
+<p>Allocate limits for your RCUs and WCUs. Provisioned throughput is the maximum amount of capacity that an application can consume from a table or index. If your application exceeds your provisioned throughput capacity on a table or index, it is subject to request throttling.</p>
+<p>For example the below usage graph you can see the usage patterns and the red line shows what you have provisioned and are paying for:</p>
+<p><img alt="dynusage1" src="../../../assets/images/dynusage1.png" title="dynusage1.png"></p>
+<p>You can see within the same graph that the red part shows provisioned resource that isn't being consumed but is being paid for:</p>
+<p><img alt="dynusage2" src="../../../assets/images/dynusage2.png" title="dynusage2.png"></p>
+<p>You can use Autoscaling to dynamically change provisioned limits (the red line) to keep costs down.</p>
+<p>Considerations:</p>
+<ul>
+<li>Capacity can be wasted</li>
+<li>Autoscaling can minimise waste but it can take a while to scale up.</li>
+</ul>
+<p><code>Best suited for consistend or predictable traffic patterns.</code></p>
+<h4 id="on-demand-capacity">On Demand Capacity<a class="headerlink" href="#on-demand-capacity" title="Permanent link">¶</a></h4>
+<p>There's no limits, you pay by request.</p>
+<p>Considerations:</p>
+<ul>
+<li>Don't need to worry about throttling</li>
+<li>Don't need to worry about scaling and usage monitoring</li>
+</ul>
+<p><code>Best suited for unpredictable or random traffic patterns.</code></p>
+<h3 id="dynamodb-scaling">DynamoDB scaling<a class="headerlink" href="#dynamodb-scaling" title="Permanent link">¶</a></h3>
+<p>Two ways to scale DynamoDB</p>
+<ul>
+<li>Throughput - based on RCU and WCUs</li>
+<li>Size - based on the storage size of data (max item is 400kb)</li>
+</ul>
+<p><img alt="dynkey" src="../../../assets/images/dynkey.png" title="dynkey.png"></p>
+<ul>
+<li>Partition - a physical space where DynamoDB data is stored</li>
+<li>Partition key - a Unique identifier for each record, sometimes known as a Hash key</li>
+<li>Sort key - In combination with the partition key, optional second part of a composite key that defines storage order</li>
+</ul>
+<p>Formula to decide on how many partitions are in a table:</p>
+<table>
+<thead>
+<tr>
+<th>Method</th>
+<th>Calculation</th>
+<th>Note</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>By Capacity</td>
+<td>(Total RCU / 3000) + (Total WCU / 1000)</td>
+<td>How many read units and write units are provisioned</td>
+</tr>
+<tr>
+<td>By Size</td>
+<td>Total Size / 10GB</td>
+<td>Number of 10GB chunks the data takes up</td>
+</tr>
+<tr>
+<td>Total Partitions</td>
+<td>Round Up for the MAX (By Capacity, By Size)</td>
+<td>The max of either of the above</td>
+</tr>
+</tbody>
+</table>
+<p>Example:</p>
+<ul>
+<li>2000 RCUs</li>
+<li>2000 WCUs</li>
+<li>10GB Data</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>Method</th>
+<th>Calculation</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>By Capacity</td>
+<td>(2000 / 3000) + (2000 / 1000)</td>
+<td>2.66</td>
+</tr>
+<tr>
+<td>By Size</td>
+<td>Total Size / 10GB</td>
+<td>1</td>
+</tr>
+<tr>
+<td>Total Partitions</td>
+<td>Round Up for the MAX (By Capacity, By Size)</td>
+<td>2.66 - So 3 partitions</td>
+</tr>
+</tbody>
+</table>
+<p>If you use say the Date as the partition key, and there's a lot of read/writes for that particular day then you end up with a <code>Hot partition</code> in that all traffic is only hitting the one partition:</p>
+<p><img alt="dynpartition1" src="../../../assets/images/dynpartition1.png" title="dynpartition1.png"></p>
+<p>A good idea would be to  use the sensor_id as the partition key which distributes the data across multiple partitions, and then use the date as the sort key.</p>
+<p><img alt="dynpartition2" src="../../../assets/images/dynpartition2.png" title="dynpartition2.png"></p>
+<h3 id="dynamodb-streams">DynamoDB Streams<a class="headerlink" href="#dynamodb-streams" title="Permanent link">¶</a></h3>
+<p>A DynamoDB feature that creates an event when record modifications occur on a table.</p>
+<p>Three event types:</p>
+<ul>
+<li>INSERT</li>
+<li>UPDATE</li>
+<li>REMOVE</li>
+</ul>
+<p>The events have the content of the row being modified so you can see before/after to see what changed on the data.</p>
+<p>Events are in the same order of modifications.</p>
+<p>Lambda can be triggered off events.</p>
+<p>Use cases:</p>
+<ul>
+<li>Real time dashboards</li>
+<li>Scoreboards which update when changes are made</li>
+</ul>
+<h3 id="nosql">NoSQL<a class="headerlink" href="#nosql" title="Permanent link">¶</a></h3>
+<p>Not only SQL.</p>
+<p>SQL:</p>
+<ul>
+<li>Structured Query Language.</li>
+<li>Table based</li>
+<li>Vertically scalable (increase size)</li>
+</ul>
+<p>NoSQL:
+- Document
+- Key/Value
+- Graph
+- Wide column stores.
+- Horizontally scalable (add more instances)</p>
+<p>SQL databases are relational, and NoSQL databases are non-relational. SQL databases use structured query language (SQL) and have a predefined schema. NoSQL databases have dynamic schemas for unstructured data. SQL databases are vertically scalable, while NoSQL databases are horizontally scalable.</p>
+<p>NoSQL can shard the data across different datastores due to it being non-structured.</p>
+<h3 id="acid">ACID<a class="headerlink" href="#acid" title="Permanent link">¶</a></h3>
+<ul>
+<li>Atomic - all or nothing transactions</li>
+<li>Consistency - data is valid before and after</li>
+<li>Isolation - multiple transactions at the same time</li>
+<li>Durability - committed data is never lost</li>
+</ul>
+<h2 id="aws-compute-optimizer">AWS Compute Optimizer<a class="headerlink" href="#aws-compute-optimizer" title="Permanent link">¶</a></h2>
+<p>AWS Compute Optimizer helps avoid overprovisioning and underprovisioning four types of AWS resources:</p>
+<ul>
+<li>Amazon Elastic Compute Cloud (EC2) instance types</li>
+<li>Amazon Elastic Block Store (EBS) volumes</li>
+<li>Amazon Elastic Container Service (ECS) services on AWS Fargate</li>
+<li>AWS Lambda functions—based on your utilization data.</li>
+</ul>
+<p><img alt="awsoptimiser" src="../../../assets/images/awsoptimiser.png" title="awsoptimiser.png"></p>
+<h2 id="aws-s3-storage-lens">AWS S3 Storage Lens<a class="headerlink" href="#aws-s3-storage-lens" title="Permanent link">¶</a></h2>
+<p>Amazon S3 Storage Lens is a cloud-storage analytics feature that you can use to gain organization-wide visibility into object-storage usage and activity.</p>
+<p>You can use S3 Storage Lens metrics to:</p>
+<ul>
+<li>Generate summary insights, such as finding out how much storage you have across your entire organization or which are the fastest-growing buckets and prefixes.</li>
+<li>Identify cost-optimization opportunities</li>
+<li>Implement data-protection and security best practices</li>
+<li>Improve the performance of application workloads.</li>
+</ul>
+<p>For example, you can identify buckets that don't have S3 Lifecycle rules to expire incomplete multipart uploads that are more than 7 days old. You can also identify buckets that aren't following data-protection best practices, such as using S3 Replication or S3 Versioning. S3 Storage Lens also analyzes metrics to deliver contextual recommendations that you can use to optimize storage costs and apply best practices for protecting your data.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Advanced metrics come at a cost.<br>
+Advanced metrics are detailed status code metrics, advanced cost and advanced data protection.</p>
+</div>
+<p><img alt="s3lens1" src="../../../assets/images/s3lens1.png" title="s3lens1.png"></p>
+<p>Can also look at 403 errors to see where applications are attempting to hit files where permissions aren't set for the application correctly.</p>
+<h2 id="ec2-instance-fleets">EC2 Instance fleets<a class="headerlink" href="#ec2-instance-fleets" title="Permanent link">¶</a></h2>
+<p>An EC2 Fleet contains the configuration information to launch a fleet—or group—of instances. In a single API call, a fleet can launch multiple instance types across multiple Availability Zones, using the On-Demand Instance, Reserved Instance, and Spot Instance purchasing options together.</p>
+<p>Using EC2 Fleet, you can:</p>
+<ul>
+<li>Define separate <code>On-Demand</code> and <code>Spot</code> capacity targets and the maximum amount you’re willing to pay per hour</li>
+<li>Specify the instance types that work best for your applications</li>
+<li>Specify how Amazon EC2 should distribute your fleet capacity within each purchasing option</li>
+</ul>
+<p>You can also set a maximum amount per hour that you’re willing to pay for your fleet, and EC2 Fleet launches instances until it reaches the maximum amount. When the maximum amount you're willing to pay is reached, the fleet stops launching instances even if it hasn’t met the target capacity.</p>
+<p>You now have an option to modify instance types and weights for a running EC2 Fleet or Spot Fleet (referred to further as fleet). You can replace an entire launch template configuration specifying new instance types, weights, and other parameters without deleting and re-creating a fleet.</p>
+<p>You can have multiple pools and the fleet will choose the best way to implement depending on the strategy you define.</p>
+<p>Spot Fleet strategies:</p>
+<ul>
+<li><code>CapacityOptimised</code> - Spot instances come from the pool with optimal capacity for the number of instances running</li>
+<li><code>LowestPrice</code> - Spot instances come from the pool with the lowest price, this is the default strategy</li>
+<li><code>Diversified</code> - Spot instances are distributed across all pools</li>
+<li><code>InstancePoolsToUseCount</code> - Spot instances are distributed across pools, only valid with <code>LowestPrice</code></li>
+</ul>
+<h2 id="asg-scaling-methods">ASG scaling methods<a class="headerlink" href="#asg-scaling-methods" title="Permanent link">¶</a></h2>
+<ul>
+<li>Maintain</li>
+<li>Manual</li>
+<li>Schedule</li>
+<li>Dynamic</li>
+</ul>
+<h3 id="dynamic-scaling">Dynamic scaling<a class="headerlink" href="#dynamic-scaling" title="Permanent link">¶</a></h3>
+<p>Dynamic scaling scales the capacity of your Auto Scaling group as traffic changes occur.</p>
+<p>Amazon EC2 Auto Scaling supports the following types of dynamic scaling policies.</p>
+<p>If you are scaling based on a metric that increases or decreases proportionally to the number of instances in an Auto Scaling group, we recommend that you use target tracking scaling policies. Otherwise, we recommend that you use step scaling policies.</p>
+<table>
+<thead>
+<tr>
+<th>Scaling</th>
+<th>What</th>
+<th>When</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Target Tracking Policy</td>
+<td>Scale based on a predefined or custom metric in relation to a target value</td>
+<td>When CPU utilisation gets to 70% on current instances, scale up</td>
+</tr>
+<tr>
+<td>Simple Scaling Policy</td>
+<td>Waits until health check and cool down period expires before evaluating new need</td>
+<td>Let's add new instances slow and steady</td>
+</tr>
+<tr>
+<td>Step Scaling Policy</td>
+<td>Responds to scaling needs with more sophistication and logic</td>
+<td>Add all the instances</td>
+</tr>
+</tbody>
+</table>
+<h4 id="target-tracking-scaling">Target tracking scaling<a class="headerlink" href="#target-tracking-scaling" title="Permanent link">¶</a></h4>
+<p><code>Target tracking scaling</code> — Increase and decrease the current capacity of the group based on a Amazon CloudWatch metric and a target value. It works similar to the way that your thermostat maintains the temperature of your home—you select a temperature and the thermostat does the rest. E.G., keep your average aggregate CPU usage of your ASG at 70%.</p>
+<p>For example, let's say that you currently have an application that runs on two instances, and you want the CPU utilization of the Auto Scaling group to stay at around 50 percent when the load on the application changes. This gives you extra capacity to handle traffic spikes without maintaining an excessive number of idle resources.</p>
+<p>You can meet this need by creating a target tracking scaling policy that targets an average CPU utilization of 50 percent. Then, your Auto Scaling group scales the number of instances to keep the actual metric value at or near 50 percent.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>We strongly recommend that you use a target tracking scaling policy to scale on a metric like average CPU utilization or the RequestCountPerTarget metric from the Application Load Balancer</p>
+</div>
+<h4 id="step-scaling">Step scaling<a class="headerlink" href="#step-scaling" title="Permanent link">¶</a></h4>
+<p><code>Step scaling</code> — Increase and decrease the current capacity of the group based on a set of scaling adjustments, known as step adjustments, that vary based on the size of the alarm breach. Step scaling methods don't have a cooldown period.</p>
+<p>Step scaling policies and simple scaling policies are two of the dynamic scaling options available for you to use. Both require you to create CloudWatch alarms for the scaling policies. Both require you to specify the high and low thresholds for the alarms. Both require you to define whether to add or remove instances, and how many, or set the group to an exact size.</p>
+<p>The main difference between the policy types is the step adjustments that you get with step scaling policies. When step adjustments are applied, and they increase or decrease the current capacity of your Auto Scaling group, the adjustments vary based on the size of the alarm breach.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>In most cases, step scaling policies are a better choice than simple scaling policies, even if you have only a single scaling adjustment.</p>
+</div>
+<h4 id="simple-scaling">Simple scaling<a class="headerlink" href="#simple-scaling" title="Permanent link">¶</a></h4>
+<p><code>Simple scaling</code> — Increase and decrease the current capacity of the group based on a single scaling adjustment, with a cooldown period between each scaling activity.</p>
+<h2 id="aws-vpc-endpoints">AWS VPC Endpoints<a class="headerlink" href="#aws-vpc-endpoints" title="Permanent link">¶</a></h2>
+<p>A VPC endpoint enables customers to privately connect to supported AWS services and VPC endpoint services powered by AWS PrivateLink.</p>
+<p>VPC endpoints are virtual devices. They are horizontally scaled, redundant, and highly available Amazon VPC components that allow communication between instances in an Amazon VPC and services without imposing availability risks or bandwidth constraints on network traffic. There are two types of VPC endpoints:</p>
+<ul>
+<li>Interface endpoints</li>
+<li>Gateway endpoints</li>
+</ul>
+<p><img alt="vpcendpoint" src="../../../assets/images/vpcendpoint.png" title="vpcendpoint.png"></p>
+<h3 id="interface-endpoints">Interface endpoints<a class="headerlink" href="#interface-endpoints" title="Permanent link">¶</a></h3>
+<p>Interface endpoints enable connectivity to services over AWS PrivateLink. These services include some AWS managed services, services hosted by other AWS customers and partners in their own Amazon VPCs (referred to as endpoint services), and supported AWS Marketplace partner services.</p>
+<p>The following AWS services integrate with AWS PrivateLink. You can create a VPC endpoint to connect to these services privately, as if they were running in your own VPC.</p>
+<p>There are a lot, some examples:</p>
+<ul>
+<li>Cloudformation</li>
+<li>Aurora</li>
+<li>ECS</li>
+<li>ECR</li>
+<li>Cloudwatch</li>
+<li>Codebuild</li>
+<li>etc</li>
+</ul>
+<p><a href="https://docs.aws.amazon.com/vpc/latest/privatelink/aws-services-privatelink-support.html">"AWS services that integrate with AWS PrivateLink"</a></p>
+<h3 id="gateway-endpoints">Gateway endpoints<a class="headerlink" href="#gateway-endpoints" title="Permanent link">¶</a></h3>
+<p>For the services:</p>
+<ul>
+<li>DynamoDB</li>
+<li>S3</li>
+</ul>
+<p>A gateway endpoint targets specific IP routes in an Amazon VPC route table, in the form of a prefix-list, used for traffic destined to Amazon DynamoDB or Amazon Simple Storage Service (Amazon S3). Gateway endpoints do not enable AWS PrivateLink.</p>
+<p>Instances in an Amazon VPC do not require public IP addresses to communicate with VPC endpoints, as interface endpoints use local IP addresses within the consumer Amazon VPC.</p>
+<h2 id="kinesis">Kinesis<a class="headerlink" href="#kinesis" title="Permanent link">¶</a></h2>
+<p>Collection of services for processing streams of various data</p>
+<p>Data is processed in <code>shards</code> which are able to ingest 1000 records per second each</p>
+<p>A default limit of 500 shards is set but you can request an increase to unlimited</p>
+<p>Data records ingested consist of:</p>
+<ul>
+<li>Partition key</li>
+<li>Sequence number</li>
+<li>Data blob (up to 1MB)</li>
+</ul>
+<p>Not persistent storage, default retention is 25 hours, can be configured to 365 days but should be used for transient storage moving data to another service to be ingested</p>
+<h3 id="kinesis-data-streams">Kinesis Data streams<a class="headerlink" href="#kinesis-data-streams" title="Permanent link">¶</a></h3>
+<p>Ingest high volume of data and process it in a number of ways</p>
+<p><img alt="kinesis1" src="../../../assets/images/kinesis1.png" title="kinesis1.png"></p>
+<h3 id="kinesis-firehouse">Kinesis Firehouse<a class="headerlink" href="#kinesis-firehouse" title="Permanent link">¶</a></h3>
+<p>Prepares and loads the data to a destination of choice</p>
+<p><img alt="kinesis2" src="../../../assets/images/kinesis2.png" title="kinesis2.png"></p>
+<h3 id="kinesis-data-analytics">Kinesis Data analytics<a class="headerlink" href="#kinesis-data-analytics" title="Permanent link">¶</a></h3>
+<p>Can run analytics on the data as it's coming in, can run standard SQL queries against the data streams</p>
+<h3 id="kinesis-shards">Kinesis Shards<a class="headerlink" href="#kinesis-shards" title="Permanent link">¶</a></h3>
+<p>Like lanes in a motorway, the more lanes, the more traffic that can go through</p>
+<p>Then you can either use applications to process the data in the streams or firehose to send that data to another service</p>
+<h3 id="kinesis-example">Kinesis Example<a class="headerlink" href="#kinesis-example" title="Permanent link">¶</a></h3>
+<ul>
+<li>Pull in tweets from Twitter API</li>
+<li>Send them to a Kinesis stream</li>
+<li>Kinesis firehose sends the data to an S3 bucket</li>
+<li>Lambda parses the data and stores it in DynamoDB</li>
+</ul>
+<p><img alt="kinesisexample" src="../../../assets/images/kinesisexample.png" title="kinesisexample.png"></p>
+<h2 id="application-portfolio-assessment">Application portfolio assessment<a class="headerlink" href="#application-portfolio-assessment" title="Permanent link">¶</a></h2>
+<p>Long-running cloud migration programs require the coordination of several workstreams such as program governance, landing zone (an operative target environment with security controls), migration, and application portfolio.</p>
+<ul>
+<li>Portfolio discovery and initial planning</li>
+<li>Prioritized applications assessment</li>
+<li>Portfolio analysis and migration planning</li>
+<li>Continuous assessment and improvement</li>
+</ul>
+<p><img alt="apa" src="../../../assets/images/apa.png" title="apa.png"></p>
+<h2 id="service-catalog-constraints">Service Catalog Constraints<a class="headerlink" href="#service-catalog-constraints" title="Permanent link">¶</a></h2>
+<p>Constraints restrict the ways that specific AWS resources can be deployed for a product. You can use them to apply limits to products for governance or cost control. There are two types of constraints: template and launch. Template constraints restrict the configuration parameters that are available for the user when launching the product (for example, EC2 instance types or IP ranges). Template constraints allow you to reuse generic infrastructure as code (IaC) templates for products and apply restrictions to the templates on a per-product or per-portfolio basis. Launch constraints allow you to specify a role for a product in a portfolio. This role is used to provision the resources at launch, so you can restrict user permissions without impacting users’ ability to provision products from the catalog.</p>
+<p>Constraints:</p>
+<ul>
+<li>Launch Constraints</li>
+<li>Template Constraints</li>
+</ul>
+<h3 id="launch-constraints">Launch Constraints<a class="headerlink" href="#launch-constraints" title="Permanent link">¶</a></h3>
+<p>A launch constraint specifies the AWS Identity and Access Management (IAM) role that AWS Service Catalog assumes when an end user launches, updates, or terminates a product.</p>
+<p>Launch constraints apply to products in the portfolio (product-portfolio association). Launch constraints do not apply at the portfolio level or to a product across all portfolios.</p>
+<p>Without a launch constraint, end users must launch and manage products using their own IAM credentials.</p>
+<h3 id="template-constraints">Template Constraints<a class="headerlink" href="#template-constraints" title="Permanent link">¶</a></h3>
+<p>To limit the options that are available to end users when they launch a product, you apply template constraints. Apply template constraints to ensure that the end users can use products without breaching the compliance requirements of your organization. You apply template constraints to a product in a AWS Service Catalog portfolio. A portfolio must contain one or more products before you can define template constraints.</p>
+<p>A template constraint consists of one or more rules that narrow the allowable values for parameters that are defined in the product's underlying AWS CloudFormation template. The parameters in an AWS CloudFormation template define the set of values that users can specify when creating a stack. For example, a parameter might define the various instance types that users can choose from when launching a stack that includes EC2 instances.</p>
+<h3 id="service-actions">Service Actions<a class="headerlink" href="#service-actions" title="Permanent link">¶</a></h3>
+<p>Using service actions, you can enable end users to perform operational tasks, troubleshoot issues, run approved commands, or request permissions in AWS Service Catalog on your provisioned products, without needing to grant end users full access to AWS services. You use AWS Systems Manager documents to define service actions. The AWS Systems Manager documents provide access to pre-defined actions that implement AWS best practices, such as Amazon EC2 stop and reboot, and you can define custom actions too.</p>
+<h2 id="multicast">Multicast<a class="headerlink" href="#multicast" title="Permanent link">¶</a></h2>
+<p>Multicast is a communication protocol used for delivering a single stream of data to multiple receiving computers simultaneously. Transit Gateway supports routing multicast traffic between subnets of attached VPCs, and it serves as a multicast router for instances sending traffic destined for multiple receiving instances.</p>
+<h2 id="cognito">Cognito<a class="headerlink" href="#cognito" title="Permanent link">¶</a></h2>
+<p>The two main components of Amazon Cognito are user pools and identity pools. User pools are user directories that provide sign-up and sign-in options for your web and mobile app users. Identity pools provide AWS credentials to grant your users access to other AWS services.</p>
+<h3 id="user-pool">User Pool<a class="headerlink" href="#user-pool" title="Permanent link">¶</a></h3>
+<p>A user pool is a user directory in Amazon Cognito. Your app users can sign in either directly through a user pool, or federate through a third-party identity provider (IdP). The user pool manages the overhead of handling the tokens that are returned from social sign-in through Facebook, Google, Amazon, and Apple, and from OpenID Connect (OIDC) and SAML IdPs. Whether your users sign in directly or through a third party, all members of the user pool have a directory profile that you can access through an SDK.</p>
+<h3 id="identity-pool">Identity Pool<a class="headerlink" href="#identity-pool" title="Permanent link">¶</a></h3>
+<p>With an identity pool, your users can obtain temporary AWS credentials to access AWS services, such as Amazon S3 and DynamoDB. Identity pools support anonymous guest users, as well as federation through third-party IdPs.</p>
+<h2 id="step-function-workflows">Step Function Workflows<a class="headerlink" href="#step-function-workflows" title="Permanent link">¶</a></h2>
+<p>AWS Step Functions is a serverless orchestration service that lets you integrate with AWS Lambda functions and other AWS services to build business-critical applications. Through Step Functions' graphical console, you see your application’s workflow as a series of event-driven steps.</p>
+<p>Step Functions has two workflow types. Standard workflows have exactly-once workflow execution and can run for up to one year. This means that each step in a Standard workflow will execute exactly once. Express workflows, however, have at-least-once workflow execution and can run for up to five minutes. This means that one or more steps in an Express Workflow can potentially run more than once, while each step in the workflow executes at least once.</p>
+<p>Standard workflows are ideal for long-running, auditable workflows, as they show execution history and visual debugging. Express workflows are ideal for high-event-rate workloads, such as streaming data processing and IoT data ingestion.</p>
+<h2 id="sqs-visibility-timeout-and-message-retention">SQS Visibility timeout and message retention<a class="headerlink" href="#sqs-visibility-timeout-and-message-retention" title="Permanent link">¶</a></h2>
+<p>When a consumer receives and processes a message from a queue, the message remains in the queue. Amazon SQS doesn't automatically delete the message. Because Amazon SQS is a distributed system, there's no guarantee that the consumer actually receives the message (for example, due to a connectivity issue, or due to an issue in the consumer application). Thus, the consumer must delete the message from the queue after receiving and processing it. If the consumer fails to process and delete the message before the visibility timeout expires, the message becomes visible to other consumers.</p>
+<p><img alt="sqsvisibility" src="../../../assets/images/sqsvisibility.png" title="sqsvisibility.png"></p>
+<p>Immediately after a message is received, it remains in the queue. To prevent other consumers from processing the message again, Amazon SQS sets a visibility timeout, a period of time during which Amazon SQS prevents all consumers from receiving and processing the message. The default visibility timeout for a message is 30 seconds.</p>
+<p>Amazon SQS supports dead-letter queues (DLQ), which other queues (source queues) can target for messages that can't be processed (consumed) successfully. Dead-letter queues are useful for debugging your application or messaging system because they let you isolate unconsumed messages to determine why their processing didn't succeed.</p>
+<h2 id="aws-glue-dms-data-pipeline">AWS Glue / DMS / Data pipeline<a class="headerlink" href="#aws-glue-dms-data-pipeline" title="Permanent link">¶</a></h2>
+<p><code>AWS Glue</code> is a fully managed extract, transform, and load (ETL) service that simplifies data preparation and integration. Glue offers automated data discovery, cataloging, and schema inference, making it an excellent choice for data lakes and data warehousing projects.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Use Glue to extract data from various sources, transform it into a common format, and load it into an AWS Redshift data warehouse for analytics purposes.</p>
+</div>
+<p><code>AWS DataPipeline</code> is an orchestration service that helps you define, schedule, and manage complex data processing workflows. It allows you to combine various AWS services and third-party applications to build end-to-end data processing pipelines.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Use DataPipeline to schedule regular data imports from an S3 bucket to a Redshift cluster, perform data transformations using Glue, and trigger an AWS Lambda function for further processing or notifications.</p>
+</div>
+<p><code>AWS EMR</code> is a managed big data processing service that uses Apache Hadoop and Spark to process large volumes of data.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Use EMR to process large-scale clickstream data, perform real-time analytics using Spark, and store the aggregated results in an S3 bucket for further analysis.</p>
+</div>
+<p><code>AWS DMS</code> is a fully managed service that helps migrate, replicate, and continuously capture data changes between different databases</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Use DMS to migrate data from an on-premises Oracle database to an Amazon RDS instance, ensuring data consistency and minimal downtime.</p>
+</div>
+<h2 id="iosp-vs-throughput">IOSP vs Throughput<a class="headerlink" href="#iosp-vs-throughput" title="Permanent link">¶</a></h2>
+<p><img alt="iops_throughput" src="../../../assets/images/iops_throughput.png" title="iops_throughput.png"></p>
+<p>For low latency you want to use IOPS and for large data sets you want to use Throughput.</p>
+<h2 id="instance-store-backed-ec2">Instance Store Backed EC2<a class="headerlink" href="#instance-store-backed-ec2" title="Permanent link">¶</a></h2>
+<p>An instance store provides temporary block-level storage for your instance.</p>
+<p>This is different to EBS backed instances.</p>
+<p>There are no EBS volumes in the EC2 &gt; Storage section of the console.</p>
+<p>You cannot unattach the volumes as they are connected physically on the EC2 instance.</p>
+<p>This is useful for low latency.</p>
+<p>The instance cannot be stopped, it can only be rebooted or terminated.</p>
+<p>Useful for instances with ephemeral storage such as caches, buffers, temporary content.</p>
+<p>You cannot resize the instance.</p>
+<p>Backups have to be done manually by copying the data off the volume.</p>
+<h2 id="aws-macie">AWS Macie<a class="headerlink" href="#aws-macie" title="Permanent link">¶</a></h2>
+<p>Amazon Macie is a data security service that uses machine learning (ML) and pattern matching to discover and help protect your sensitive data.</p>
+<p>Reviews and suggests changes based on use determined by machine learning:</p>
+<ul>
+<li>S3 bucket encryption</li>
+<li>S3 bucket public access</li>
+<li>S3 bucket shared permissions</li>
+</ul>
+<h2 id="aws-outposts">AWS Outposts<a class="headerlink" href="#aws-outposts" title="Permanent link">¶</a></h2>
+<p>AWS Outposts is a family of fully managed solutions delivering AWS infrastructure and services to virtually any on-premises or edge location for a truly consistent hybrid experience. Outposts solutions allow you to extend and run native AWS services on premises, and is available in a variety of form factors, from 1U and 2U Outposts servers to 42U Outposts racks, and multiple rack deployments.</p>
+<h3 id="s3-outposts">S3 Outposts<a class="headerlink" href="#s3-outposts" title="Permanent link">¶</a></h3>
+<p>Amazon S3 on Outposts delivers object storage to your on-premises AWS Outposts environment to meet local data processing and data residency needs. Using the S3 APIs and features, S3 on Outposts makes it easy to store, secure, tag, retrieve, report on, and control access to the data on your Outpost.</p>
+<h2 id="api-gateway">API Gateway<a class="headerlink" href="#api-gateway" title="Permanent link">¶</a></h2>
+<ul>
+<li>First you create a <code>Resource</code> for example <code>/transactions</code></li>
+<li>Then you create a <code>Method</code> for example <code>GET</code></li>
+<li>Then you create your <code>Integration</code> for example a <code>Lambda Function</code></li>
+</ul>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>In <code>Lambda proxy integration</code>, when a client submits an API request, API Gateway passes to the integrated Lambda function an event object, except that the order of the request parameters is not preserved. This request data includes the request headers, query string parameters, URL path variables, payload, and API configuration data. The configuration data can include current deployment stage name, stage variables, user identity, or authorization context (if any). The backend Lambda function parses the incoming request data to determine the response that it returns.</p>
+</div>
+<p>Then you deploy the API gateway into a <code>Stage</code> for example <code>Development</code></p>
+<h2 id="cognito_1">Cognito<a class="headerlink" href="#cognito_1" title="Permanent link">¶</a></h2>
+<h3 id="basic-flow">Basic flow<a class="headerlink" href="#basic-flow" title="Permanent link">¶</a></h3>
+<ul>
+<li>To generate or retrieve a user identity in the identity pool, call the <code>GetId</code> API</li>
+<li>To retrieve the open ID token, use the result from step 2 to call the <code>GetOpenIdToken</code> API.</li>
+<li>To retrieve the temporary credentials of the authenticated role, use the token from step 3 to call the <code>AssumeRoleWithWebIdentity</code> API.</li>
+</ul>
+<p><img alt="cognitobasic" src="../../../assets/images/cognitobasic.png" title="cognitobasic.png"></p>
+<h3 id="enhanced-flow">Enhanced flow<a class="headerlink" href="#enhanced-flow" title="Permanent link">¶</a></h3>
+<ul>
+<li>To generate or retrieve a user identity in the identity pool, call the <code>GetId</code> API</li>
+<li>To retrieve temporary credentials from the identity pool, call the <code>GetCredentialsForIdentity</code> API.</li>
+</ul>
+<p><img alt="cognitoenhanced" src="../../../assets/images/cognitoenhanced.png" title="cognitoenhanced.png"></p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>When calling <code>GetCredentialsForIdentity</code>, Amazon Cognito is actually making the call to <code>AssumeRoleWithWebIdentity</code> on your behalf</p>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>If you created an identity pool after February 2015 and used the supplied example code, you are already using the enhnaced flow.</p>
+</div>
+<p>For most customers, the enhanced flow is the correct choice, it offers many benefits over the basic flow:</p>
+<ul>
+<li>One less network call to get credentials on the device.</li>
+<li>All calls are made to Amazon Cognito, meaning it is also one less network connection.</li>
+<li>Roles no longer need to be embedded in your application, only an identity pool id and region are necessary to start bootstrapping credentials.</li>
+</ul>
+<h2 id="timestream">Timestream<a class="headerlink" href="#timestream" title="Permanent link">¶</a></h2>
+<p>Amazon Timestream is a fast, scalable, and serverless time-series database service that makes it easier to store and analyze trillions of events per day up to 1,000 times faster. Amazon Timestream automatically scales up or down to adjust capacity and performance, so that you don’t have to manage the underlying infrastructure.</p>
+<p>Use case is IOT.</p>
+<h2 id="redshift-spectrum">Redshift Spectrum<a class="headerlink" href="#redshift-spectrum" title="Permanent link">¶</a></h2>
+<p>With Redshift Spectrum, an analyst can perform SQL queries on data stored in Amazon S3 buckets. This can save time and money because it eliminates the need to move data from a storage service to a database, and instead directly queries data inside an S3 bucket</p>
+<h2 id="athena-vs-opensearch">Athena vs Opensearch<a class="headerlink" href="#athena-vs-opensearch" title="Permanent link">¶</a></h2>
+<p>Opensearch is opensource and a lot faster.</p>
+<h2 id="aws-proton">AWS Proton<a class="headerlink" href="#aws-proton" title="Permanent link">¶</a></h2>
+<p>AWS Proton is a deployment workflow tool for modern applications that helps platform and DevOps engineers achieve organizational agility.</p>
+<p>You can support reliable deployments for modern applications with consistent standards for CI/CD, security, and monitoring.</p>
+<h2 id="permissions-boundary">Permissions boundary<a class="headerlink" href="#permissions-boundary" title="Permanent link">¶</a></h2>
+<p>An entity's permissions boundary allows it to perform only the actions that are allowed by both its identity-based policies and its permissions boundaries.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Don't use resource-based policy statements that include a NotPrincipal policy element with a Deny effect for IAM users or roles that have a permissions boundary policy attached. <code>The NotPrincipal element with a Deny effect will always deny any IAM principal that has a permissions boundary policy attached</code>, regardless of the values specified in the NotPrincipal element.</p>
+</div>
+<h2 id="using-amazon-s3-as-a-source-for-aws-dms">Using Amazon S3 as a source for AWS DMS<a class="headerlink" href="#using-amazon-s3-as-a-source-for-aws-dms" title="Permanent link">¶</a></h2>
+<p>You can migrate data from an Amazon S3 bucket using AWS DMS. To do this, provide access to an Amazon S3 bucket containing one or more data files. In that S3 bucket, include a JSON file that describes the mapping between the data and the database tables of the data in those files.</p>
+<p>The source data files must be present in the Amazon S3 bucket before the full load starts. You specify the bucket name using the bucketName parameter.</p>
+<p>The source data files must be in comma-separated value (.csv) format.</p>
+<p>The mapping rule should be put in the source endpoint configuration rather than the task settings if S3 is the source for DMS.</p></div>
+
+
+
+
+
+
+
+  
+    
+  
+  
+
+
+  <aside class="md-source-file">
+    
+      
+  <span class="md-source-file__fact">
+    <span class="md-icon" title="Last update">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1-2.1-2M12.5 7v5.2l4 2.4-1 1L11 13V7h1.5M11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2v1.8Z"/></svg>
+    </span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">March 9, 2024</span>
+  </span>
+
+    
+    
+    
+    
+  </aside>
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12Z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "../../..", "features": ["search.highlight", "search.share", "content.code.annotate", "navigation.top", "navigation.indexes", "content.action.edit"], "search": "../../../assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../../../assets/javascripts/bundle.c8d2eff1.min.js"></script>
+      
+    
+  </body>
+</html>
