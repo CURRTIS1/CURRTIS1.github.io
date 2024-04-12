@@ -1,1 +1,0 @@
-## Design for New Solutions
