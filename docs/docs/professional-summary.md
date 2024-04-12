@@ -6,7 +6,9 @@ version: 1.0
 
 ## Profile
 
-I am well organised which transfers from my home life to work. I've always been well driven and have a keen interest in technologies.
+<a href="https://www.linkedin.com/in/curtis-w-95ab9559/"><img src="/assets/images/curtis.png" height="100" width="125"></a>
+
+I am well organised which transfers from my home life to work. I've always been driven and have a keen interest in technologies.
 
 ## Experience
 
