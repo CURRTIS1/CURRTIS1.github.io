@@ -1,8 +1,15 @@
-## Github Pages Documentation
+---
+title: Github Pages Documentation
+summary: Github Pages Documentation
+version: 1.0
+---
 
-This is a Github Pages to store all documentation on:
+This is a Github Pages to store my project documentation on:
 
 - AWS
+- Python
 - Terraform
-- EKS
+- Pipelines
+- Docker
+- Kubernetes
 - Any other projects

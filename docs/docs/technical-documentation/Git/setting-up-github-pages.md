@@ -28,7 +28,7 @@ sudo apt install -y make
 
 #### Make lint permissions
 
-If you get permissions denied on the linting bash script, run the below:
+If you get `permissions denied` on the linting bash script, run the below:
 
 ```bash
 sudo chmod a+x markdown-lint.sh
@@ -40,9 +40,7 @@ sudo chmod a+x markdown-lint.sh
 curl -sSL https://install.python-poetry.org | python3 -
 ```
 
-#### Error: /bin/bash: line 1: poetry: command not found
-
-If you get the above error, ensure you have the correct path in your bash profile.
+If you get the error `/bin/bash: line 1: poetry: command not found`, ensure you have the correct path in your bash profile.
 
 Run:
 
