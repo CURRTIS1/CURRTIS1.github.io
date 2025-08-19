@@ -49,6 +49,12 @@ theme:
 extra_css:
   - stylesheets/extra.css
 
+nav:
+  - ...
+  - General:
+      - Tag Index: general/tags.md
+      - Contributing: general/contributing.md
+
 markdown_extensions:
   - admonition
   - attr_list
