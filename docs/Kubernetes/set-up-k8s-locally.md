@@ -26,7 +26,7 @@ To see your cluster information run:
 kubectl cluster-info --context kind-kind
 ```
 
-![kind1](../../assets/images/kind1.png "kind1.png")
+![kind1](../assets/images/kind1.png "kind1.png")
 
 ### Use Kind to create a K8 cluster with multiple nodes
 
@@ -75,4 +75,4 @@ Now when you run get nodes you can see a control-plane and 3 worker nodes
 kubectl get nodes --context kind-kind
 ```
 
-![kind2](../../assets/images/kind2.png "kind2.png")
+![kind2](../assets/images/kind2.png "kind2.png")
