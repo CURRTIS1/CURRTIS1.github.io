@@ -5,7 +5,7 @@ site_url:
 repo_name: CURRTIS1.github.io
 repo_url: https://github.com/CURRTIS1/CURRTIS1.github.io
 # EDIT LINES ABOVE THIS ONE FOR A NEW REPOSITORY
-edit_uri: "edit/main/docs/docs/"
+edit_uri: "edit/main/docs/"
 docs_dir: docs
 site_dir: site
 remote_branch: gh-pages
@@ -51,9 +51,7 @@ extra_css:
 
 nav:
   - ...
-  - General:
-      - Tag Index: general/tags.md
-      - Contributing: general/contributing.md
+  - 'index.md'
 
 markdown_extensions:
   - admonition
