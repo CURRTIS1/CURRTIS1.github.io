@@ -101,20 +101,3 @@ spec:
     restartPolicy: Never
   backoffLimit: 4
   activeDeadlineSeconds: 10
-```
-
-```bash
-
-```
-
-```bash
-
-```
-
-```bash
-
-```
-
-```bash
-
-```
