@@ -11,11 +11,9 @@ rxt:
 
 ## Overview
 
-```text
 --8<--
 bitbucket_access_key_rotation/README.md
 --8<--
-```
 
 ## Code
 
