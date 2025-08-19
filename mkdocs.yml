@@ -15,7 +15,6 @@ plugins:
   - awesome-pages
   - macros
   - git-revision-date-localized
-  - mkdocs-video
   #- tags:
   #    tags_file: general/tags.md
 
