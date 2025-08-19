@@ -50,7 +50,6 @@ extra_css:
   - stylesheets/extra.css
 
 nav:
-  - ...
   - 'index.md'
 
 markdown_extensions:
