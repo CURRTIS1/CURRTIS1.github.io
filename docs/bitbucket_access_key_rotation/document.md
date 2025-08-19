@@ -23,7 +23,7 @@ bitbucket_access_key_rotation/README.md
 
 ```python
 --8<--
-bitbucket_access_key_rotation/create_initial_access_key,py
+bitbucket_access_key_rotation/create_initial_access_key.py
 --8<--
 ```
 
@@ -31,6 +31,6 @@ bitbucket_access_key_rotation/create_initial_access_key,py
 
 ```python
 --8<--
-bitbucket_access_key_rotation/rotate_bitbucket_access_key,py
+bitbucket_access_key_rotation/rotate_bitbucket_access_key.py
 --8<--
 ```
