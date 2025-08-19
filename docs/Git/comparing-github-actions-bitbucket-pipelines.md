@@ -69,7 +69,7 @@ The below is a Github Pipelines example which on push to master branch:
 - Downloads the artifacts
 - Runs a terraform apply using the plan output from the previous step
 
-![ghactions](../../assets/images/ghactions.png "ghactions.png")
+![ghactions](../assets/images/ghactions.png "ghactions.png")
 
 ```YAML
 name: Deploy Terraform
@@ -214,9 +214,9 @@ The below is a Bitbucket Pipelines example which on push to master:
 - Performs a terraform plan
 - Uploads the terraform plan output to artifacts
 - Downloads the terraform plan from artifacts for a second step
-- Perfirns a terraform init and then a terraform apply from the previous job using artifacts
+- Performs a terraform init and then a terraform apply from the previous job using artifacts
 
-![bitbucketpipelines](../../assets/images/bitbucketpipelines.png "bitbucketpipelines.png")
+![bitbucketpipelines](../assets/images/bitbucketpipelines.png "bitbucketpipelines.png")
 
 ```YAML
 image: hashicorp/terraform:1.5.5

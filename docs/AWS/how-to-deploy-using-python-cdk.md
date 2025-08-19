@@ -132,7 +132,7 @@ cdk deploy
 
 You will see the below if the deployment is successful.
 
-![cdk1](../../assets/images/cdk1.png "cdk1.png")
+![cdk1](../assets/images/cdk1.png "cdk1.png")
 
 ## Deploying an application written in Cloudformation
 

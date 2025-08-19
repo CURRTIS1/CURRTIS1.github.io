@@ -51,9 +51,7 @@ extra_css:
 
 nav:
   - ...
-  - General:
-      - Tag Index: general/tags.md
-      - Contributing: general/contributing.md
+
 
 markdown_extensions:
   - admonition
