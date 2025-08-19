@@ -1,0 +1,2534 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Documentation Site">
+      
+      
+      
+      
+        <link rel="prev" href="../cost_management/">
+      
+      
+        <link rel="next" href="../deployment_and_operations_management/">
+      
+      
+      <link rel="icon" href="../../../assets/images/favicon.ico">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.17">
+    
+    
+      
+        <title>Datastores - Curtis Documentation</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.7e37652d.min.css">
+      
+        
+        <link rel="stylesheet" href="../../../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+  
+  
+    
+    
+  
+  
+  <style>:root{--md-admonition-icon--quote:url('data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%2024%2024%22%3E%3Cpath%20d%3D%22m14.6%2016.6%204.6-4.6-4.6-4.6L16%206l6%206-6%206zm-5.2%200L4.8%2012l4.6-4.6L8%206l-6%206%206%206z%22/%3E%3C/svg%3E');}</style>
+
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../../stylesheets/extra.css">
+    
+    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#datastores" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../../.." title="Curtis Documentation" class="md-header__button md-logo" aria-label="Curtis Documentation" data-md-component="logo">
+      
+  <img src="../../../assets/images/icon.jpg" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Curtis Documentation
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Datastores
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m17.75 4.09-2.53 1.94.91 3.06-2.63-1.81-2.63 1.81.91-3.06-2.53-1.94L12.44 4l1.06-3 1.06 3zm3.5 6.91-1.64 1.25.59 1.98-1.7-1.17-1.7 1.17.59-1.98L15.75 11l2.06-.05L18.5 9l.69 1.95zm-2.28 4.95c.83-.08 1.72 1.1 1.19 1.85-.32.45-.66.87-1.08 1.27C15.17 23 8.84 23 4.94 19.07c-3.91-3.9-3.91-10.24 0-14.14.4-.4.82-.76 1.27-1.08.75-.53 1.93.36 1.85 1.19-.27 2.86.69 5.83 2.89 8.02a9.96 9.96 0 0 0 8.02 2.89m-1.64 2.02a12.08 12.08 0 0 1-7.8-3.47c-2.17-2.19-3.33-5-3.49-7.82-2.81 3.14-2.7 7.96.31 10.98 3.02 3.01 7.84 3.12 10.98.31"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="light" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 7a5 5 0 0 1 5 5 5 5 0 0 1-5 5 5 5 0 0 1-5-5 5 5 0 0 1 5-5m0 2a3 3 0 0 0-3 3 3 3 0 0 0 3 3 3 3 0 0 0 3-3 3 3 0 0 0-3-3m0-7 2.39 3.42C13.65 5.15 12.84 5 12 5s-1.65.15-2.39.42zM3.34 7l4.16-.35A7.2 7.2 0 0 0 5.94 8.5c-.44.74-.69 1.5-.83 2.29zm.02 10 1.76-3.77a7.131 7.131 0 0 0 2.38 4.14zM20.65 7l-1.77 3.79a7.02 7.02 0 0 0-2.38-4.15zm-.01 10-4.14.36c.59-.51 1.12-1.14 1.54-1.86.42-.73.69-1.5.83-2.29zM12 22l-2.41-3.44c.74.27 1.55.44 2.41.44.82 0 1.63-.17 2.37-.44z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+          <a href="javascript:void(0)" class="md-search__icon md-icon" title="Share" aria-label="Share" data-clipboard data-clipboard-text="" data-md-component="search-share" tabindex="-1">
+            
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M18 16.08c-.76 0-1.44.3-1.96.77L8.91 12.7c.05-.23.09-.46.09-.7s-.04-.47-.09-.7l7.05-4.11c.54.5 1.25.81 2.04.81a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3c0 .24.04.47.09.7L8.04 9.81C7.5 9.31 6.79 9 6 9a3 3 0 0 0-3 3 3 3 0 0 0 3 3c.79 0 1.5-.31 2.04-.81l7.12 4.15c-.05.21-.08.43-.08.66 0 1.61 1.31 2.91 2.92 2.91s2.92-1.3 2.92-2.91A2.92 2.92 0 0 0 18 16.08"/></svg>
+          </a>
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/CURRTIS1/CURRTIS1.github.io" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.0.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path fill="currentColor" d="M173.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M252.8 8C114.1 8 8 113.3 8 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C436.2 457.8 504 362.9 504 252 504 113.3 391.5 8 252.8 8M105.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"/></svg>
+  </div>
+  <div class="md-source__repository">
+    CURRTIS1.github.io
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../.." title="Curtis Documentation" class="md-nav__button md-logo" aria-label="Curtis Documentation" data-md-component="logo">
+      
+  <img src="../../../assets/images/icon.jpg" alt="logo">
+
+    </a>
+    Curtis Documentation
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/CURRTIS1/CURRTIS1.github.io" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.0.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path fill="currentColor" d="M173.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M252.8 8C114.1 8 8 113.3 8 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C436.2 457.8 504 362.9 504 252 504 113.3 391.5 8 252.8 8M105.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"/></svg>
+  </div>
+  <div class="md-source__repository">
+    CURRTIS1.github.io
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Github Pages Documentation
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../professional-summary/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Professional Profile
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    AWS
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            AWS
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../AWS/how-to-deploy-using-java-cdk/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    How to deploy using AWS Java CDK
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../AWS/how-to-deploy-using-python-cdk/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    How to deploy using AWS Python CDK
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Git
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            Git
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Git/comparing-github-actions-bitbucket-pipelines/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Comparing Github Actions Bitbucket Pipelines
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Git/setting-up-github-pages/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Setting up Github Pages
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Git/sync-github-to-bitbucket/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Syncing Github repository to Bitbucket
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Kubernetes
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            Kubernetes
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Kubernetes/set-up-k8s-locally/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Setting up a Kubernetes cluster locally on your machine
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Minecraft
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6">
+            <span class="md-nav__icon md-icon"></span>
+            Minecraft
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Minecraft/deploy-a-minecraft-server/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    How to deploy a Minecraft Server
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7" >
+        
+          
+          <label class="md-nav__link" for="__nav_7" id="__nav_7_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Mkdocs
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_7_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_7">
+            <span class="md-nav__icon md-icon"></span>
+            Mkdocs
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Mkdocs/bracket-render-error/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    How to resolve the Macro Rendering Error
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_8" >
+        
+          
+          <label class="md-nav__link" for="__nav_8" id="__nav_8_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Synology
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_8_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_8">
+            <span class="md-nav__icon md-icon"></span>
+            Synology
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../Synology/resolve-mfa-error/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Resolving 2FA on Synology NAS
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_9" >
+        
+          
+          <label class="md-nav__link" for="__nav_9" id="__nav_9_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Bitbucket access key rotation
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_9_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_9">
+            <span class="md-nav__icon md-icon"></span>
+            Bitbucket access key rotation
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../bitbucket_access_key_rotation/document/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Document on the Bitbucket pipeline access key rotation
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_10" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_10" id="__nav_10_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Studying
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_10_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_10">
+            <span class="md-nav__icon md-icon"></span>
+            Studying
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_10_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_10_1" id="__nav_10_1_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Certified kubernetes application developer ckad
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_10_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_10_1">
+            <span class="md-nav__icon md-icon"></span>
+            Certified kubernetes application developer ckad
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../certified_kubernetes_application_developer_ckad/application-design-and-build/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Application design and build
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../certified_kubernetes_application_developer_ckad/general/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    General
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_10_2" checked>
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    Solutions architect professional
+    
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_10_2" id="__nav_10_2_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_10_2_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_10_2">
+            <span class="md-nav__icon md-icon"></span>
+            Solutions architect professional
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../architecting_to_scale/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Architecting to scale
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../business_continuity/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Business continuity
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../cost_management/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Cost management
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    Datastores
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    Datastores
+    
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#datastores" class="md-nav__link">
+    <span class="md-ellipsis">
+      Datastores
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Datastores">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#design-solutions-for-organisational-complexity" class="md-nav__link">
+    <span class="md-ellipsis">
+      Design Solutions for Organisational Complexity
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#design-for-new-solutions" class="md-nav__link">
+    <span class="md-ellipsis">
+      Design for new solutions
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#continuous-improvement-for-existing-solutions" class="md-nav__link">
+    <span class="md-ellipsis">
+      Continuous Improvement for Existing Solutions
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#accelerate-workload-migration-and-modernisation" class="md-nav__link">
+    <span class="md-ellipsis">
+      Accelerate Workload Migration and Modernisation
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#datastore-concepts" class="md-nav__link">
+    <span class="md-ellipsis">
+      Datastore Concepts
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#s3" class="md-nav__link">
+    <span class="md-ellipsis">
+      S3
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ebs" class="md-nav__link">
+    <span class="md-ellipsis">
+      EBS
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#efs" class="md-nav__link">
+    <span class="md-ellipsis">
+      EFS
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#fsx" class="md-nav__link">
+    <span class="md-ellipsis">
+      FSx
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#amazon-storage-gateway" class="md-nav__link">
+    <span class="md-ellipsis">
+      Amazon Storage Gateway
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#database-on-ec2" class="md-nav__link">
+    <span class="md-ellipsis">
+      Database on EC2
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#rds" class="md-nav__link">
+    <span class="md-ellipsis">
+      RDS
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#aurora" class="md-nav__link">
+    <span class="md-ellipsis">
+      Aurora
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#dynamodb" class="md-nav__link">
+    <span class="md-ellipsis">
+      DynamoDB
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="DynamoDB">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#relational-vs-nosql" class="md-nav__link">
+    <span class="md-ellipsis">
+      Relational vs NoSQL
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#read-and-write-capacity-units" class="md-nav__link">
+    <span class="md-ellipsis">
+      Read and Write capacity units
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#indexes-and-keys" class="md-nav__link">
+    <span class="md-ellipsis">
+      Indexes and keys
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#secondary-indexes" class="md-nav__link">
+    <span class="md-ellipsis">
+      Secondary indexes
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#documentdb" class="md-nav__link">
+    <span class="md-ellipsis">
+      DocumentDB
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#redshift" class="md-nav__link">
+    <span class="md-ellipsis">
+      Redshift
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#preparing-for-data" class="md-nav__link">
+    <span class="md-ellipsis">
+      Preparing for Data
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Preparing for Data">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#aws-glue" class="md-nav__link">
+    <span class="md-ellipsis">
+      AWS Glue
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#aws-athena" class="md-nav__link">
+    <span class="md-ellipsis">
+      AWS Athena
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#aws-neptune" class="md-nav__link">
+    <span class="md-ellipsis">
+      AWS Neptune
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#elasticache" class="md-nav__link">
+    <span class="md-ellipsis">
+      Elasticache
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#other-database-options" class="md-nav__link">
+    <span class="md-ellipsis">
+      Other Database options
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#quiz" class="md-nav__link">
+    <span class="md-ellipsis">
+      Quiz
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../deployment_and_operations_management/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Deployment and operations management
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../migrations/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Migrations
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../networking/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Networking
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../security/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Security
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#datastores" class="md-nav__link">
+    <span class="md-ellipsis">
+      Datastores
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Datastores">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#design-solutions-for-organisational-complexity" class="md-nav__link">
+    <span class="md-ellipsis">
+      Design Solutions for Organisational Complexity
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#design-for-new-solutions" class="md-nav__link">
+    <span class="md-ellipsis">
+      Design for new solutions
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#continuous-improvement-for-existing-solutions" class="md-nav__link">
+    <span class="md-ellipsis">
+      Continuous Improvement for Existing Solutions
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#accelerate-workload-migration-and-modernisation" class="md-nav__link">
+    <span class="md-ellipsis">
+      Accelerate Workload Migration and Modernisation
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#datastore-concepts" class="md-nav__link">
+    <span class="md-ellipsis">
+      Datastore Concepts
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#s3" class="md-nav__link">
+    <span class="md-ellipsis">
+      S3
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ebs" class="md-nav__link">
+    <span class="md-ellipsis">
+      EBS
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#efs" class="md-nav__link">
+    <span class="md-ellipsis">
+      EFS
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#fsx" class="md-nav__link">
+    <span class="md-ellipsis">
+      FSx
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#amazon-storage-gateway" class="md-nav__link">
+    <span class="md-ellipsis">
+      Amazon Storage Gateway
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#database-on-ec2" class="md-nav__link">
+    <span class="md-ellipsis">
+      Database on EC2
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#rds" class="md-nav__link">
+    <span class="md-ellipsis">
+      RDS
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#aurora" class="md-nav__link">
+    <span class="md-ellipsis">
+      Aurora
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#dynamodb" class="md-nav__link">
+    <span class="md-ellipsis">
+      DynamoDB
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="DynamoDB">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#relational-vs-nosql" class="md-nav__link">
+    <span class="md-ellipsis">
+      Relational vs NoSQL
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#read-and-write-capacity-units" class="md-nav__link">
+    <span class="md-ellipsis">
+      Read and Write capacity units
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#indexes-and-keys" class="md-nav__link">
+    <span class="md-ellipsis">
+      Indexes and keys
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#secondary-indexes" class="md-nav__link">
+    <span class="md-ellipsis">
+      Secondary indexes
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#documentdb" class="md-nav__link">
+    <span class="md-ellipsis">
+      DocumentDB
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#redshift" class="md-nav__link">
+    <span class="md-ellipsis">
+      Redshift
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#preparing-for-data" class="md-nav__link">
+    <span class="md-ellipsis">
+      Preparing for Data
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Preparing for Data">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#aws-glue" class="md-nav__link">
+    <span class="md-ellipsis">
+      AWS Glue
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#aws-athena" class="md-nav__link">
+    <span class="md-ellipsis">
+      AWS Athena
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#aws-neptune" class="md-nav__link">
+    <span class="md-ellipsis">
+      AWS Neptune
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#elasticache" class="md-nav__link">
+    <span class="md-ellipsis">
+      Elasticache
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#other-database-options" class="md-nav__link">
+    <span class="md-ellipsis">
+      Other Database options
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#quiz" class="md-nav__link">
+    <span class="md-ellipsis">
+      Quiz
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+  
+    <a href="https://github.com/CURRTIS1/CURRTIS1.github.io/edit/main/docs/studying/solutions_architect_professional/datastores.md" title="Edit this page" class="md-content__button md-icon" rel="edit">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75z"/></svg>
+    </a>
+  
+  
+
+
+  <h1>Datastores</h1>
+
+<h2 id="datastores">Datastores<a class="headerlink" href="#datastores" title="Permanent link">&para;</a></h2>
+<h3 id="design-solutions-for-organisational-complexity">Design Solutions for Organisational Complexity<a class="headerlink" href="#design-solutions-for-organisational-complexity" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Deploying encryption strategies for data at rest and in transit</li>
+<li>Data backup and restoration</li>
+</ul>
+<h3 id="design-for-new-solutions">Design for new solutions<a class="headerlink" href="#design-for-new-solutions" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Storage options on AWS</li>
+<li>Storage tiering and transfer cost</li>
+<li>Configuring database replication</li>
+<li>Operating and maintaining high-availability</li>
+<li>AWS Storage services and replication strategies (S3/RDS/Elasticache)</li>
+</ul>
+<h3 id="continuous-improvement-for-existing-solutions">Continuous Improvement for Existing Solutions<a class="headerlink" href="#continuous-improvement-for-existing-solutions" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Data retention, sensitivity and regulatory requirements</li>
+<li>Data replication methods</li>
+</ul>
+<h3 id="accelerate-workload-migration-and-modernisation">Accelerate Workload Migration and Modernisation<a class="headerlink" href="#accelerate-workload-migration-and-modernisation" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Different databases</li>
+<li>Selecting the appropriate storage service</li>
+<li>Selecting the appropriate database platform</li>
+</ul>
+<h2 id="datastore-concepts">Datastore Concepts<a class="headerlink" href="#datastore-concepts" title="Permanent link">&para;</a></h2>
+<p><img alt="datastore_concepts" src="../../../assets/images/datastore_concepts.png" title="datastore_concepts.png" /></p>
+<p><img alt="iops_throughput" src="../../../assets/images/iops_throughput.png" title="iops_throughput.png" /></p>
+<h2 id="s3">S3<a class="headerlink" href="#s3" title="Permanent link">&para;</a></h2>
+<ul>
+<li>S3 is an object store</li>
+<li>Used in other AWS services behind the scenes</li>
+<li>Maximum object size is 5TB</li>
+<li>Largest object in a single PUT is 5GB</li>
+<li>Recommended to use multi-part uploads if larger than 100MB</li>
+</ul>
+<p>S3 has much more in common with a database than a filesystem</p>
+<p>Security options:</p>
+<ul>
+<li>Resource based - Object ACL and Bucket policy</li>
+<li>User-based - (IAM policies)</li>
+<li>Optional MFA before delete</li>
+</ul>
+<p>Storage classes:</p>
+<ul>
+<li>Standard</li>
+<li>Standard IA</li>
+<li>One-zone IA</li>
+<li>Reduced redundancy</li>
+<li>Intelligent tiering</li>
+<li>Glacier</li>
+<li>Glacier deep archive</li>
+</ul>
+<p>Encryption keys:</p>
+<ul>
+<li>SSE-S3 - S3s existing encryption key for AES-256</li>
+<li>SSE-C - Upload your own AWS-256 key</li>
+<li>SSE-KMS - Use a key generated by KMS</li>
+<li>Client-side - Encrypt objects using local encryption before uploading</li>
+</ul>
+<p>Bucket Polocies vs IAM:</p>
+<ul>
+<li>Bucket policies are defined at the bucket resource, you give access to all or some objects to a principal</li>
+<li>IAM policies grant temporary access in the form of a role to user, service or application</li>
+<li>Bucket policies are Resource-based</li>
+<li>
+<p>IAM policies are Identity-based</p>
+</li>
+<li>
+<p>First access is determined whether there is an explicit DENY on the Bucket Policy for said user</p>
+</li>
+<li>Then access is determined whether there is an ALLOW on the Bucket Policy for said user</li>
+<li>Then the IAM user permissions are checked whether there is a role they can assume with S3 permissions on the bucket</li>
+</ul>
+<p>Using an S3 Gateway Endpoint can be used to reduce cost for public Ingress/Egress to/from the S3 bucket.</p>
+<p>Glacier:</p>
+<ul>
+<li>Cheap but slow to respond and very infrequently accessed</li>
+<li>'Cold storage'</li>
+<li>Faster retrieval options if you pay</li>
+</ul>
+<p>Glacier Vault:</p>
+<ul>
+<li>Can use Glacier as a service without using S3</li>
+<li>Has Archives, similar to an S3 object</li>
+<li>Has Policies, defines what rules the vault must abide by (ie nobody can delete)</li>
+<li>Access to the Vault is administered by IAM</li>
+<li>
+<p>Archives and Policies can't be changed (immutable) but can be overwritten</p>
+</li>
+<li>
+<p>You create a Glacier Vault lock</p>
+</li>
+<li>You have 24 hours to confirm the vault lock</li>
+<li>If this isn't confirmed within 24 hours it is aborted</li>
+</ul>
+<h2 id="ebs">EBS<a class="headerlink" href="#ebs" title="Permanent link">&para;</a></h2>
+<ul>
+<li>Similar to virtual hard drives</li>
+<li>Can only be assigned to EC2</li>
+<li>Tied to a single AZ</li>
+<li>Choices of IOPS, Throughput and Cost</li>
+</ul>
+<p>Instance stores:</p>
+<ul>
+<li>Temporary</li>
+<li>Only available when the EC2 instance is running</li>
+<li>Locked to the one instance</li>
+</ul>
+<p>Snapshots:</p>
+<ul>
+<li>Initial snapshot contains all data</li>
+<li>Subsequent snapshots only take a snapshot of the data added from the previous snapshot</li>
+</ul>
+<h2 id="efs">EFS<a class="headerlink" href="#efs" title="Permanent link">&para;</a></h2>
+<ul>
+<li>Implementation of NFS fileshare</li>
+<li>Elastic storage capacity, pay for what you use</li>
+<li>Multi-AZ</li>
+<li>Configure mount points in one or more AZs</li>
+<li>Can be mounted on-premise but network considerations are needed (Direct Connect recommended)</li>
+<li>Can use Datasync to sync on-premise data to EFS (or EFS to EFS)</li>
+<li>3 times more expensive to EBS and 10+ times more expensive to S3</li>
+</ul>
+<h2 id="fsx">FSx<a class="headerlink" href="#fsx" title="Permanent link">&para;</a></h2>
+<p>FSx is a fileshare service is a distributed file system which provices options for non-NFS options for filesharing.</p>
+<p>Most commonly used for Windows file services as some windows applications may not work with EFS</p>
+<p>Four flavours:</p>
+<ul>
+<li>NetApp ONTAP</li>
+<li>OpenZFS</li>
+<li>FSx for windows file server</li>
+<li>FSx for Lustre</li>
+</ul>
+<p>Can use Managed Microsoft AD to provide access to FSx</p>
+<h2 id="amazon-storage-gateway">Amazon Storage Gateway<a class="headerlink" href="#amazon-storage-gateway" title="Permanent link">&para;</a></h2>
+<ul>
+<li>A VM that you can run on premise</li>
+<li>Provides local storage resources backed by S3 and Glacier</li>
+<li>Often used for DR to sync to AWS</li>
+<li>
+<p>Useful for cloud migrations getting data into AWS</p>
+</li>
+<li>
+<p>File gateway - NFS or SMB - Allow on prem or EC2 instances to store objects in S3 via NFS</p>
+</li>
+<li>Volume Gateway Stored - iSCSI - Async replication of on prep to S3</li>
+<li>Volume Gateway Cached - iSCSI - Primary data stored in S3 with frequently access data cached locally on-prem</li>
+<li>Tape gateway - iSCSI - Virtual media and tape library for use with existing backup software</li>
+</ul>
+<p>Use case would be initial migration to AWS from on-prem would use Volume Gateway Stored, then you can move to Volume Gateway Cached</p>
+<h2 id="database-on-ec2">Database on EC2<a class="headerlink" href="#database-on-ec2" title="Permanent link">&para;</a></h2>
+<ul>
+<li>Run any DB on EC2 with full flexibility</li>
+<li>Have to manage backups, redundancy, patching</li>
+<li>Not a managed service</li>
+<li>Generally used when DB engines aren't supported in RDS</li>
+</ul>
+<h2 id="rds">RDS<a class="headerlink" href="#rds" title="Permanent link">&para;</a></h2>
+<ul>
+<li>Managed DB for MySQL, Maria, PostgreSQL, MSSQL, Oracle and MySQL Aurora</li>
+<li>Automated backup and patching in defined maint windows</li>
+<li>Push-button scaling, replication and redundancy</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>If you need</th>
+<th>Don't use RDS, use:</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Lots or large binary objects</td>
+<td>S3</td>
+</tr>
+<tr>
+<td>Automated scalability</td>
+<td>DynamoDB</td>
+</tr>
+<tr>
+<td>Name/Value Data</td>
+<td>DynamoDB</td>
+</tr>
+<tr>
+<td>Data which isn't structured</td>
+<td>DynamoDB (NoSQL as there's no schema)</td>
+</tr>
+<tr>
+<td>Use a non RDS supported engine</td>
+<td>EC2</td>
+</tr>
+<tr>
+<td>You need complete control of the DB engine</td>
+<td>EC2</td>
+</tr>
+</tbody>
+</table>
+<p>A multi-AZ deployment has a Master database in one AZ and a Standby (or Secondary) database in another AZ. Only the Master database serves traffic. If the Master fails, then the Secondary takes over.</p>
+<p>A Read Replica is a read-only copy of the database. It is actively running and apps can use it for read-only queries. A Read Replica can be in a different AZ or even in a different region.</p>
+<h2 id="aurora">Aurora<a class="headerlink" href="#aurora" title="Permanent link">&para;</a></h2>
+<ul>
+<li>Fully managed RDS service for MysqL and PostreSQL</li>
+<li>Multi-AZ by design</li>
+<li>Autoscaling managed by AWS</li>
+<li>Easier multi-region replication</li>
+</ul>
+<p><img alt="aurora1" src="../../../assets/images/aurora1.png" title="aurora1.png" /></p>
+<p>Your main instance handles all write jobs, once data is written it's available to read in 100ms.</p>
+<p>Aurora is good for read traffic as you can distribute the read jobs across instances.</p>
+<p>Aurora natively handles high availability, if there's an AZ failure your read replica is moved to the master. The Cluster endpoint doesn't change.</p>
+<p>If you're reading from a read replica you can use the Reader endpoint.</p>
+<p>You can set up read replicas in different regions.</p>
+<p><img alt="aurora2" src="../../../assets/images/aurora2.png" title="aurora2.png" /></p>
+<h2 id="dynamodb">DynamoDB<a class="headerlink" href="#dynamodb" title="Permanent link">&para;</a></h2>
+<ul>
+<li>Managed Multi-az NoSQL datastore with Cross Region replication option</li>
+<li>Defaults to eventual consistency reads but can request strongly consistent reads via SDK parameter</li>
+<li>Priced on throughput rather than compute</li>
+<li>Provision read and write capacity in anticipation of need</li>
+<li>On demand capacity for flexible capacity at a small premium cost</li>
+<li>Achieve ACID compliance with DynamoDB Transactions</li>
+</ul>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>In computer science, <code>ACID</code> is a set of properties of database transactions intended to guarantee data validity despite errors, power failures, and other mishaps. In the context of databases, a sequence of database operations that satisfies the ACID properties is called a transaction.</p>
+<p>For example, when a customer withdraws money from an ATM, an ACID transaction is executed to update their account balance and record the transaction. The transaction is atomic, meaning it succeeds or fails, and the account balance remains constant.</p>
+</div>
+<p>A <code>table</code> is a collection of <code>items</code>, and each <code>item</code> is a collection of <code>attributes</code>. DynamoDB uses <code>primary keys</code> to uniquely identify each <code>item</code> in a <code>table</code> and <code>secondary indexes</code> to provide more querying flexibility.</p>
+<h3 id="relational-vs-nosql">Relational vs NoSQL<a class="headerlink" href="#relational-vs-nosql" title="Permanent link">&para;</a></h3>
+<p>Relational concepts use tables and fienlds.</p>
+<p>NoSQL is designed to manage name value pairs ie JSON.</p>
+<h3 id="read-and-write-capacity-units">Read and Write capacity units<a class="headerlink" href="#read-and-write-capacity-units" title="Permanent link">&para;</a></h3>
+<p>For on-demand mode tables, you don't need to specify how much read and write throughput you expect your application to perform. DynamoDB charges you for the reads and writes that your application performs on your tables in terms of read request units and write request units.</p>
+<p>DynamoDB <code>read requests</code> can be either strongly consistent, eventually consistent, or transactional.</p>
+<ul>
+<li>A strongly consistent read request of an item up to 4 KB requires one read request unit.</li>
+<li>An eventually consistent read request of an item up to 4 KB requires one-half read request unit.</li>
+<li>A transactional read request of an item up to 4 KB requires two read request units.</li>
+</ul>
+<p>If you need to read an item that is larger than 4 KB, DynamoDB needs additional read request units. The total number of read request units required depends on the item size, and whether you want an eventually consistent or strongly consistent read. For example, if your item size is 8 KB, you require 2 read request units to sustain one strongly consistent read, 1 read request unit if you choose eventually consistent reads, or 4 read request units for a transactional read request.</p>
+<p>One <code>write request</code> unit represents one write for an item up to 1 KB in size. If you need to write an item that is larger than 1 KB, DynamoDB needs to consume additional write request units. Transactional write requests require 2 write request units to perform one write for items up to 1 KB. The total number of write request units required depends on the item size. For example, if your item size is 2 KB, you require 2 write request units to sustain one write request or 4 write request units for a transactional write request.</p>
+<h3 id="indexes-and-keys">Indexes and keys<a class="headerlink" href="#indexes-and-keys" title="Permanent link">&para;</a></h3>
+<p>The below is a table named 'People'.</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="p">{</span>
+<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="w">    </span><span class="nt">&quot;PersonID&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">101</span><span class="p">,</span>
+<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="w">    </span><span class="nt">&quot;LastName&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Smith&quot;</span><span class="p">,</span>
+<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="w">    </span><span class="nt">&quot;FirstName&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Fred&quot;</span><span class="p">,</span>
+<a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a><span class="w">    </span><span class="nt">&quot;Phone&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;555-4321&quot;</span>
+<a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a><span class="p">}</span>
+<a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a>
+<a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a><span class="p">{</span>
+<a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a><span class="w">    </span><span class="nt">&quot;PersonID&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">102</span><span class="p">,</span>
+<a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a><span class="w">    </span><span class="nt">&quot;LastName&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Jones&quot;</span><span class="p">,</span>
+<a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a><span class="w">    </span><span class="nt">&quot;FirstName&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Mary&quot;</span><span class="p">,</span>
+<a id="__codelineno-0-12" name="__codelineno-0-12" href="#__codelineno-0-12"></a><span class="w">    </span><span class="nt">&quot;Address&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-0-13" name="__codelineno-0-13" href="#__codelineno-0-13"></a><span class="w">                </span><span class="nt">&quot;Street&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;123 Main&quot;</span><span class="p">,</span>
+<a id="__codelineno-0-14" name="__codelineno-0-14" href="#__codelineno-0-14"></a><span class="w">                </span><span class="nt">&quot;City&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Anytown&quot;</span><span class="p">,</span>
+<a id="__codelineno-0-15" name="__codelineno-0-15" href="#__codelineno-0-15"></a><span class="w">                </span><span class="nt">&quot;State&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;OH&quot;</span><span class="p">,</span>
+<a id="__codelineno-0-16" name="__codelineno-0-16" href="#__codelineno-0-16"></a><span class="w">                </span><span class="nt">&quot;ZIPCode&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">12345</span>
+<a id="__codelineno-0-17" name="__codelineno-0-17" href="#__codelineno-0-17"></a><span class="w">    </span><span class="p">}</span>
+<a id="__codelineno-0-18" name="__codelineno-0-18" href="#__codelineno-0-18"></a><span class="p">}</span>
+<a id="__codelineno-0-19" name="__codelineno-0-19" href="#__codelineno-0-19"></a>
+<a id="__codelineno-0-20" name="__codelineno-0-20" href="#__codelineno-0-20"></a><span class="p">{</span>
+<a id="__codelineno-0-21" name="__codelineno-0-21" href="#__codelineno-0-21"></a><span class="w">    </span><span class="nt">&quot;PersonID&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">103</span><span class="p">,</span>
+<a id="__codelineno-0-22" name="__codelineno-0-22" href="#__codelineno-0-22"></a><span class="w">    </span><span class="nt">&quot;LastName&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Stephens&quot;</span><span class="p">,</span>
+<a id="__codelineno-0-23" name="__codelineno-0-23" href="#__codelineno-0-23"></a><span class="w">    </span><span class="nt">&quot;FirstName&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Howard&quot;</span><span class="p">,</span>
+<a id="__codelineno-0-24" name="__codelineno-0-24" href="#__codelineno-0-24"></a><span class="w">    </span><span class="nt">&quot;Address&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-0-25" name="__codelineno-0-25" href="#__codelineno-0-25"></a><span class="w">                </span><span class="nt">&quot;Street&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;123 Main&quot;</span><span class="p">,</span>
+<a id="__codelineno-0-26" name="__codelineno-0-26" href="#__codelineno-0-26"></a><span class="w">                </span><span class="nt">&quot;City&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;London&quot;</span><span class="p">,</span><span class="w">                                    </span>
+<a id="__codelineno-0-27" name="__codelineno-0-27" href="#__codelineno-0-27"></a><span class="w">                </span><span class="nt">&quot;PostalCode&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;ER3 5K8&quot;</span>
+<a id="__codelineno-0-28" name="__codelineno-0-28" href="#__codelineno-0-28"></a><span class="w">    </span><span class="p">},</span>
+<a id="__codelineno-0-29" name="__codelineno-0-29" href="#__codelineno-0-29"></a><span class="w">    </span><span class="nt">&quot;FavoriteColor&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Blue&quot;</span>
+<a id="__codelineno-0-30" name="__codelineno-0-30" href="#__codelineno-0-30"></a><span class="p">}</span>
+</code></pre></div>
+<ul>
+<li>Each item in the table has a unique identifier, or primary key, that distinguishes the item from all of the others in the table. In the People table, the <code>primary key</code> consists of one attribute (<code>PersonID</code>).</li>
+<li>Some of the items have a nested attribute (<code>Address</code>). DynamoDB supports nested attributes up to 32 levels deep.</li>
+</ul>
+<p>When you create a table, in addition to the table name, you must specify the <code>primary key</code> of the table. The primary key uniquely identifies each item in the table, so that no two items can have the same key.</p>
+<p>DynamoDB supports two different kinds of primary keys:
+- <code>Partition key</code> - A simple <code>primary key</code>, composed of one attribute known as the <code>partition key</code>.
+- <code>Partition key and sort key</code> – Referred to as a <code>composite primary key</code>, this type of key is composed of two attributes. The first attribute is the partition key, and the second attribute is the sort key. A <code>composite primary</code> key gives you additional flexibility when querying data. For example, if you provide only the value for Artist, DynamoDB retrieves all of the songs by that artist. To retrieve only a subset of songs by a particular artist, you can provide a value for Artist along with a range of values for SongTitle.</p>
+<h3 id="secondary-indexes">Secondary indexes<a class="headerlink" href="#secondary-indexes" title="Permanent link">&para;</a></h3>
+<p>You can create one or more secondary indexes on a table. A secondary index lets you query the data in the table using an alternate key, in addition to queries against the primary key. DynamoDB doesn't require that you use indexes, but they give your applications more flexibility when querying your data. After you create a secondary index on a table, you can read data from the index in much the same way as you do from the table.</p>
+<p>DynamoDB supports two kinds of indexes:</p>
+<ul>
+<li><code>Global secondary index</code> – An <code>index</code> with a <code>partition key</code> and <code>sort key</code> that can be different from those on the table.</li>
+<li><code>Local secondary index</code> – An <code>index</code> that has the same <code>partition key</code> as the table, but a different <code>sort key</code>.</li>
+</ul>
+<p>The following diagram shows the example <code>Music</code> table, with a new index called <code>GenreAlbumTitle</code>. In the index, <code>Genre</code> is the <code>partition key</code> and <code>AlbumTitle</code> is the <code>sort key</code>.</p>
+<table>
+<thead>
+<tr>
+<th>Music Table</th>
+<th>GenreAlbumTitle</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><pre lang="json">{<br>  "Artist": "No One You Know",<br>  "SongTitle": "My Dog Spot",<br>  "AlbumTitle": "Hey Now",<br>  "Price": 1.98,<br>  "Genre": "Country",<br>  "CriticRating": 8.4<br>}</pre></td>
+<td><pre lang="json">{<br>    "Genre": "Country",<br>    "AlbumTitle": "Hey Now",<br>    "Artist": "No One You Know",<br>    "SongTitle": "My Dog Spot"<br>}</pre></td>
+</tr>
+<tr>
+<td><pre lang="json">{<br>    "Artist": "No One You Know",<br>    "SongTitle": "Somewhere Down The Road",<br>    "AlbumTitle": "Somewhat Famous",<br>    "Genre": "Country",<br>    "CriticRating": 8.4,<br>    "Year": 1984<br>}</pre></td>
+<td><pre lang="json">{<br>    "Genre": "Country",<br>    "AlbumTitle": "Somewhat Famous",<br>    "Artist": "No One You Know",<br>    "SongTitle": "Somewhere Down The Road"<br>}</pre></td>
+</tr>
+<tr>
+<td><pre lang="json">{<br>    "Artist": "The Acme Band",<br>    "SongTitle": "Still in Love",<br>    "AlbumTitle": "The Buck Starts Here",<br>    "Price": 2.47,<br>    "Genre": "Rock",<br>    "PromotionInfo": {<br>        "RadioStationsPlaying": {<br>            "KHCR",<br>            "KQBX",<br>            "WTNR",<br>            "WJJH"<br>        },<br>        "TourDates": {<br>            "Seattle": "20150622",<br>            "Cleveland": "20150630"<br>        },<br>        "Rotation": "Heavy"<br>    }<br>}</pre></td>
+<td><pre lang="json">{<br>    "Genre": "Rock",<br>    "AlbumTitle": "The Buck Starts Here",<br>    "Artist": "The Acme Band",<br>    "SongTitle": "Still In Love"<br>}</pre></td>
+</tr>
+<tr>
+<td><pre lang="json">{<br>    "Artist": "The Acme Band",<br>    "SongTitle": "Look Out, World",<br>    "AlbumTitle": "The Buck Starts Here",<br>    "Price": 0.99,<br>    "Genre": "Rock"<br>}</pre></td>
+<td><pre lang="json">{<br>    "Genre": "Rock",<br>    "AlbumTitle": "The Buck Starts Here",<br>    "Artist": "The Acme Band",<br>    "SongTitle": "Look Out, World"<br>}</pre></td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th>Index type</th>
+<th>Description</th>
+<th>Remember</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Global Secondary Index</td>
+<td>Partition key and sort key can be different from those on the table</td>
+<td>Not restriced to just the partitioning set forth by the partition key, global</td>
+</tr>
+<tr>
+<td>Local Secondary Index</td>
+<td>Same partition key as the table but different sort key</td>
+<td>Have to stay local and respect the tables partition key but can choose whatever sort key I want</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th>Index type</th>
+<th>When to use</th>
+<th>Example</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Global Secondary Index</td>
+<td>When you want a fast query of attributes outside of the primary key</td>
+<td>"I'd like to query sales orders by customer number rather than sales order number"</td>
+</tr>
+<tr>
+<td>Local Secondary Index</td>
+<td>When you already know the partition key and want to quickly query on another attribute</td>
+<td>"I have the sales order number but I'd like to retrieve only those records with a certain Material number"</td>
+</tr>
+</tbody>
+</table>
+<p>You can query the GenreAlbumTitle index to find all albums of a particular genre (for example, all Rock albums). You can also query the index to find all albums within a particular genre that have certain album titles (for example, all Country albums with titles that start with the letter H).</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="p">{</span>
+<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="w">    </span><span class="nt">&quot;salesordernum&quot;</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;12346435&quot;</span><span class="p">,</span>
+<a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a><span class="w">    </span><span class="nt">&quot;timestamp&quot;</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;22-10-2023&quot;</span><span class="p">,</span>
+<a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a><span class="w">    </span><span class="nt">&quot;salesorder&quot;</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a><span class="w">        </span><span class="nt">&quot;salesordertytpe&quot;</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;schedule&quot;</span><span class="p">,</span>
+<a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a><span class="w">        </span><span class="nt">&quot;materialnum&quot;</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;123217856&quot;</span>
+<a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a><span class="w">    </span><span class="p">},</span>
+<a id="__codelineno-1-8" name="__codelineno-1-8" href="#__codelineno-1-8"></a><span class="w">    </span><span class="nt">&quot;customer&quot;</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-1-9" name="__codelineno-1-9" href="#__codelineno-1-9"></a><span class="w">        </span><span class="nt">&quot;customernum&quot;</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;234235&quot;</span><span class="p">,</span>
+<a id="__codelineno-1-10" name="__codelineno-1-10" href="#__codelineno-1-10"></a><span class="w">        </span><span class="nt">&quot;customername&quot;</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Jimbob&quot;</span>
+<a id="__codelineno-1-11" name="__codelineno-1-11" href="#__codelineno-1-11"></a><span class="w">    </span><span class="p">}</span>
+<a id="__codelineno-1-12" name="__codelineno-1-12" href="#__codelineno-1-12"></a><span class="p">}</span>
+</code></pre></div>
+<p>If you created a Global Secondary Index using <code>customernum</code> you could query by Customer Number at light-speed.</p>
+<p>If you created a Local Secondary Index using <code>materialnum</code> you could query bu Sales Order Number and Material Number at light-speed.</p>
+<p>Attribute projections are attributes projected into an index, ie:</p>
+<ul>
+<li>customernum (key)</li>
+<li>customername</li>
+<li>salesordernum</li>
+<li>timestamp</li>
+<li>materialnum</li>
+</ul>
+<p>You can also create a <code>replica</code> table by creating a <code>Global secondary index</code> using the same <code>partition key</code> and <code>sort key</code>. A use case for this would be if you wanted the same set of data present to higher and lower tier customers, you can set higher RCU/WCU limits for the higher tier customers.</p>
+<p><img alt="dynamo1" src="../../../assets/images/dynamo1.png" title="dynamo1.png" /></p>
+<h2 id="documentdb">DocumentDB<a class="headerlink" href="#documentdb" title="Permanent link">&para;</a></h2>
+<p>DocumentDB is a NoSQL JSON document database service, it is designed to be compatibale with MongoDB.</p>
+<p>DocumentDB has one main instance and multiple replicas, similar to Aurora.</p>
+<h2 id="redshift">Redshift<a class="headerlink" href="#redshift" title="Permanent link">&para;</a></h2>
+<p>Fully managed clustered peta-byte scale data wahrehouse. It's PostresSQL compatible.</p>
+<h2 id="preparing-for-data">Preparing for Data<a class="headerlink" href="#preparing-for-data" title="Permanent link">&para;</a></h2>
+<p>ETL</p>
+<ul>
+<li>Extract</li>
+<li>Transform</li>
+<li>Load</li>
+</ul>
+<p><code>Extract</code> only the data relevant to your data need.</p>
+<p><code>Transform</code> the data ie sorting, de-duplicating.</p>
+<p><code>Load</code> the data into your application source.</p>
+<h3 id="aws-glue">AWS Glue<a class="headerlink" href="#aws-glue" title="Permanent link">&para;</a></h3>
+<p>ETL at scale. Glue crawlers can pull data.</p>
+<p>AWS Glue is serverless.</p>
+<p>Data sources: S3, Redshift, RDS or DB on EC2.</p>
+<p>A Glue Crawler will collect data and stores data in a Glue Data Catalog.</p>
+<p>You can then use something like Athena to parse that data.</p>
+<h3 id="aws-athena">AWS Athena<a class="headerlink" href="#aws-athena" title="Permanent link">&para;</a></h3>
+<p>AWS Athena is a managed service. You can use it to analyse data where it lives.</p>
+<p>Can ingest databases from S3 objects and use standard SQL to query that data.</p>
+<h2 id="aws-neptune">AWS Neptune<a class="headerlink" href="#aws-neptune" title="Permanent link">&para;</a></h2>
+<p>Fully managed graph database which supports open graph APIs for both Gremlin and SPARQL.</p>
+<h2 id="elasticache">Elasticache<a class="headerlink" href="#elasticache" title="Permanent link">&para;</a></h2>
+<p>Fully managed implementation of in-memory datastores - Redis and Memcached</p>
+<p>Billed by node size and hours of use.</p>
+<p>Use cases:</p>
+<ul>
+<li>Storing web sessions</li>
+<li>Database caching - taking load off the RDS layer</li>
+<li>Leaderboards</li>
+</ul>
+<p><code>Memcached</code> is generally the no-frills straight forward option for when you need to cache objects.</p>
+<p><code>Redis</code> is more feature heavy, supports clustering, backup/restore and you need encryption to run it.</p>
+<h2 id="other-database-options">Other Database options<a class="headerlink" href="#other-database-options" title="Permanent link">&para;</a></h2>
+<ul>
+<li><code>Athena</code> - used to query raw data in S3 via SQL.</li>
+<li><code>Quantum Ledger</code> - based on blockchain, provides immutable journal as a service.</li>
+<li><code>Timestream</code> - Keeping up with time-series data</li>
+<li><code>Opensearch</code> - Mostly a search engine but also a document store, used to be Elasticsearch</li>
+</ul>
+<h2 id="quiz">Quiz<a class="headerlink" href="#quiz" title="Permanent link">&para;</a></h2>
+<p>What DynamoDB features can be utilised to increase the speed of read operations?</p>
+<ul>
+<li>DynamoDB Accelerator (DAX)</li>
+<li>Secondary Indexes</li>
+</ul>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>DynamoDB Accelerator (DAX) works as an in-memory cache in front of DynamoDB, which can accelerate many read operations.<br>
+Secondary indexes contain a subset of attributes from a table and an alternate key for queries. These can help speed up certain read operations.</p>
+</div>
+<p>Which of the following options allows users to have secure access to private files located in S3?</p>
+<ul>
+<li>CloudFront signed cookies</li>
+<li>CloudFront signed URLs</li>
+<li>CloudFront origin access identity</li>
+</ul>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Signed cookies generate special cookies to grant secure access to objects in an S3 bucket, but they require the creation of an application and policy to generate and control these items.<br>
+Signed URLs generate special URLs to grant secure access to objects in an S3 bucket, but require the creation of an application and policy to generate and control these items.<br>
+An origin access identity is a virtual user identity that is used to give the CloudFront distribution permission to fetch a private object from an S3 bucket.</p>
+</div>
+<p>Which of the following are true statements regarding Amazon Athena?</p>
+<ul>
+<li>Athena requires no servers to be set up or managed.</li>
+<li>Amazon Athena provides an easy way to analyze data in Amazon S3 using standard SQL.</li>
+<li>Athena can run ad-hoc queries using ANSI SQL.</li>
+</ul>
+<p>You are tasked with choosing a storage service for a high-performance computing (HPC) environment based on Amazon Linux. The workload stores and processes a large number of videos that require shared, parallel storage and compute-intensive transcoding. Which of the following storage options would be the optimal solution?</p>
+<ul>
+<li>FSx for Lustre</li>
+</ul>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>FSx for Lustre is optimized for HPC environments and provides parallel storage for files being processed by HPC clusters.</p>
+</div>
+<p>__ is an immutable way to set policies on a Glacier vault, such as retention or enforcing MFA before delete.</p>
+<ul>
+<li>Glacier Vault Lock</li>
+</ul>
+<p>Which database service would be appropriate for an application that requires a flexible, JSON-formatted schema?</p>
+<ul>
+<li>DocumentDB</li>
+<li>S3 and Athena</li>
+</ul>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>DocumentDB is a document-store database that keeps data in JSON-formatted documents. These documents have flexible schemas and are designed to be intuitively structured such that developers can easily make sense of the data contained in each document.<br>
+JSON objects can be stored in S3 and queried with Amazon Athena.</p>
+</div>
+<p>Which of the following data formats does Amazon Athena support?</p>
+<ul>
+<li>Apache ORC data</li>
+<li>JSON data</li>
+<li>Apache Parquet data</li>
+</ul>
+<p>You need low-latency access to your entire dataset. Amazon S3 should be used to back up your on-premises data periodically, so you can restore it in the event of a disaster in your data center. Which AWS Storage Gateway solution offers the most suitable features for this use case?</p>
+<ul>
+<li>Volume Gateway - Stored Volumes</li>
+</ul>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Stored volumes provide low-latency access to entire datasets, where on-premises gateways are configured to store all data locally. Point-in-time snapshots from the local data are taken asynchronously to Amazon S3. This configuration provides durable and inexpensive offsite backups that can be recovered to local data centers or Amazon EC2.</p>
+</div>
+<p>Which of the following are considered attributes of the ACID compliance model?</p>
+<ul>
+<li>The ACID consistency model is Atomic, Consistent, Isolated, and Durable.</li>
+</ul>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Consistent transactions must be valid.<br>
+Atomic transactions are "all or nothing".<br>
+Durable means that a completed transaction must stick around.<br>
+Isolated transactions can't mess with one another.</p>
+</div>
+<p>You are architecting a complex application landscape that values fast disk I/O for EC2 instances above everything else. Which storage option would you choose?</p>
+<ul>
+<li>Instance Store</li>
+</ul>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>EBS can provide very high I/O for your EC2 instances, but the locally attached Instance Store drives provide the highest I/O potential.<br>
+Instance Store, because it is locally attached, provides the fastest disk I/O among the choices. Note the question did not specify the need for the storage to be persistent, so ephemeral options are in play too.</p>
+</div>
+<p>You need to improve the performance of queries to your DynamoDB table. The most common queries do not use the partition key. What should you do?</p>
+<ul>
+<li>Create a global secondary index with the most common queried attribute as the partition key.</li>
+</ul>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>A global secondary index can be used to speed up queries against non-primary key items. They have their own throughput capacity separate to the table. Using the most common queried attribute as the global secondary index's partition key lets us query on it directly.</p>
+</div>
+
+
+
+
+
+
+
+  
+    
+  
+  
+
+
+  <aside class="md-source-file">
+    
+      
+  <span class="md-source-file__fact">
+    <span class="md-icon" title="Last update">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
+    </span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="August 19, 2025 19:34:26 UTC">August 19, 2025</span>
+  </span>
+
+    
+    
+    
+    
+  </aside>
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      <script id="__config" type="application/json">{"base": "../../..", "features": ["search.highlight", "search.share", "content.code.annotate", "navigation.top", "navigation.indexes", "content.action.edit"], "search": "../../../assets/javascripts/workers/search.973d3a69.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../../../assets/javascripts/bundle.92b07e13.min.js"></script>
+      
+    
+  </body>
+</html>
