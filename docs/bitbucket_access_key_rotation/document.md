@@ -13,7 +13,19 @@ rxt:
 
 ```text
 --8<--
-bitbucket_access_key_rotation/README.md
+../bitbucket_access_key_rotation/README.md
+--8<--
+```
+
+```text
+--8<--
+docs/bitbucket_access_key_rotation/test.txt
+--8<--
+```
+
+```text
+--8<--
+../test.txt
 --8<--
 ```
 
@@ -23,7 +35,7 @@ bitbucket_access_key_rotation/README.md
 
 ```python
 --8<--
-bitbucket_access_key_rotation/create_initial_access_key,py
+../bitbucket_access_key_rotation/create_initial_access_key,py
 --8<--
 ```
 
@@ -31,6 +43,6 @@ bitbucket_access_key_rotation/create_initial_access_key,py
 
 ```python
 --8<--
-bitbucket_access_key_rotation/rotate_bitbucket_access_key,py
+../bitbucket_access_key_rotation/rotate_bitbucket_access_key,py
 --8<--
 ```
